@@ -4,6 +4,7 @@ from dataclasses import asdict
 from typing import Any, Protocol
 
 from .evidence import detect_evidence
+from .evidence_context import detect_contextual_evidence
 from .exhibit import build_exhibit
 from .risk import decide_risk
 
@@ -50,6 +51,14 @@ class ScamAnalysisService:
             ml_signal = asdict(signal_obj)
 
         evidence, protective = detect_evidence(text)
+        evidence.extend(detect_contextual_evidence(text))
+        evidence.sort(
+            key=lambda item: (
+                item.start,
+                item.end,
+                item.id,
+            )
+        )
 
         decision = decide_risk(
             ml_signal=ml_signal,
