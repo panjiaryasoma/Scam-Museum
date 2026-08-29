@@ -66,6 +66,22 @@ function percentageFromProgress(message) {
   return Math.max(0, Math.min(100, Math.round(message.progress * 100)));
 }
 
+function clipboardImageFile(event) {
+  const files = Array.from(event.clipboardData?.files || []);
+  const directFile = files.find((file) => ACCEPTED_TYPES.has(file.type));
+
+  if (directFile) {
+    return directFile;
+  }
+
+  const items = Array.from(event.clipboardData?.items || []);
+  const imageItem = items.find(
+    (item) => item.kind === "file" && ACCEPTED_TYPES.has(item.type)
+  );
+
+  return imageItem?.getAsFile?.() || null;
+}
+
 function createAdapter() {
   if (!input || document.getElementById("ocr-adapter")) {
     return null;
@@ -99,7 +115,7 @@ function createAdapter() {
 
   const helper = document.createElement("span");
   helper.className = "caption";
-  helper.textContent = "PNG, JPG, or WebP up to 8 MB. Review the extracted text before analysis.";
+  helper.textContent = "Upload PNG, JPG, or WebP up to 8 MB, or paste a screenshot into the message box with Ctrl+V. Review extracted text before analysis.";
 
   copy.append(label, helper);
   controls.append(fileInput, uploadButton, copy);
@@ -137,6 +153,18 @@ function createAdapter() {
       return;
     }
 
+    await processScreenshot({ file, uploadButton, fileInput, preview, status, adapter });
+  });
+
+  input.addEventListener("paste", async (event) => {
+    const file = clipboardImageFile(event);
+
+    if (!file) {
+      return;
+    }
+
+    event.preventDefault();
+    setStatus(status, "Screenshot pasted. Preparing OCR…");
     await processScreenshot({ file, uploadButton, fileInput, preview, status, adapter });
   });
 
@@ -184,7 +212,7 @@ async function processScreenshot({ file, uploadButton, fileInput, preview, statu
     showPreview(preview, file);
     setBusy({ busy: true, uploadButton, fileInput, adapter });
     uploadButton.textContent = "Extracting text…";
-    setStatus(status, `Preparing OCR for ${file.name}…`);
+    setStatus(status, `Preparing OCR for ${file.name || "pasted screenshot"}…`);
 
     const Tesseract = await loadTesseract();
     const result = await Tesseract.recognize(file, "eng", {
