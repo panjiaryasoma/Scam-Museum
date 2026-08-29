@@ -1,0 +1,447 @@
+SCAM MUSEUM — 50 REALISTIC CHAT CASES
+========================================================================
+
+Purpose: manual copy-paste testing through the Scam Museum textarea.
+Language: English-first.
+These are synthetic test messages, not training data and not real scam records.
+
+How to use:
+1. Copy ONLY the text under MESSAGE.
+2. Paste it into Scam Museum.
+3. Click Analyze artifact.
+4. Compare the result with EXPECTED / REVIEW TARGET.
+
+========================================================================
+
+CASE 01
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Family impersonation
+MESSAGE:
+mum its me 😭 smashed my phone so this is my temp number. can u send £420 to this account today? i'll pay u back tomorrow x
+
+------------------------------------------------------------------------
+
+CASE 02
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Family impersonation
+MESSAGE:
+Unknown: Hi Mum, new phone here
+Mum: who is this?
+Unknown: it's me, Sam. old phone died
+Unknown: need £650 for the repair guy asap, can you transfer it now?
+
+------------------------------------------------------------------------
+
+CASE 03
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Fake bank / OTP
+MESSAGE:
+Hi, fraud team here. We blocked a £786 card payment. Reply YES and send the 6 digit code we just texted you so we can cancel it.
+
+------------------------------------------------------------------------
+
+CASE 04
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Fake delivery
+MESSAGE:
+parcel 8842 couldn't be delivered today. small £1.49 redelivery fee due: https://bit.ly/redeliver8842 pls sort before 6pm
+
+------------------------------------------------------------------------
+
+CASE 05
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Boss impersonation
+MESSAGE:
+Boss: hey are you free?
+You: yep what's up
+Boss: stuck in a client meeting. need 5 apple gift cards for the team
+Boss: £100 each. buy them now and send me pics of the codes
+
+------------------------------------------------------------------------
+
+CASE 06
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Marketplace payment scam
+MESSAGE:
+Buyer: still available?
+Seller: yes
+Buyer: perfect i paid already through courier secure checkout
+Buyer: open this to receive the money https://bit.ly/market-pay-91 and enter your card details
+
+------------------------------------------------------------------------
+
+CASE 07
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Account takeover
+MESSAGE:
+SECURITY ALERT: unusual login detected. Your account will be closed in 30 minutes unless you verify now: https://bit.ly/account-check
+
+------------------------------------------------------------------------
+
+CASE 08
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Crypto recovery
+MESSAGE:
+Good news, we recovered the crypto you lost last year. Wallet is ready to release 4.2 ETH, only the network fee of $180 needs paying first.
+
+------------------------------------------------------------------------
+
+CASE 09
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Romance emergency
+MESSAGE:
+Chris: babe i'm stuck at the airport 😔
+Chris: card isn't working here
+Chris: can you send me $300 right now? promise i'll explain when i land
+
+------------------------------------------------------------------------
+
+CASE 10
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Credential phishing
+MESSAGE:
+Your Microsoft 365 password expires today. Confirm your existing password here to prevent mailbox suspension: https://bit.ly/m365-fix
+
+------------------------------------------------------------------------
+
+CASE 11
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Fake PayPal
+MESSAGE:
+PayPal: we noticed a payment of $499.99. If this wasn't you call +1 202 555 0184 immediately and provide the code sent to your phone.
+
+------------------------------------------------------------------------
+
+CASE 12
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Tax refund scam
+MESSAGE:
+HMRC refund pending £384.72. We were unable to send the payment. Confirm your bank details within 24 hours: https://bit.ly/refund-384
+
+------------------------------------------------------------------------
+
+CASE 13
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Fake police threat
+MESSAGE:
+Police Notice: an arrest warrant has been issued under your name. Pay the £275 administrative settlement today to avoid further action.
+
+------------------------------------------------------------------------
+
+CASE 14
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Loan scam
+MESSAGE:
+Congrats your loan for $8,000 has been approved 🎉 before release we need the $95 processing fee. send payment now to secure it.
+
+------------------------------------------------------------------------
+
+CASE 15
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Investment scam
+MESSAGE:
+mate i doubled £2k in 3 days using this private crypto group. admin says spots close tonight. send your wallet address and deposit £500 to start.
+
+------------------------------------------------------------------------
+
+CASE 16
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Gift card request
+MESSAGE:
+Hey it's Mark from finance. Need you to grab 3 Steam cards for a client issue. £100 each. Scratch them and send the codes here asap.
+
+------------------------------------------------------------------------
+
+CASE 17
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Fake support
+MESSAGE:
+Netflix support: your account is suspended due to failed payment. Update card details now at https://bit.ly/netflix-billing-fix
+
+------------------------------------------------------------------------
+
+CASE 18
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: SIM swap / OTP
+MESSAGE:
+Vodafone security: SIM replacement requested on your number. If this wasn't you reply with the verification code we just sent.
+
+------------------------------------------------------------------------
+
+CASE 19
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Inheritance scam
+MESSAGE:
+Dear beneficiary, your late relative left an unclaimed estate of $1.8M. A legal release fee of $650 is required before transfer.
+
+------------------------------------------------------------------------
+
+CASE 20
+EXPECTED / REVIEW TARGET: HIGH RISK
+SCENARIO: Fake booking
+MESSAGE:
+Hotel booking cancelled due to payment verification failure. Re-enter card details within 30 minutes or your reservation will be released: https://bit.ly/hotel-confirm
+
+------------------------------------------------------------------------
+
+CASE 21
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Job offer
+MESSAGE:
+hey! saw your profile and we have easy remote work. like 3 videos a day and earn $200-500. message our manager on telegram @workteam88 to start
+
+------------------------------------------------------------------------
+
+CASE 22
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Unexpected OTP request
+MESSAGE:
+hey can you send me the code that just came to your phone? i accidentally used your number lol
+
+------------------------------------------------------------------------
+
+CASE 23
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Unexpected contact + money
+MESSAGE:
+Unknown: hi sorry random question
+Unknown: are you able to receive a bank transfer for me?
+Unknown: i'll give you 10% for helping
+
+------------------------------------------------------------------------
+
+CASE 24
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Prize lure
+MESSAGE:
+you've been selected for a £500 shopping reward 🎁 just need to confirm a few details before we send it
+
+------------------------------------------------------------------------
+
+CASE 25
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Authority claim
+MESSAGE:
+Bank security team here. Please contact us urgently regarding unusual activity on your account.
+
+------------------------------------------------------------------------
+
+CASE 26
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Short URL
+MESSAGE:
+hey this is the photo i mentioned earlier https://bit.ly/view-photo-991
+
+------------------------------------------------------------------------
+
+CASE 27
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Unknown recruiter
+MESSAGE:
+Hi, I'm Sophie from HR. We found your number on a recruitment database. Are you available for a quick paid task today?
+
+------------------------------------------------------------------------
+
+CASE 28
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Payment conversation
+MESSAGE:
+Buyer: i sent the money already
+Buyer: check your email, there should be a confirmation
+Buyer: you may need to pay a small release fee first
+
+------------------------------------------------------------------------
+
+CASE 29
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Family new number
+MESSAGE:
+hey dad this is my new number. old phone broke again 😭 can you save this one pls
+
+------------------------------------------------------------------------
+
+CASE 30
+EXPECTED / REVIEW TARGET: SUSPICIOUS
+SCENARIO: Urgency + vague action
+MESSAGE:
+Important: action required before 5PM today to avoid service interruption. Contact support immediately.
+
+------------------------------------------------------------------------
+
+CASE 31
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Protective OTP
+MESSAGE:
+Your verification code is 483920. Don't share this code with anyone, including support staff. We will never ask you for it.
+
+------------------------------------------------------------------------
+
+CASE 32
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Ordinary chat
+MESSAGE:
+Maya: grabbing dinner around 7?
+You: yep
+Maya: same place as last week?
+You: works for me 👍
+
+------------------------------------------------------------------------
+
+CASE 33
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Peer payment
+MESSAGE:
+hey can u send me the $18 from dinner when you get a sec? no rush
+
+------------------------------------------------------------------------
+
+CASE 34
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Wi-Fi password
+MESSAGE:
+can you send me the wifi password when you get home? i forgot to save it 😭
+
+------------------------------------------------------------------------
+
+CASE 35
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Delivery update
+MESSAGE:
+Amazon: your package is out for delivery. Track the latest status in the Amazon app.
+
+------------------------------------------------------------------------
+
+CASE 36
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Bank notice
+MESSAGE:
+Your monthly statement is ready. Sign in to the official banking app if you'd like to view it.
+
+------------------------------------------------------------------------
+
+CASE 37
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Friend new number
+MESSAGE:
+Jamie: yo new number, finally switched phones
+You: noted lol
+Jamie: football saturday still?
+You: absolutely
+
+------------------------------------------------------------------------
+
+CASE 38
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Support warning
+MESSAGE:
+Reminder from IT: support will never ask for your password or verification code. Report suspicious requests through the help desk.
+
+------------------------------------------------------------------------
+
+CASE 39
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Legitimate transfer
+MESSAGE:
+Alex: got the concert tickets
+You: niceee
+Alex: your half was £42 btw
+You: sending it now
+
+------------------------------------------------------------------------
+
+CASE 40
+EXPECTED / REVIEW TARGET: LOW RISK
+SCENARIO: Password context
+MESSAGE:
+Roommate: netflix logged me out again 💀
+You: lol
+Roommate: what's the password?
+You: i'll tell you when i'm home
+
+------------------------------------------------------------------------
+
+CASE 41
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Wrong number
+MESSAGE:
+Unknown: hey anna, still on for coffee tomorrow?
+You: wrong number sorry
+Unknown: oh wow my bad 😅 hope i didn't bother you
+
+------------------------------------------------------------------------
+
+CASE 42
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Wrong number
+MESSAGE:
+Unknown: is this Daniel from the wine tasting?
+You: nope
+Unknown: sorry! saved the wrong number apparently
+
+------------------------------------------------------------------------
+
+CASE 43
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: New number
+MESSAGE:
+hey dad new number, old phone finally died lol. save this one pls. still coming round sunday?
+
+------------------------------------------------------------------------
+
+CASE 44
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Unexpected contact
+MESSAGE:
+hey, random question, do i know you from somewhere? your number was in my contacts
+
+------------------------------------------------------------------------
+
+CASE 45
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Identity check
+MESSAGE:
+Hi, is this Rachel? Sorry if I've got the wrong number.
+
+------------------------------------------------------------------------
+
+CASE 46
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Social opener
+MESSAGE:
+Unknown: hey! long time no see
+You: sorry who is this?
+Unknown: oh wait maybe i saved the wrong contact
+
+------------------------------------------------------------------------
+
+CASE 47
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Family-like opener
+MESSAGE:
+hi mum, new phone here. old one completely died. just letting you know ❤️
+
+------------------------------------------------------------------------
+
+CASE 48
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Casual unknown contact
+MESSAGE:
+hey sorry to bother you, did we meet at the conference last month?
+
+------------------------------------------------------------------------
+
+CASE 49
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Ambiguous parcel notice
+MESSAGE:
+Delivery update: your parcel could not be delivered today. Please check your delivery preferences.
+
+------------------------------------------------------------------------
+
+CASE 50
+EXPECTED / REVIEW TARGET: INSUFFICIENT EVIDENCE
+SCENARIO: Generic security notice
+MESSAGE:
+A security-related notification was generated for your account. Review recent activity when convenient.
+
+------------------------------------------------------------------------
