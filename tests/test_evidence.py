@@ -62,6 +62,11 @@ from app.core.evidence import detect_evidence
             "Attachment: Delivery_Invoice.apk",
             "RISKY_ATTACHMENT",
         ),
+        (
+            "Might it be okey if you pay the payment until I get back "
+            "into my banking?",
+            "PAYMENT_REQUEST",
+        ),
     ],
 )
 def test_detects_expected_evidence(
@@ -170,3 +175,15 @@ def test_gift_card_request_is_not_reward_lure_or_money_transfer():
     assert "GIFT_CARD_REQUEST" in ids
     assert "NEED_AND_GREED" not in ids
     assert "MONEY_TRANSFER_REQUEST" not in ids
+
+
+def test_ocr_like_payment_request_is_detected_with_new_phone_context():
+    evidence, _ = detect_evidence(
+        "I was just trying to order a new phone but it wont let me do it. "
+        "That's because the notification number goes to my old number. "
+        "Might it be okey if you pay the payment until I get back into "
+        "my banking? That will be on Saturday"
+    )
+    ids = {item.id for item in evidence}
+    assert "NEW_NUMBER_CLAIM" in ids
+    assert "PAYMENT_REQUEST" in ids
