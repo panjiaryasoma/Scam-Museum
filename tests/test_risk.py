@@ -186,12 +186,20 @@ def analyze(
             "HIGH RISK",
         ),
 
-        # RC17: money alone is observable, not automatically scam.
+        # RC17: ordinary repayment context remains low risk.
         (
             "hey can u send me the $18 from dinner "
             "when you get a sec? no rush",
             "WEAK",
             "LOW RISK",
+        ),
+
+        # Standalone money request is actionable but not enough to infer deception.
+        (
+            "mom i have a problem, i was driving my car and got a $10 fine, "
+            "could you please transfer the money to me?",
+            "WEAK",
+            "INSUFFICIENT EVIDENCE",
         ),
 
         # RC18: household Wi-Fi password is not an account credential.
@@ -284,6 +292,31 @@ def test_ocr_payment_request_with_new_phone_context_is_not_ambiguous_only():
     assert "PAYMENT_REQUEST" in ids
     assert result["verdict"] == "SUSPICIOUS"
     assert "MULTIPLE_OBSERVABLE_RISK_SIGNALS" in result["reason_codes"]
+
+
+def test_standalone_money_request_remains_unresolved():
+    result = analyze(
+        "mom i have a problem, i was driving my car and got a $10 fine, "
+        "could you please transfer the money to me?",
+        "WEAK",
+    )
+    assert result["verdict"] == "INSUFFICIENT EVIDENCE"
+    assert (
+        "MONEY_TRANSFER_REQUEST_WITHOUT_DECEPTION_CONTEXT"
+        in result["reason_codes"]
+    )
+
+
+def test_benign_repayment_context_can_remain_low_risk():
+    result = analyze(
+        "hey can u send me the $18 from dinner when you get a sec? no rush",
+        "WEAK",
+    )
+    assert result["verdict"] == "LOW RISK"
+    assert (
+        "BENIGN_REPAYMENT_CONTEXT_WITHOUT_ADDITIONAL_RISK"
+        in result["reason_codes"]
+    )
 
 
 def test_reason_code_is_returned():
