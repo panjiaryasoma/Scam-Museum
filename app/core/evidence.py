@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import ipaddress
 import re
@@ -37,6 +37,8 @@ MONEY_TERMS = (
     r"\b\d+(?:[.,]\d+)?\s?(?:usd|gbp|eur)\b|"
     r"\b(?:money|funds?|cash|usd|gbp|eur)\b)"
 )
+
+RISKY_FILE = r"[A-Za-z0-9_.-]+\.(?:apk|exe|msi|scr|bat|cmd|ps1|jar|dmg|pkg)"
 
 
 RULES = [
@@ -80,6 +82,14 @@ RULES = [
         r"|\bgift cards?\b.{0,120}\b(?:send|share|text|message)\b"
         r".{0,50}\b(?:codes?|photos?|pics?|pictures?)\b",
         "Requests transferable gift cards and disclosure of their codes.",
+    ),
+    (
+        "RISKY_ATTACHMENT",
+        "operational",
+        "critical",
+        rf"\b(?:download|open|install|run|launch|check)\b.{{0,260}}\b{RISKY_FILE}\b"
+        rf"|\b{RISKY_FILE}\b.{{0,260}}\b(?:download|open|install|run|launch|check)\b",
+        "Requests interaction with an executable or installable attachment.",
     ),
     (
         "MONEY_TRANSFER_REQUEST",
@@ -146,7 +156,7 @@ RULES = [
         "manipulation",
         "supporting",
         r"\b(?:winner|won|prize|reward|refund|cashback|compensation|"
-        r"loan approved|approved loan|gift cards?|bonus)\b",
+        r"loan approved|approved loan|bonus)\b",
         "Uses an unexpected benefit, reward, refund, or approval lure.",
     ),
     (
@@ -154,15 +164,19 @@ RULES = [
         "contextual",
         "supporting",
         r"\b(?:mum|mom|mummy|mother|dad|daddy|father|son|daughter|"
-        r"brother|sister)\b",
-        "Frames the sender as a close family member.",
+        r"brother|sister)\b.{0,80}\b(?:it's me|this is my new number|"
+        r"this is my new phone|new phone|new number|temporary number|"
+        r"temp number|using this number|old phone|lost my phone)\b",
+        "Claims a close-family identity in an impersonation-like context.",
     ),
     (
         "NEW_NUMBER_CLAIM",
         "contextual",
         "supporting",
         r"\b(?:my new number|new phone number|changed my number|"
-        r"lost my phone|new phone|new sim)\b",
+        r"lost my phone|new phone|new sim|temporary number|temp number|"
+        r"using this (?:temporary )?number|old phone (?:died|broke|broken|"
+        r"stopped working))\b",
         "Claims a new or changed phone number.",
     ),
     (
@@ -299,6 +313,24 @@ def detect_evidence(
             ):
                 continue
 
+            # Gift-card code requests are not ordinary money transfers merely
+            # because a denomination and the verb "send" occur nearby.
+            if evidence_id == "MONEY_TRANSFER_REQUEST":
+                context = text[
+                    max(0, match.start() - 120):
+                    min(len(text), match.end() + 120)
+                ]
+                if (
+                    re.search(r"\bgift cards?\b", context, re.IGNORECASE)
+                    and re.search(
+                        r"\b(?:send|share|text|message)\b.{0,60}\b"
+                        r"(?:codes?|photos?|pics?|pictures?)\b",
+                        context,
+                        flags=re.IGNORECASE | re.DOTALL,
+                    )
+                ):
+                    continue
+
             # "Do not share your OTP" is protective advice, not a request.
             if evidence_id in request_ids:
                 prefix = text[
@@ -389,5 +421,3 @@ def detect_evidence(
         )
     )
     return positive, protective
-
-
