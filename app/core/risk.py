@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from dataclasses import asdict
 
 from .evidence import Evidence
@@ -25,11 +26,34 @@ AMBIGUOUS_ONLY = {
     "UNEXPECTED_CONTACT",
 }
 
+BENIGN_INFORMATIONAL_PATTERNS = (
+    r"\b(?:order|parcel|package|shipment)\b.{0,60}\b"
+    r"(?:has\s+(?:been\s+)?(?:shipped|delivered)|"
+    r"was\s+(?:shipped|delivered)|delivered\s+successfully)\b",
+    r"\bpassword\s+reset\b.{0,50}\b"
+    r"(?:completed|successful(?:ly)?)\b",
+)
+
+
+def _has_benign_informational_context(text: str | None) -> bool:
+    if not text:
+        return False
+
+    return any(
+        re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        for pattern in BENIGN_INFORMATIONAL_PATTERNS
+    )
+
 
 def decide_risk(
     ml_signal: dict,
     evidence: list[Evidence],
     protective_evidence: list[Evidence],
+    text: str | None = None,
 ) -> dict:
     ids = {item.id for item in evidence}
     protective_ids = {
@@ -43,6 +67,9 @@ def decide_risk(
         for item in evidence
         if item.strength != "weak"
     }
+    benign_informational = _has_benign_informational_context(
+        text
+    )
 
     if len(critical) >= 2:
         verdict = "HIGH RISK"
@@ -165,6 +192,17 @@ def decide_risk(
         verdict = "SUSPICIOUS"
         reason_codes = [
             "ML_STRONG_WITH_LIMITED_DETERMINISTIC_EVIDENCE"
+        ]
+
+    elif (
+        ml_signal.get("label") == "ELEVATED"
+        and not ids
+        and not protective_ids
+        and benign_informational
+    ):
+        verdict = "LOW RISK"
+        reason_codes = [
+            "BENIGN_INFORMATIONAL_CONTEXT_WITHOUT_ACTIONABLE_RISK"
         ]
 
     elif (
