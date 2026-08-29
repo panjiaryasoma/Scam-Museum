@@ -35,6 +35,17 @@ BENIGN_INFORMATIONAL_PATTERNS = (
     r"(?:completed|successful(?:ly)?)\b",
 )
 
+BENIGN_MONEY_TRANSFER_PATTERNS = (
+    r"\b(?:send|transfer|pay)\b.{0,35}\b"
+    r"(?:from|for)\s+(?:dinner|lunch|coffee|groceries|tickets?|rent|utilities?)\b",
+    r"\b(?:from|for)\s+(?:dinner|lunch|coffee|groceries|tickets?|rent|utilities?)\b"
+    r".{0,35}\b(?:send|transfer|pay)\b",
+    r"\b(?:pay|send|transfer)\s+(?:me|you)\s+back\b",
+    r"\b(?:owe|owed)\s+(?:me|you)\b",
+    r"\b(?:split|splitting)\s+(?:the\s+)?(?:bill|check|cost)\b",
+    r"\breimburse(?:ment|d|s|ing)?\b",
+)
+
 
 def _has_benign_informational_context(text: str | None) -> bool:
     if not text:
@@ -47,6 +58,20 @@ def _has_benign_informational_context(text: str | None) -> bool:
             flags=re.IGNORECASE | re.DOTALL,
         )
         for pattern in BENIGN_INFORMATIONAL_PATTERNS
+    )
+
+
+def _has_benign_money_transfer_context(text: str | None) -> bool:
+    if not text:
+        return False
+
+    return any(
+        re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        for pattern in BENIGN_MONEY_TRANSFER_PATTERNS
     )
 
 
@@ -69,6 +94,9 @@ def decide_risk(
         if item.strength != "weak"
     }
     benign_informational = _has_benign_informational_context(
+        text
+    )
+    benign_money_transfer = _has_benign_money_transfer_context(
         text
     )
 
@@ -176,6 +204,24 @@ def decide_risk(
         reason_codes = [
             "AMBIGUOUS_CONTEXT_ONLY"
         ]
+
+    # A standalone request to move money is actionable, but not enough by
+    # itself to call the sender deceptive. Preserve clearly ordinary repayment
+    # language as low risk while keeping other money requests unresolved.
+    elif nonweak_positive == {"MONEY_TRANSFER_REQUEST"}:
+        if (
+            benign_money_transfer
+            and ml_signal.get("label") == "WEAK"
+        ):
+            verdict = "LOW RISK"
+            reason_codes = [
+                "BENIGN_REPAYMENT_CONTEXT_WITHOUT_ADDITIONAL_RISK"
+            ]
+        else:
+            verdict = "INSUFFICIENT EVIDENCE"
+            reason_codes = [
+                "MONEY_TRANSFER_REQUEST_WITHOUT_DECEPTION_CONTEXT"
+            ]
 
     elif len(nonweak_positive) >= 2:
         verdict = "SUSPICIOUS"
