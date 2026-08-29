@@ -1,0 +1,8 @@
+[project]
+name = "scam-museum"
+version = "0.1.0"
+description = "An AI-powered museum of digital deception."
+requires-python = ">=3.12,<3.13"
+
+[tool.vercel]
+entrypoint = "app.main:app"

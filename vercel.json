@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "app/main.py": {
+      "excludeFiles": "{tests/**,reports/**,data/**,docs/**,scripts/**,submission/**,**/__pycache__/**,**/*.pyc,models/scam_classifier.joblib,models/scam_classifier_v02.joblib,models/scam_classifier_v021.joblib,models/scam_classifier_v03.joblib,models/scam_classifier_v04.joblib,models/scam_classifier_v04_metadata.json}"
+    }
+  }
+}
