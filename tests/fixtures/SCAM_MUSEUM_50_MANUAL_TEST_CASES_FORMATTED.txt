@@ -1,0 +1,372 @@
+SCAM MUSEUM — 50 MANUAL MESSAGE TEST CASES
+Synthetic test-only examples for manually copy-pasting into Scam Museum.
+Copy the text inside “The Message” into the application. “The Reality” explains the intended interpretation.
+
+**1. Verification Code Scam (Account Takeover)**
+
+The scammer pretends to be a friend, support agent, or service employee who needs a code that was supposedly sent to you by mistake.
+
+- **The Message:** *"Hey! Sorry to bother you. I was trying to log into WhatsApp on my new phone and I accidentally entered your number. A 6-digit code was sent to you by mistake. Can you send it to me here real quick? I really need to get back into my account."*
+- **The Reality:** That code is the one-time password for your own account. Sharing it can let the scammer take over your WhatsApp or another account protected by SMS verification.
+
+**2. Impersonation Scam (The "Hi Mum" / Family Trap)**
+
+The scammer pretends to be your child, sibling, parent, or another relative using a new phone number.
+
+- **The Message:** *"Hi Mum, it's me. I dropped my phone and the screen is completely dead, so I'm using this temporary number. I have an urgent bill due in an hour and I can't access my banking app yet. Could you please transfer £450 for me? I'll pay you back tomorrow."*
+- **The Reality:** This is a stranger exploiting familiarity and urgency. A real relative can usually be verified through an old number, a voice call, or another trusted contact before money is sent.
+
+**3. Delivery / Malicious File Scam (Malware APK)**
+
+The scammer poses as a courier or logistics company and tries to make you install a dangerous Android application.
+
+- **The Message:** *"Hello, this is DHL Express. We have a package for you, but the delivery address is incomplete. Please download and check the digital invoice attached below to verify your shipment details so we can deliver it today. Attachment: Delivery_Invoice.apk"*
+- **The Reality:** An APK file is an Android application, not a normal invoice. Installing an unknown APK can expose SMS messages, banking credentials, or other data on the device.
+
+**4. Part-Time Job Scam (Task Fraud)**
+
+The scammer offers easy remote work with unusually high pay and almost no requirements.
+
+- **The Message:** *"Hello! I am a recruiter from Global Media Marketing. We offer flexible remote part-time jobs you can do using just your phone. Your task is simply to like videos and rate hotels. You can earn $50 to $200 per day. Would you like to start your first task and receive a $10 bonus?"*
+- **The Reality:** Task scams often pay a small amount first to build trust, then pressure the victim to deposit their own money to unlock higher commissions or withdraw fake earnings.
+
+**5. Bank Security Scam (Fake Fraud Department)**
+
+The scammer pretends to be a bank employee responding to suspicious activity.
+
+- **The Message:** *"Hi, this is the fraud team from your bank. We blocked a £786 card payment from your account. To cancel it, reply YES and send us the 6-digit verification code that was just sent to your phone."*
+- **The Reality:** A real bank should not ask you to send an OTP or verification code to an employee. The scammer may already have some account details and needs the code to complete an unauthorized login or payment.
+
+**6. Fake Delivery Fee Scam**
+
+The scammer claims a parcel cannot be delivered until a small fee is paid.
+
+- **The Message:** *"Your parcel 8842 could not be delivered today because the postage fee was incomplete. Please pay the £1.49 redelivery charge before 6 PM here: https://bit.ly/redeliver8842"*
+- **The Reality:** The small amount is designed to seem harmless. The real goal is usually to collect card details or redirect the victim to a fake courier website.
+
+**7. Boss Impersonation Scam (Gift Cards)**
+
+The scammer pretends to be a manager or executive and asks an employee to make an unusual purchase.
+
+- **The Message:** *"Hey, are you free? I'm stuck in a client meeting and need five Apple gift cards for the team. £100 each. Please buy them now and send me clear photos of the codes. I'll reimburse you later."*
+- **The Reality:** Gift-card codes work like cash once shared. Scammers exploit workplace hierarchy and urgency so the employee acts before verifying the request through a known company channel.
+
+**8. Marketplace Payment Scam**
+
+A fake buyer claims they already paid and sends a link to a fake payment or courier page.
+
+- **The Message:** *"Hi, I already paid for the item through the courier secure checkout. Open this page to receive your money: https://bit.ly/market-pay-91. It may ask for your card details so the funds can be released."*
+- **The Reality:** Legitimate marketplaces normally keep payment inside their own platform. Asking the seller to enter card details into an external link is a strong phishing indicator.
+
+**9. Account Suspension Phishing**
+
+The scammer threatens immediate account closure unless the victim clicks a link.
+
+- **The Message:** *"SECURITY ALERT: unusual login detected. Your account will be permanently closed in 30 minutes unless you verify your identity now: https://bit.ly/account-check"*
+- **The Reality:** The message combines fear, urgency, and an external link. Real services usually direct users to open the official app or website instead of demanding immediate verification through a shortened URL.
+
+**10. Fake Crypto Recovery Scam**
+
+The scammer claims they recovered previously lost cryptocurrency but demands a fee first.
+
+- **The Message:** *"Good news. Our recovery department has located the crypto you lost last year. Your wallet currently contains 4.2 ETH. To release the funds, you only need to pay the $180 network processing fee."*
+- **The Reality:** This is an advance-fee scam. The supposed recovered funds do not exist, and any fee paid is simply additional money sent to the scammer.
+
+**11. Romance Emergency Scam**
+
+A person from an online relationship suddenly claims to be in an emergency and needs money.
+
+- **The Message:** *"Babe, I'm stuck at the airport and my card isn't working here 😔 I hate asking, but can you send me $300 right now? I promise I'll explain everything as soon as I land."*
+- **The Reality:** Romance scammers build emotional trust before creating emergencies that require money. The pressure comes from the relationship rather than from a technical-looking phishing page.
+
+**12. Microsoft 365 Password Phishing**
+
+The scammer impersonates an IT or Microsoft notice and asks the victim to re-enter credentials.
+
+- **The Message:** *"Your Microsoft 365 password expires today. To prevent mailbox suspension, confirm your existing password at https://bit.ly/m365-fix"*
+- **The Reality:** A password-expiry notice should be handled through the official Microsoft login flow or company IT portal. The external link is designed to capture credentials.
+
+**13. Fake PayPal Transaction Scam**
+
+The scammer warns about a large payment and tells the victim to call a fake support number.
+
+- **The Message:** *"PayPal Alert: a payment of $499.99 was approved on your account. If you did not make this purchase, call +1 202 555 0184 immediately and provide the verification code sent to your phone."*
+- **The Reality:** The fake support number connects the victim directly to the scammer. The requested verification code can then be used to access the victim's account.
+
+**14. Tax Refund Phishing**
+
+The scammer promises a refund and asks the victim to confirm banking details.
+
+- **The Message:** *"HMRC refund pending: £384.72. We were unable to send the payment. Confirm your bank details within 24 hours at https://bit.ly/refund-384"*
+- **The Reality:** Tax authorities do not normally distribute refunds through random shortened links. The refund is used as bait to collect financial information.
+
+**15. Fake Police Threat Scam**
+
+The scammer uses legal threats to frighten the victim into paying immediately.
+
+- **The Message:** *"Police Notice: an arrest warrant has been issued under your name due to unpaid penalties. Pay the £275 administrative settlement today to avoid further legal action."*
+- **The Reality:** Police and courts do not resolve arrest warrants through instant payments requested by unsolicited messages. The threat is designed to stop the victim from thinking critically.
+
+**16. Loan Approval Scam**
+
+The scammer offers an attractive loan but asks for an upfront fee before releasing the funds.
+
+- **The Message:** *"Congratulations! Your $8,000 loan has been approved. Before we release the money, please pay the $95 processing and insurance fee to secure the transfer."*
+- **The Reality:** Legitimate lenders do not normally demand random advance payments through chat before releasing a loan. The promised loan is often fictional.
+
+**17. Investment Group Scam**
+
+The scammer promotes extraordinary returns and pressures the victim to join quickly.
+
+- **The Message:** *"Mate, I doubled £2,000 in three days using this private crypto group. The admin says there are only a few spots left tonight. Deposit £500 and they will activate your trading account."*
+- **The Reality:** Guaranteed or unusually high returns combined with urgency are classic investment-scam signals. The trading platform may simply display fake balances.
+
+**18. Steam / Gaming Gift Card Scam**
+
+The scammer asks for gaming gift cards as a supposedly convenient form of payment.
+
+- **The Message:** *"Hey, it's Mark from finance. I need three Steam gift cards for a client issue. £100 each. Scratch the backs and send me the codes as soon as you buy them."*
+- **The Reality:** Gift cards are difficult to recover once the codes are shared. Legitimate business expenses should not require employees to send gift-card codes through chat.
+
+**19. Fake Netflix Billing Scam**
+
+The scammer claims a subscription has been suspended and asks for card details.
+
+- **The Message:** *"Netflix: your account has been suspended due to a failed payment. Update your billing information now at https://bit.ly/netflix-billing-fix"*
+- **The Reality:** The fake page imitates the streaming service and captures payment information. A legitimate billing issue should be checked directly inside the official Netflix app or website.
+
+**20. SIM Swap Verification Scam**
+
+The scammer claims a SIM replacement is happening and asks for a code.
+
+- **The Message:** *"Vodafone Security: a SIM replacement has been requested on your number. If this was not you, reply with the verification code we just sent so we can stop the request."*
+- **The Reality:** The verification code may actually authorize the SIM replacement or another account action. Real support staff should not ask the customer to send them security codes.
+
+**21. Inheritance Scam**
+
+The scammer tells the victim they are entitled to a large inheritance or unclaimed estate.
+
+- **The Message:** *"Dear beneficiary, your late relative left an unclaimed estate valued at $1.8 million. To begin the transfer, a legal release fee of $650 is required."*
+- **The Reality:** The large inheritance is bait. The victim is repeatedly asked to pay fees for lawyers, taxes, documents, or transfer costs until they stop sending money.
+
+**22. Fake Hotel Booking Verification**
+
+The scammer impersonates a hotel or booking platform and threatens to cancel a reservation.
+
+- **The Message:** *"Your hotel booking will be cancelled because the payment verification failed. Re-enter your card details within 30 minutes to keep your reservation: https://bit.ly/hotel-confirm"*
+- **The Reality:** The attacker exploits the fear of losing a real or plausible reservation. Payment details entered into the fake page go to the scammer.
+
+**23. Telegram Job Recruitment Scam**
+
+The scammer uses an attractive job offer to move the conversation to Telegram or another private channel.
+
+- **The Message:** *"Hi! We found your profile and have easy remote work available. You only need to complete three simple online tasks per day and can earn $200 to $500. Contact our manager on Telegram @workteam88 to start today."*
+- **The Reality:** Moving the victim away from a legitimate recruitment platform makes the scam harder to moderate. The job often evolves into a task or advance-fee scheme.
+
+**24. Accidental Verification Code Scam**
+
+The scammer pretends they entered the victim's phone number by accident.
+
+- **The Message:** *"Hey, sorry! I was signing up for something and accidentally used your phone number. A code should have just arrived on your phone. Can you send it to me? It'll only take a second."*
+- **The Reality:** Verification codes are tied to the account action being performed. A stranger has no legitimate reason to need a code delivered to your phone.
+
+**25. Money Mule Recruitment**
+
+The scammer offers a commission if the victim receives or transfers money for them.
+
+- **The Message:** *"Hi, quick question. Are you able to receive a bank transfer for me today? You would just send it onward to another account and keep 10% for helping."*
+- **The Reality:** The money may come from fraud or stolen accounts. Acting as a money mule can expose the victim to account freezes, financial losses, or legal consequences.
+
+**26. Prize Claim Scam**
+
+The scammer says the victim has won a reward despite never entering a competition.
+
+- **The Message:** *"Congratulations! You've been selected for a £500 shopping reward 🎁 We just need to confirm a few personal details before the voucher can be released."*
+- **The Reality:** Unexpected prizes are often used to collect personal information, payment details, or small 'processing fees.' A real prize should be traceable to a competition the recipient actually entered.
+
+**27. Fake Bank Callback Request**
+
+The scammer claims to be bank security and pressures the victim to respond quickly.
+
+- **The Message:** *"Bank security team here. We need to speak with you urgently regarding unusual activity on your account. Reply to this message so we can secure it before more transactions occur."*
+- **The Reality:** The message may be the opening stage of a longer social-engineering attack. The safe response is to contact the bank using the number printed on the card or listed in the official app.
+
+**28. Shortened-Link Social Engineering**
+
+The message appears casual but includes an unexplained shortened URL.
+
+- **The Message:** *"Hey, this is the photo I mentioned earlier 😂 https://bit.ly/view-photo-991"*
+- **The Reality:** A shortened link hides the actual destination. The message may be harmless, but without context it deserves caution, especially when it comes from an unexpected sender.
+
+**29. Unknown Recruiter Message**
+
+A recruiter contacts the victim through an unexpected personal number with a vague offer.
+
+- **The Message:** *"Hi, I'm Sophie from HR. We found your number on a recruitment database. Are you available for a quick paid task today? It only takes about ten minutes."*
+- **The Reality:** This may be legitimate outreach, but the vague company identity, personal-number contact, and paid-task framing make independent verification necessary before sharing information or following instructions.
+
+**30. Fake Payment Release Fee**
+
+A supposed buyer says the victim must pay money before receiving money.
+
+- **The Message:** *"I already sent the payment. Check your email for the confirmation. The courier system says you may need to pay a small refundable release fee before the money reaches your account."*
+- **The Reality:** A seller should not normally have to pay a fee to unlock money from a buyer. The fake confirmation is used to convince the victim to send funds first.
+
+**31. Protective OTP Notification**
+
+A legitimate security message sends a code while explicitly warning the user not to share it.
+
+- **The Message:** *"Your verification code is 483920. Do not share this code with anyone, including support staff. We will never ask you for it."*
+- **The Reality:** This is protective language rather than a request for the code. The message tells the user to keep the credential private and does not ask them to perform a suspicious action.
+
+**32. Normal Conversation**
+
+A casual personal chat contains no payment request, threat, credential request, or suspicious link.
+
+- **The Message:** *"Maya: grabbing dinner around 7?
+You: yep
+Maya: same place as last week?
+You: works for me 👍"*
+- **The Reality:** This is ordinary conversation. There is no meaningful scam evidence in the text.
+
+**33. Legitimate Peer-to-Peer Payment**
+
+A friend asks for a small amount of money connected to a clear shared expense.
+
+- **The Message:** *"Hey, can you send me the $18 from dinner when you get a sec? No rush."*
+- **The Reality:** A money request by itself is not automatically a scam. The amount, shared context, and lack of urgency or impersonation make this look like a normal peer payment.
+
+**34. Legitimate Wi-Fi Password Request**
+
+A familiar person asks for a household password in normal conversational context.
+
+- **The Message:** *"Can you send me the Wi-Fi password when you get home? I forgot to save it 😭"*
+- **The Reality:** The word 'password' alone should not make a message fraudulent. Context matters: this is a normal household request with no account threat or identity deception.
+
+**35. Legitimate Delivery Update**
+
+A retailer provides a routine shipment update without demanding payment or credentials.
+
+- **The Message:** *"Amazon: your package is out for delivery. Track the latest status in the Amazon app."*
+- **The Reality:** The message directs the user to the official app and does not request card information, passwords, OTPs, or urgent payment.
+
+**36. Legitimate Bank Statement Notice**
+
+A bank notification tells the customer that a document is available inside the official app.
+
+- **The Message:** *"Your monthly statement is ready. Sign in to the official banking app if you'd like to view it."*
+- **The Reality:** This is routine account communication. It does not include an external link or ask the user to disclose credentials through the message.
+
+**37. Legitimate New-Number Conversation**
+
+A friend tells the user they changed phones and continues with a familiar topic.
+
+- **The Message:** *"Jamie: yo new number, finally switched phones
+You: noted lol
+Jamie: football saturday still?
+You: absolutely"*
+- **The Reality:** A new-number claim can appear in scams, but the surrounding conversation contains normal continuity and no request for money, codes, or sensitive information.
+
+**38. Legitimate Security Awareness Message**
+
+An IT department reminds users not to disclose sensitive credentials.
+
+- **The Message:** *"Reminder from IT: support will never ask for your password or verification code. Report suspicious requests through the help desk."*
+- **The Reality:** The message is protective. It warns the recipient against exactly the behaviors commonly used in phishing.
+
+**39. Legitimate Shared-Expense Transfer**
+
+Two people discuss repayment for a known purchase.
+
+- **The Message:** *"Alex: got the concert tickets
+You: niceee
+Alex: your half was £42 btw
+You: sending it now"*
+- **The Reality:** The transfer is tied to an explicit shared expense and an ongoing conversation. There is no sudden identity change, external payment link, or coercive urgency.
+
+**40. Legitimate Password Context**
+
+A household conversation includes the word 'password' without involving an account takeover.
+
+- **The Message:** *"Roommate: netflix logged me out again 💀
+You: lol
+Roommate: what's the password?
+You: i'll tell you when i'm home"*
+- **The Reality:** This is a useful hard negative. Keyword matching alone could overreact to 'password,' but the surrounding conversation looks like normal household communication.
+
+**41. Wrong-Number Conversation**
+
+An unknown person appears to have contacted the wrong number and apologizes.
+
+- **The Message:** *"Unknown: hey Anna, still on for coffee tomorrow?
+You: wrong number sorry
+Unknown: oh wow my bad 😅 hope I didn't bother you"*
+- **The Reality:** Wrong-number messages are sometimes used to start long scams, but this text alone does not contain enough evidence to conclude fraud. The correct response is caution without pretending certainty.
+
+**42. Mistaken Contact**
+
+A stranger asks for someone else and immediately accepts that they reached the wrong person.
+
+- **The Message:** *"Unknown: is this Daniel from the wine tasting?
+You: nope
+Unknown: sorry! saved the wrong number apparently"*
+- **The Reality:** The situation could be genuine or could be an opening for social engineering. At this stage there is no money request, credential request, threat, or suspicious link.
+
+**43. New Number Without a Request**
+
+A message claims to come from a family member using a new phone but does not ask for anything sensitive.
+
+- **The Message:** *"Hey Dad, new number. Old phone finally died lol. Save this one please. Still coming round Sunday?"*
+- **The Reality:** The pattern resembles family-impersonation scams, but there is not yet enough evidence to call it fraudulent. Verification through another known channel would be sensible.
+
+**44. Unexpected Contact**
+
+An unknown person asks whether the recipient recognizes them.
+
+- **The Message:** *"Hey, random question, do I know you from somewhere? Your number was in my contacts."*
+- **The Reality:** This may be harmless or may be the opening stage of a social-engineering attempt. The message alone is ambiguous.
+
+**45. Identity Check From an Unknown Number**
+
+A stranger politely checks whether they reached the correct person.
+
+- **The Message:** *"Hi, is this Rachel? Sorry if I've got the wrong number."*
+- **The Reality:** There is no request for money, credentials, links, or urgent action. The sender is unknown, but unknown does not automatically mean scam.
+
+**46. Casual Wrong-Contact Opener**
+
+A short exchange begins with apparent familiarity and then acknowledges a possible mistake.
+
+- **The Message:** *"Unknown: hey! long time no see
+You: sorry who is this?
+Unknown: oh wait maybe I saved the wrong contact"*
+- **The Reality:** This should remain ambiguous unless the conversation develops into manipulation, money requests, investment pitches, or other concrete scam behavior.
+
+**47. Family-Like New Phone Message**
+
+Someone claims to be a relative using a new device but makes no financial or credential request.
+
+- **The Message:** *"Hi Mum, new phone here. Old one completely died. Just letting you know ❤️"*
+- **The Reality:** This resembles a common impersonation setup, so it deserves verification, but the current message alone does not contain enough evidence for a high-confidence scam verdict.
+
+**48. Conference Contact Message**
+
+An unknown sender thinks they met the recipient at an event.
+
+- **The Message:** *"Hey, sorry to bother you. Did we meet at the conference last month? Your number looks familiar."*
+- **The Reality:** The message is unexpected but contains no concrete harmful request. It may be genuine, mistaken, or the beginning of social engineering.
+
+**49. Generic Parcel Notification**
+
+A delivery message reports a failed delivery without asking for money or sending an external link.
+
+- **The Message:** *"Delivery update: your parcel could not be delivered today. Please check your delivery preferences."*
+- **The Reality:** This wording alone is not enough to establish phishing. A stronger scam signal would appear if the sender later demanded a fee, credentials, or a suspicious external link.
+
+**50. Generic Security Notification**
+
+A service reports a security event but does not demand immediate action through a link.
+
+- **The Message:** *"A security-related notification was generated for your account. Review recent activity when convenient."*
+- **The Reality:** This is deliberately vague. Without a credential request, suspicious link, threat, or urgent payment demand, the message should not automatically be treated as a confirmed scam.
+
