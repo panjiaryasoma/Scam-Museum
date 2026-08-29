@@ -271,6 +271,21 @@ def test_risky_attachment_has_explicit_high_risk_reason():
     )
 
 
+def test_ocr_payment_request_with_new_phone_context_is_not_ambiguous_only():
+    result = analyze(
+        "I was just trying to order a new phone but it wont let me do it. "
+        "That's because the notification number goes to my old number. "
+        "Might it be okey if you pay the payment until I get back into "
+        "my banking? That will be on Saturday",
+        "WEAK",
+    )
+    ids = {item["id"] for item in result["evidence"]}
+    assert "NEW_NUMBER_CLAIM" in ids
+    assert "PAYMENT_REQUEST" in ids
+    assert result["verdict"] == "SUSPICIOUS"
+    assert "MULTIPLE_OBSERVABLE_RISK_SIGNALS" in result["reason_codes"]
+
+
 def test_reason_code_is_returned():
     result = analyze(
         "Your account will be suspended immediately. "
