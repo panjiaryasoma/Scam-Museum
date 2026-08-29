@@ -25,6 +25,7 @@ def analyze(
         },
         evidence,
         protective,
+        text=text,
     )
 
 
@@ -89,6 +90,23 @@ def analyze(
             "Please review your recent activity when you have time.",
             "ELEVATED",
             "INSUFFICIENT EVIDENCE",
+        ),
+        (
+            "Your parcel has shipped. "
+            "Track it at https://amazon.com/orders",
+            "ELEVATED",
+            "LOW RISK",
+        ),
+        (
+            "Your order has been delivered successfully.",
+            "ELEVATED",
+            "LOW RISK",
+        ),
+        (
+            "Password reset completed successfully. "
+            "If this was not you, contact support through the official app.",
+            "ELEVATED",
+            "LOW RISK",
         ),
 
         # RC02
@@ -209,6 +227,18 @@ def test_elevated_ml_without_observable_evidence_is_unresolved():
     assert result["verdict"] == "INSUFFICIENT EVIDENCE"
     assert (
         "ML_ELEVATED_WITHOUT_OBSERVABLE_EVIDENCE"
+        in result["reason_codes"]
+    )
+
+
+def test_benign_informational_context_can_remain_low_risk():
+    result = analyze(
+        "Your order has been delivered successfully.",
+        "ELEVATED",
+    )
+    assert result["verdict"] == "LOW RISK"
+    assert (
+        "BENIGN_INFORMATIONAL_CONTEXT_WITHOUT_ACTIONABLE_RISK"
         in result["reason_codes"]
     )
 
