@@ -1,4 +1,4 @@
-﻿import pytest
+import pytest
 
 from app.core.evidence import detect_evidence
 
@@ -56,6 +56,11 @@ from app.core.evidence import detect_evidence
         (
             "We recovered the crypto you lost last year.",
             "RECOVERY_LURE",
+        ),
+        (
+            "Please download and check the digital invoice attached below. "
+            "Attachment: Delivery_Invoice.apk",
+            "RISKY_ATTACHMENT",
         ),
     ],
 )
@@ -145,3 +150,23 @@ def test_card_details_is_financial_info_request():
         "Open this link to receive the money and enter your card details."
     )
     assert "FINANCIAL_INFO_REQUEST" in {item.id for item in evidence}
+
+
+def test_family_reference_without_impersonation_context_is_not_flagged():
+    evidence, _ = detect_evidence(
+        "Hey Mum, dinner is at 7 tonight. "
+        "I'll probably get there around 6:45."
+    )
+    assert "FAMILY_IMPERSONATION" not in {item.id for item in evidence}
+
+
+def test_gift_card_request_is_not_reward_lure_or_money_transfer():
+    evidence, _ = detect_evidence(
+        "Hey, are you free? I'm stuck in a client meeting and need five "
+        "Apple gift cards for the team. £100 each. Please buy them now "
+        "and send me clear photos of the codes. I'll reimburse you later."
+    )
+    ids = {item.id for item in evidence}
+    assert "GIFT_CARD_REQUEST" in ids
+    assert "NEED_AND_GREED" not in ids
+    assert "MONEY_TRANSFER_REQUEST" not in ids
