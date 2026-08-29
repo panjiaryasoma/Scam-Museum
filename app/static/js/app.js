@@ -20,6 +20,8 @@ const EVIDENCE_LABELS = {
   OTP_REQUEST: "OTP request",
   CREDENTIAL_REQUEST: "Credential request",
   FINANCIAL_INFO_REQUEST: "Financial information request",
+  GIFT_CARD_REQUEST: "Gift card request",
+  RISKY_ATTACHMENT: "Risky attachment",
   MONEY_TRANSFER_REQUEST: "Money transfer request",
   PAYMENT_REQUEST: "Payment request",
   SUSPICIOUS_URL: "Suspicious URL",
@@ -27,6 +29,7 @@ const EVIDENCE_LABELS = {
   TIME_URGENCY: "Time urgency",
   ACCOUNT_THREAT: "Account threat",
   AUTHORITY_CLAIM: "Authority claim",
+  RECOVERY_LURE: "Recovery lure",
   NEED_AND_GREED: "Reward or benefit lure",
   FAMILY_IMPERSONATION: "Family impersonation",
   NEW_NUMBER_CLAIM: "New number claim",
@@ -135,10 +138,24 @@ function makeFindingItem(item, index) {
   return row;
 }
 
+function uniqueFindingsById(items) {
+  const seen = new Set();
+
+  return items.filter((item) => {
+    if (!item?.id || seen.has(item.id)) {
+      return false;
+    }
+
+    seen.add(item.id);
+    return true;
+  });
+}
+
 function renderEvidence(items) {
   evidenceList.replaceChildren();
+  const uniqueItems = uniqueFindingsById(items);
 
-  if (!items.length) {
+  if (!uniqueItems.length) {
     const empty = document.createElement("p");
     empty.className = "finding-empty";
     empty.textContent = "No material observable risk artifacts were cataloged.";
@@ -146,22 +163,23 @@ function renderEvidence(items) {
     return;
   }
 
-  items.forEach((item, index) => {
+  uniqueItems.forEach((item, index) => {
     evidenceList.append(makeFindingItem(item, index));
   });
 }
 
 function renderProtective(items) {
   protectiveList.replaceChildren();
+  const uniqueItems = uniqueFindingsById(items);
 
-  if (!items.length) {
+  if (!uniqueItems.length) {
     protectiveBlock.hidden = true;
     return;
   }
 
   protectiveBlock.hidden = false;
 
-  items.forEach((item, index) => {
+  uniqueItems.forEach((item, index) => {
     protectiveList.append(makeFindingItem(item, index));
   });
 }
