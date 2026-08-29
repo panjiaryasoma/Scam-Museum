@@ -10,3 +10,14 @@ dependencies = [
   "scipy==1.17.0",
   "joblib==1.5.3",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+  "integration: requires frozen local v0.5 model artifacts",
+]
+filterwarnings = [
+  'ignore:Setting the shape on a NumPy array has been deprecated in NumPy 2\.5\..*:DeprecationWarning:joblib\.numpy_pickle',
+  'ignore:Using .httpx. with .starlette\.testclient. is deprecated.*:Warning:fastapi\.testclient',
+]
