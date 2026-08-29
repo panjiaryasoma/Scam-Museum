@@ -1,0 +1,26 @@
+{
+  "n": 266,
+  "threshold": 0.7,
+  "class_counts": {
+    "0": 80,
+    "1": 186
+  },
+  "f1_macro": 0.5397297560027219,
+  "precision_scam": 0.7214611872146118,
+  "recall_scam": 0.8494623655913979,
+  "f1_scam": 0.7802469135802469,
+  "specificity_legitimate": 0.2375,
+  "false_positive_rate": 0.7625,
+  "average_precision": 0.7515786282560141,
+  "balanced_accuracy": 0.5434811827956989,
+  "confusion_matrix": [
+    [
+      19,
+      61
+    ],
+    [
+      28,
+      158
+    ]
+  ]
+}

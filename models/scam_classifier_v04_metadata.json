@@ -1,0 +1,20 @@
+{
+  "version": "0.4",
+  "selected_model": "word_char_balanced_v04",
+  "threshold": 0.7,
+  "selection": {
+    "model": "word_char_balanced_v04",
+    "threshold": 0.7,
+    "primary_cv_f1_macro": 0.9846717816846043,
+    "family_macro_recall": 0.7645484947716542,
+    "family_weighted_recall": 0.9095785440613027,
+    "hard_negative_specificity": 0.8686274509803921,
+    "selection_score": 0.8633665284388523
+  },
+  "training_rows": 12707,
+  "training_class_counts": {
+    "0": 4034,
+    "1": 8673
+  },
+  "hard_negative_rows": 167
+}

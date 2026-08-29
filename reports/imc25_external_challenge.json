@@ -1,0 +1,125 @@
+{
+  "dataset": "data\\processed\\imc25_english_challenge.csv",
+  "model": "models\\scam_classifier.joblib",
+  "threshold": 0.5,
+  "n_external_positive": 14362,
+  "detected_count": 10259,
+  "missed_count": 4103,
+  "external_smishing_recall": 0.7143155549366383,
+  "score_summary": {
+    "min": 0.010549994895752764,
+    "p05": 0.17291202580481604,
+    "median": 0.6825620604722249,
+    "p95": 0.9512700363504085,
+    "max": 0.9926501855736967
+  },
+  "by_scam_type": [
+    {
+      "scam_type": "wrong number",
+      "n": 222,
+      "detected": 4,
+      "missed": 218,
+      "recall": 0.018018018018018018
+    },
+    {
+      "scam_type": "hey mum/dad",
+      "n": 55,
+      "detected": 2,
+      "missed": 53,
+      "recall": 0.03636363636363636
+    },
+    {
+      "scam_type": "others",
+      "n": 3694,
+      "detected": 1951,
+      "missed": 1743,
+      "recall": 0.5281537628586898
+    },
+    {
+      "scam_type": "delivery",
+      "n": 1237,
+      "detected": 707,
+      "missed": 530,
+      "recall": 0.5715440582053355
+    },
+    {
+      "scam_type": "government",
+      "n": 1332,
+      "detected": 967,
+      "missed": 365,
+      "recall": 0.725975975975976
+    },
+    {
+      "scam_type": "telecom",
+      "n": 1379,
+      "detected": 1064,
+      "missed": 315,
+      "recall": 0.7715736040609137
+    },
+    {
+      "scam_type": "banking",
+      "n": 6442,
+      "detected": 5563,
+      "missed": 879,
+      "recall": 0.8635516920211115
+    },
+    {
+      "scam_type": null,
+      "n": 1,
+      "detected": 1,
+      "missed": 0,
+      "recall": 1.0
+    }
+  ],
+  "by_lure": [
+    {
+      "lure": "kindness",
+      "n": 291,
+      "detected": 49,
+      "missed": 242,
+      "recall": 0.16838487972508592
+    },
+    {
+      "lure": "dishonesty",
+      "n": 64,
+      "detected": 20,
+      "missed": 44,
+      "recall": 0.3125
+    },
+    {
+      "lure": "herd",
+      "n": 89,
+      "detected": 51,
+      "missed": 38,
+      "recall": 0.5730337078651685
+    },
+    {
+      "lure": "need and greed",
+      "n": 2923,
+      "detected": 2050,
+      "missed": 873,
+      "recall": 0.7013342456380431
+    },
+    {
+      "lure": "distraction",
+      "n": 4550,
+      "detected": 3269,
+      "missed": 1281,
+      "recall": 0.7184615384615385
+    },
+    {
+      "lure": "authority",
+      "n": 11329,
+      "detected": 9038,
+      "missed": 2291,
+      "recall": 0.7977756200900344
+    },
+    {
+      "lure": "time/urgency",
+      "n": 10393,
+      "detected": 8301,
+      "missed": 2092,
+      "recall": 0.7987106706437025
+    }
+  ]
+}

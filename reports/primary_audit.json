@@ -1,0 +1,119 @@
+{
+  "input": "data\\raw\\Dataset_5971.csv",
+  "input_sha256": "649844f1c62a6b27e145eaf17a65f7010c56c390e11a794ea8329993a05ba71e",
+  "encoding_used": "utf-8",
+  "raw_rows": 5971,
+  "columns": [
+    "LABEL",
+    "TEXT",
+    "URL",
+    "EMAIL",
+    "PHONE",
+    "source_label_raw",
+    "source_label",
+    "text_raw",
+    "text_missing",
+    "text",
+    "text_empty",
+    "replacement_char_count",
+    "canonical_label",
+    "target",
+    "exact_key",
+    "template",
+    "template_group_id"
+  ],
+  "unknown_normalized_labels": [],
+  "source_label_counts_normalized": {
+    "ham": 4844,
+    "smishing": 638,
+    "spam": 489
+  },
+  "canonical_label_counts": {
+    "LEGITIMATE": 4844,
+    "SCAM_RISK": 638,
+    "AMBIGUOUS_SPAM": 489
+  },
+  "missing_text_rows": 0,
+  "empty_text_rows_after_normalization": 0,
+  "rows_with_replacement_character": 145,
+  "total_replacement_characters": 185,
+  "exact_duplicate_group_count_all_labels": 133,
+  "exact_duplicate_extra_rows_all_labels": 140,
+  "binary_rows_before_conflict_filter": 5482,
+  "binary_conflicting_exact_group_count": 0,
+  "binary_conflicting_rows_removed": 0,
+  "binary_same_label_exact_duplicate_rows_removed": 86,
+  "binary_rows_after_cleaning": 5396,
+  "binary_clean_class_counts": {
+    "LEGITIMATE": 4834,
+    "SCAM_RISK": 562
+  },
+  "binary_unique_template_groups": 5303,
+  "binary_repeated_template_group_count": 44,
+  "largest_binary_template_groups": [
+    {
+      "template_group_id": "024f2c3e44facc40",
+      "rows": 7
+    },
+    {
+      "template_group_id": "2c3be6a26a406bd9",
+      "rows": 7
+    },
+    {
+      "template_group_id": "9c39e71dc7c4b52f",
+      "rows": 7
+    },
+    {
+      "template_group_id": "f5865f84d36d43c4",
+      "rows": 7
+    },
+    {
+      "template_group_id": "74f2f8846caef673",
+      "rows": 6
+    },
+    {
+      "template_group_id": "e9d3cbbca28eca29",
+      "rows": 6
+    },
+    {
+      "template_group_id": "10f16fe0f0eb2474",
+      "rows": 5
+    },
+    {
+      "template_group_id": "67934211e82944fb",
+      "rows": 5
+    },
+    {
+      "template_group_id": "ca84e3584268f2c4",
+      "rows": 5
+    },
+    {
+      "template_group_id": "f635ea723c0ef5da",
+      "rows": 5
+    },
+    {
+      "template_group_id": "a4cb1a5a8bcef1f8",
+      "rows": 4
+    },
+    {
+      "template_group_id": "f1d6d66921560bb4",
+      "rows": 4
+    },
+    {
+      "template_group_id": "7a6c14ee8dcda9af",
+      "rows": 3
+    },
+    {
+      "template_group_id": "81ce496e0fcf616c",
+      "rows": 3
+    },
+    {
+      "template_group_id": "8b2e5390e1ad99a3",
+      "rows": 3
+    }
+  ],
+  "outputs": {
+    "primary_binary_clean": "data\\processed\\primary_binary_clean.csv",
+    "ambiguous_spam": "data\\processed\\ambiguous_spam.csv"
+  }
+}

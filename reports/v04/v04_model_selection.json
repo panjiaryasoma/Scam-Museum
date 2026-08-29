@@ -1,0 +1,304 @@
+{
+  "version": "0.4",
+  "selected": {
+    "model": "word_char_balanced_v04",
+    "threshold": 0.7,
+    "primary_cv_f1_macro": 0.9846717816846043,
+    "family_macro_recall": 0.7645484947716542,
+    "family_weighted_recall": 0.9095785440613027,
+    "hard_negative_specificity": 0.8686274509803921,
+    "selection_score": 0.8633665284388523
+  },
+  "all_choices": [
+    {
+      "model": "word_char_balanced_v04",
+      "threshold": 0.7,
+      "primary_cv_f1_macro": 0.9846717816846043,
+      "family_macro_recall": 0.7645484947716542,
+      "family_weighted_recall": 0.9095785440613027,
+      "hard_negative_specificity": 0.8686274509803921,
+      "selection_score": 0.8633665284388523
+    },
+    {
+      "model": "word_char_balanced_v04",
+      "threshold": 0.6,
+      "primary_cv_f1_macro": 0.9846717816846043,
+      "family_macro_recall": 0.833926125302454,
+      "family_weighted_recall": 0.9359108324625566,
+      "hard_negative_specificity": 0.790909090909091,
+      "selection_score": 0.8622965244467261
+    },
+    {
+      "model": "char_balanced_v04",
+      "threshold": 0.6,
+      "primary_cv_f1_macro": 0.9864393101118392,
+      "family_macro_recall": 0.8160777281820011,
+      "family_weighted_recall": 0.924695228143504,
+      "hard_negative_specificity": 0.7789661319073085,
+      "selection_score": 0.8515775681561543
+    },
+    {
+      "model": "char_balanced_v04",
+      "threshold": 0.7,
+      "primary_cv_f1_macro": 0.9864393101118392,
+      "family_macro_recall": 0.7442619548814928,
+      "family_weighted_recall": 0.8886799024730059,
+      "hard_negative_specificity": 0.8563279857397503,
+      "selection_score": 0.8510307755652822
+    },
+    {
+      "model": "word_char_plain_v04",
+      "threshold": 0.7,
+      "primary_cv_f1_macro": 0.9541267195099611,
+      "family_macro_recall": 0.8331900892543714,
+      "family_weighted_recall": 0.9314524555903866,
+      "hard_negative_specificity": 0.7727272727272728,
+      "selection_score": 0.8468828072368622
+    },
+    {
+      "model": "word_char_balanced_v04",
+      "threshold": 0.8,
+      "primary_cv_f1_macro": 0.9846717816846043,
+      "family_macro_recall": 0.6883216616317313,
+      "family_weighted_recall": 0.8659700452803901,
+      "hard_negative_specificity": 0.9221033868092693,
+      "selection_score": 0.8443918024868023
+    },
+    {
+      "model": "word_char_plain_v04",
+      "threshold": 0.8,
+      "primary_cv_f1_macro": 0.9541267195099611,
+      "family_macro_recall": 0.7489240004502415,
+      "family_weighted_recall": 0.8941832114245908,
+      "hard_negative_specificity": 0.8508021390374332,
+      "selection_score": 0.8430070284217819
+    },
+    {
+      "model": "char_balanced_v04",
+      "threshold": 0.8,
+      "primary_cv_f1_macro": 0.9864393101118392,
+      "family_macro_recall": 0.6631528609632469,
+      "family_weighted_recall": 0.8347614071752003,
+      "hard_negative_specificity": 0.9162210338680927,
+      "selection_score": 0.8303039341221647
+    },
+    {
+      "model": "word_char_balanced_v04",
+      "threshold": 0.5,
+      "primary_cv_f1_macro": 0.9846717816846043,
+      "family_macro_recall": 0.8706618740369212,
+      "family_weighted_recall": 0.9536050156739811,
+      "hard_negative_specificity": 0.6891265597147951,
+      "selection_score": 0.8298225869655872
+    },
+    {
+      "model": "word_balanced_v04",
+      "threshold": 0.7,
+      "primary_cv_f1_macro": 0.9763131477584279,
+      "family_macro_recall": 0.7009645030004312,
+      "family_weighted_recall": 0.8847788227098572,
+      "hard_negative_specificity": 0.8445632798573974,
+      "selection_score": 0.8253296542032226
+    },
+    {
+      "model": "word_balanced_v04",
+      "threshold": 0.6,
+      "primary_cv_f1_macro": 0.9763131477584279,
+      "family_macro_recall": 0.7668993775485956,
+      "family_weighted_recall": 0.9244862417276211,
+      "hard_negative_specificity": 0.7545454545454545,
+      "selection_score": 0.8211271041745412
+    },
+    {
+      "model": "char_balanced_v04",
+      "threshold": 0.5,
+      "primary_cv_f1_macro": 0.9864393101118392,
+      "family_macro_recall": 0.8634008615584581,
+      "family_weighted_recall": 0.946360153256705,
+      "hard_negative_specificity": 0.670944741532977,
+      "selection_score": 0.819136473581694
+    },
+    {
+      "model": "word_char_plain_v04",
+      "threshold": 0.6,
+      "primary_cv_f1_macro": 0.9541267195099611,
+      "family_macro_recall": 0.8755208848367582,
+      "family_weighted_recall": 0.9513758272378962,
+      "hard_negative_specificity": 0.6711229946524064,
+      "selection_score": 0.8151518552524774
+    },
+    {
+      "model": "word_char_plain_v04",
+      "threshold": 0.9,
+      "primary_cv_f1_macro": 0.9541267195099611,
+      "family_macro_recall": 0.6271041694669893,
+      "family_weighted_recall": 0.8130268199233717,
+      "hard_negative_specificity": 0.9459893048128343,
+      "selection_score": 0.8108536288191012
+    },
+    {
+      "model": "word_balanced_v04",
+      "threshold": 0.5,
+      "primary_cv_f1_macro": 0.9763131477584279,
+      "family_macro_recall": 0.8379709673433317,
+      "family_weighted_recall": 0.9492163009404389,
+      "hard_negative_specificity": 0.6655971479500892,
+      "selection_score": 0.8064449831471497
+    },
+    {
+      "model": "word_char_plain_v04",
+      "threshold": 0.5,
+      "primary_cv_f1_macro": 0.9541267195099611,
+      "family_macro_recall": 0.9179314895535586,
+      "family_weighted_recall": 0.9657262277951933,
+      "hard_negative_specificity": 0.6112299465240641,
+      "selection_score": 0.7950115191888161
+    },
+    {
+      "model": "word_char_balanced_v04",
+      "threshold": 0.9,
+      "primary_cv_f1_macro": 0.9846717816846043,
+      "family_macro_recall": 0.5759469161712438,
+      "family_weighted_recall": 0.7710902124695228,
+      "hard_negative_specificity": 0.9639928698752229,
+      "selection_score": 0.7917259307276896
+    },
+    {
+      "model": "word_balanced_v04",
+      "threshold": 0.8,
+      "primary_cv_f1_macro": 0.9763131477584279,
+      "family_macro_recall": 0.5998993914467545,
+      "family_weighted_recall": 0.8146987112504354,
+      "hard_negative_specificity": 0.9101604278074866,
+      "selection_score": 0.7915744569207533
+    },
+    {
+      "model": "char_balanced_v04",
+      "threshold": 0.9,
+      "primary_cv_f1_macro": 0.9864393101118392,
+      "family_macro_recall": 0.5253464973398592,
+      "family_weighted_recall": 0.7173807035876001,
+      "hard_negative_specificity": 0.9759358288770054,
+      "selection_score": 0.7610523359064999
+    },
+    {
+      "model": "word_balanced_v04",
+      "threshold": 0.9,
+      "primary_cv_f1_macro": 0.9763131477584279,
+      "family_macro_recall": 0.4458273335320178,
+      "family_weighted_recall": 0.6530128874956461,
+      "hard_negative_specificity": 0.9878787878787879,
+      "selection_score": 0.7010079052166973
+    }
+  ],
+  "primary_cv": {
+    "word_balanced_v04": {
+      "f1_macro_mean": 0.9763131477584279,
+      "f1_macro_std": 0.002876057379549823
+    },
+    "char_balanced_v04": {
+      "f1_macro_mean": 0.9864393101118392,
+      "f1_macro_std": 0.00632974698098183
+    },
+    "word_char_balanced_v04": {
+      "f1_macro_mean": 0.9846717816846043,
+      "f1_macro_std": 0.0038380647878969894
+    },
+    "word_plain_v04": {
+      "f1_macro_mean": 0.9247097360941641,
+      "f1_macro_std": 0.01957894503360974
+    },
+    "word_char_plain_v04": {
+      "f1_macro_mean": 0.9541267195099611,
+      "f1_macro_std": 0.015867452380165372
+    }
+  },
+  "selected_family_results": [
+    {
+      "family": "banking",
+      "n": 6441,
+      "template_groups": 6367,
+      "detected": 6311,
+      "missed": 130,
+      "recall": 0.9798167986337525
+    },
+    {
+      "family": "delivery",
+      "n": 1236,
+      "template_groups": 1231,
+      "detected": 1006,
+      "missed": 230,
+      "recall": 0.813915857605178
+    },
+    {
+      "family": "government",
+      "n": 1331,
+      "template_groups": 1331,
+      "detected": 1258,
+      "missed": 73,
+      "recall": 0.9451540195341849
+    },
+    {
+      "family": "hey mum/dad",
+      "n": 55,
+      "template_groups": 55,
+      "detected": 19,
+      "missed": 36,
+      "recall": 0.34545454545454546
+    },
+    {
+      "family": "others",
+      "n": 3691,
+      "template_groups": 3678,
+      "detected": 3015,
+      "missed": 676,
+      "recall": 0.8168518016797616
+    },
+    {
+      "family": "telecom",
+      "n": 1379,
+      "template_groups": 1376,
+      "detected": 1342,
+      "missed": 37,
+      "recall": 0.9731689630166788
+    },
+    {
+      "family": "wrong number",
+      "n": 222,
+      "template_groups": 222,
+      "detected": 106,
+      "missed": 116,
+      "recall": 0.4774774774774775
+    }
+  ],
+  "selected_hard_negative_specificity_folds": [
+    0.9411764705882353,
+    0.7352941176470589,
+    0.8181818181818182,
+    0.9393939393939394,
+    0.9090909090909091
+  ],
+  "financial_hard_negative_rows": 167,
+  "imc_family_conflict_groups_removed": 3,
+  "final_training_rows": 12707,
+  "primary_locked_test_after_selection": {
+    "f1_macro": 0.9774950464073417,
+    "precision_scam": 0.963963963963964,
+    "recall_scam": 0.9553571428571429,
+    "f1_scam": 0.9596412556053812,
+    "average_precision": 0.9411256625356436,
+    "balanced_accuracy": 0.9756103191017875,
+    "confusion_matrix": [
+      [
+        963,
+        4
+      ],
+      [
+        5,
+        107
+      ]
+    ]
+  },
+  "model_path": "models\\scam_classifier_v04.joblib",
+  "metadata_path": "models\\scam_classifier_v04_metadata.json"
+}

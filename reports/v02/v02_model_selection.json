@@ -1,0 +1,52 @@
+{
+  "selected_model": "char_lr_v02",
+  "selection_rule": "highest harmonic mean of grouped-CV F1-macro and IMC25 temporal positive recall, requiring CV F1-macro >= 0.95",
+  "candidates": {
+    "word_lr_v02": {
+      "cv_f1_macro_mean": 0.9681362319999878,
+      "cv_precision_scam_mean": 0.9284324808209352,
+      "cv_recall_scam_mean": 0.9603960396039604,
+      "temporal_positive_recall": 0.9473684210526315,
+      "temporal_positive_n": 19,
+      "selection_score": 0.957639744713768,
+      "temporal_score_median": 0.8604165817710121
+    },
+    "char_lr_v02": {
+      "cv_f1_macro_mean": 0.9810167791772854,
+      "cv_precision_scam_mean": 0.964695644225056,
+      "cv_recall_scam_mean": 0.9683168316831683,
+      "temporal_positive_recall": 0.9473684210526315,
+      "temporal_positive_n": 19,
+      "selection_score": 0.9638990353218999,
+      "temporal_score_median": 0.8896261838802763
+    },
+    "word_char_lr_v02": {
+      "cv_f1_macro_mean": 0.9799860239460157,
+      "cv_precision_scam_mean": 0.9593828833018072,
+      "cv_recall_scam_mean": 0.9702970297029703,
+      "temporal_positive_recall": 0.9473684210526315,
+      "temporal_positive_n": 19,
+      "selection_score": 0.963401220329284,
+      "temporal_score_median": 0.9024616230600744
+    }
+  },
+  "primary_locked_test_after_selection": {
+    "f1_macro": 0.9806817774913167,
+    "precision_scam": 0.9333333333333333,
+    "recall_scam": 1.0,
+    "f1_scam": 0.9655172413793104,
+    "average_precision": 0.9729022392116387,
+    "balanced_accuracy": 0.9958634953464323,
+    "confusion_matrix": [
+      [
+        959,
+        8
+      ],
+      [
+        0,
+        112
+      ]
+    ]
+  },
+  "model_path": "models\\scam_classifier_v02.joblib"
+}

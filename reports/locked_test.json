@@ -1,0 +1,24 @@
+{
+  "f1_macro": 0.9806817774913167,
+  "precision_scam": 0.9333333333333333,
+  "recall_scam": 1.0,
+  "f1_scam": 0.9655172413793104,
+  "average_precision": 0.9977819283853764,
+  "balanced_accuracy": 0.9958634953464323,
+  "confusion_matrix": [
+    [
+      959,
+      8
+    ],
+    [
+      0,
+      112
+    ]
+  ],
+  "model": "word_lr",
+  "n_test": 1079,
+  "class_counts": {
+    "0": 967,
+    "1": 112
+  }
+}

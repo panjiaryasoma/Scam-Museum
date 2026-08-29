@@ -1,0 +1,417 @@
+text,target,template_group_id,score,prediction
+Claim your loan approved by sending OTP immediately.,1,6cd51ffdcb3c55cd,0.8931216842894888,1
+"Fraudulent transaction detected, provide your OTP.",1,50e8d0df6f54d93d,0.8154408632307603,1
+"Your account has been suspended, verify OTP now!",1,e78745f25620cfd2,0.9787532135714535,1
+Your account balance is adequate.,0,00bb1db233acb8ac,0.7906097141846483,1
+Please ignore unknown SMS.,0,a6cf1a12ef16b1c5,0.4702555084239175,0
+Click here to reset your banking password.,1,2820169a0235e8ff,0.8398474301663008,1
+Payment received successfully.,0,c24b7e03c1d1f5ea,0.8261538954201838,1
+Send your OTP to claim your prize!,1,577ad6572b922202,0.8714136769869288,1
+Your debit card has been blocked.,1,ad3290ca4393ac68,0.9489348189768313,1
+"New offers available, accept today!",0,a6442d0fe6bb3cc1,0.5299315697289491,1
+"Your account is at risk, immediate action required.",1,d515ccca1edfc703,0.9568516382450273,1
+"Your mobile recharge was successful, thank you.",0,da8e1849a73238d4,0.8833477052689135,1
+"Your loan application is approved, send OTP now!",1,2ab1ed3b59fab0d8,0.8540823268714528,1
+Do not share your bank details with anyone.,0,6fcc666ee861691e,0.7829525021515851,1
+Account hacked! Open the app now to secure it.,1,9eb510e10da6cd93,0.723141035372062,1
+"Your OTP code expires in 5 minutes, do not share",0,23742e77b3a868b5,0.6039857015554861,1
+"Loan approved, confirm by sending OTP code.",1,b347741711d9f23f,0.6809046044809512,1
+Update your account details to avoid suspension.,1,a55167d6eab32489,0.9764181611619058,1
+Thank you for using our service.,0,bd12c8e1be12ca82,0.907194194572183,1
+Claim your loan approved by sending OTP.,1,0120d0cb21abc60c,0.8065032488528484,1
+"Fraudulent transaction detected, provide OTP.",1,091b974fae087497,0.698324176388471,1
+"Your OTP is <NUMBER> , do not share it with anyone.",0,92945239b710e593,0.8776570603102504,1
+"Your account suspended, verify OTP now!",1,694e3b465fa11dfa,0.9475736853473654,1
+Congratulations! You won a prize. Please send OTP to claim.,1,e61c6dcdb93032e4,0.9338744224943726,1
+"Your OTP is <NUMBER> , keep it confidential to secure your account.",0,947eb293b6cc8cdc,0.9796615992373916,1
+Claim your cashback by entering OTP received in next 5 minutes.,1,a0a22e14d8f9f249,0.7289345766936208,1
+Important: Your account verification is pending. Please provide OTP.,1,e234e1be0ae2795b,0.9640727548918154,1
+Your debit card transaction of <NUMBER> taka was declined. Contact support.,1,44a5215139d7f518,0.9693306591855954,1
+Congratulations! Claim your reward by submitting OTP within 10 minutes.,1,b5a41eae0104b14d,0.7903654610316143,1
+"Your recent login was from a new device. If not you, verify with OTP.",1,17e1ac460b271322,0.9454919230242528,1
+Update your payment information immediately to avoid suspension.,1,86b6510d316e5ab4,0.9923857132645795,1
+Your mobile recharge of 20 taka is successful. Thank you for your payment.,0,2d384a3c27d7c181,0.9756686027992697,1
+Refund of 100 taka has been processed to your account.,0,e8abfdf7f0bd8ad6,0.9777284752900965,1
+"Warning: Suspicious activity detected, confirm via OTP now.",1,03ab3bb8cdfe20a8,0.7341961404615414,1
+Your loan application was approved. Verify details using OTP.,1,03ed0d3f5483467c,0.9557372551083719,1
+Please ignore any unknown messages pretending to be your bank.,0,0df070232ab60f82,0.6620362646360987,1
+Your online banking password expired. Reset it via the provided link.,1,12e3ef391506aada,0.8357813149721279,1
+Your account balance is low. Add funds to continue service.,0,1556d76721362ae3,0.9247919164922047,1
+"To secure your account, provide the OTP sent to your registered phone.",1,856672e3e5de2ab3,0.9572941888505022,1
+Payment of <NUMBER> taka received. Thanks for banking with us,0,a92001b08b38042d,0.9693878945633072,1
+Alert: Unauthorized transaction attempt detected. Change password now.,1,d54e337075cf1a78,0.8088284853574005,1
+Your credit card limit has been increased. Check details in app.,0,57cf80afece78723,0.9468670548969023,1
+Verify your identity to avoid account suspension. OTP required.,1,92b9d09f9a147b19,0.9849312639126419,1
+Your request to withdraw <NUMBER> taka was successful.,0,bcb9b9c412a754eb,0.9127055089289399,1
+Last chance: Provide OTP to claim your prize money now.,1,b0b61e662d39c7e6,0.8435113661603194,1
+Your scheduled payment will be processed tomorrow.,0,24d8d3fc36ea93e5,0.6610028987985584,1
+Alert! Unauthorized login attempt detected. Confirm with OTP immediately.,1,a4bb52685484ec69,0.8858517420365332,1
+Your BDT <NUMBER> wallet transfer was successful. Thank you for using our service.,0,3f87a9106e971dc6,0.9881897711160215,1
+Suspicious withdrawal of BDT <NUMBER> detected. Please verify with OTP now.,1,60b501cd432322d9,0.9440269430193461,1
+"Your internet banking password expired, reset it today to avoid service disruption.",1,ebc749788fce7fea,0.7546693541787208,1
+BDT 100 recharge completed successfully.,0,e074ced9e0f3721d,0.6594239238021834,1
+Congratulations! You won BDT <NUMBER> cashback. Submit OTP to receive.,1,8bb45f303b4ba0d2,0.9636822032118624,1
+Verify your identity by entering the OTP sent to your mobile to continue transactions.,1,f042b7c9dd06ebf2,0.9793646123120817,1
+Your debit card ending <NUMBER> has been temporarily blocked for suspicious activity.,1,ef3d5ebd9c3d5329,0.9768903828934077,1
+BDT <NUMBER> loan approved. Confirm by sending OTP within 10 minutes.,1,2eed0d1a6439e030,0.7593296887041832,1
+Your account balance is BDT <NUMBER> .,0,dab72dbf8b9682b2,0.9772352789499514,1
+"Immediate action needed! Unrecognized device logged in, confirm with OTP now.",1,0fd3a85aea00ec83,0.7050237555004695,1
+Reminder: Your scheduled BDT <NUMBER> bill payment will process tomorrow.,0,8f1cb731483bf676,0.9024643974808364,1
+Your BDT <NUMBER> refund has been processed successfully.,0,61846d0a9b2e31aa,0.9614919533349441,1
+OTP validation required to complete your BDT <NUMBER> transfer.,1,ac3d24422d1d2ce4,0.9902282185231532,1
+Update your mobile number in banking records today for uninterrupted service.,1,4626f3ccd0e61dcc,0.9283772521073645,1
+Your recent transaction of BDT <NUMBER> has been verified,0,e57967627adffcda,0.991269570438165,1
+Secure your account now! OTP sent to your registered contact.,1,565c701e59914070,0.966216741390938,1
+BDT <NUMBER> payment received from your account.,0,da07e1f385a3071f,0.9978210978243224,1
+Warning: Suspicious activity in your account. Verify using your OTP immediately.,1,161c70626eb88c27,0.9529046260393612,1
+Your loan payment of BDT <NUMBER> is overdue. Please pay immediately to avoid penalties.,1,43943e33a3b8d0ce,0.9870442480820308,1
+Congratulations! You won a free investment plan. Call now to claim your prize.,1,daefc088c11efad0,0.9544173821606217,1
+New job opportunity with high salary. Send your CV to apply immediately.,1,ef459970fa8cc574,0.8263347794327419,1
+You have been selected for a government grant of BDT <NUMBER> . Contact us now.,1,afa02aaba3969d7e,0.9735556127657649,1
+Exclusive offer: Double your money in 30 days with our secret scheme.,1,982494f30ddcbbc9,0.49593450137960926,0
+Your lottery ticket won BDT <NUMBER> . Send your details for prize delivery.,1,b94794247327079e,0.9779037522919073,1
+Join our online trading platform for guaranteed profits.,1,4cd4c0a5e913b20e,0.581570019199029,1
+Beware of strangers asking for your financial details over chat or SMS.,0,1c0744954f498e43,0.6925458767031859,1
+Your KYC verification is complete. Thank you for your cooperation.,0,8181f023ddb78873,0.9680473114537979,1
+Earn BDT <NUMBER> daily working from home. Register now!,1,8d412c171a71bacf,0.7519605732605659,1
+Immediate payment required for customs clearance. Pay BDT <NUMBER> now.,1,a18c7496efe052a9,0.9616162609071758,1
+Congratulations! You are shortlisted for a luxury car giveaway.,1,ec35d5b5d29b4e35,0.6249719594790664,1
+Investment opportunity with zero risk and high returns. Contact us.,1,e45eebda4b508144,0.6409619800847082,1
+Monthly subscription paid successfully.,0,64cb967b5b75698a,0.6431970681717173,1
+Avoid fake schemes promising overnight wealth. Stay cautious.,0,55936087851163c6,0.19035942685088791,0
+Free smartphone giveaway for lucky winners. Reply to participate.,1,0539ae2e3d2ba480,0.6891093859884297,1
+Urgent: Pay BDT <NUMBER> to avoid legal action related to tax dues.,1,dfd5ca75eb5a467c,0.9654116327846449,1
+Your online order has been shipped successfully.,0,653a8bc7da6b9667,0.8928122539981869,1
+Your health insurance claim has been approved. Contact for details.,0,a7a140857f058bb2,0.9710932686999799,1
+Secure your future with our pension plan. Enroll today!,1,6cbb011068039c73,0.5404297333905068,1
+Reminder: Electricity bill payment of BDT <NUMBER> is due tomorrow.,0,723f871c03a2d89b,0.906363611126351,1
+Your package has been shipped. Track your delivery at this link.,0,d27fc60d48c67c83,0.990899000877945,1
+Congratulations! You've won a free gift card. Click now to claim.,1,ce922897134e74f8,0.9611021153845113,1
+Our records show suspicious activity in your account. Contact support.,1,bb6c39db878cc02a,0.9262304266202461,1
+Your subscription is about to expire. Renew now for uninterrupted service.,1,fb7aac5f4254e428,0.8916045386003765,1
+You have an overdue bill of BDT <NUMBER> . Pay immediately to avoid disconnect.,1,d6c0fd5dddd8c37d,0.9613169063543325,1
+Limited-time offer! Double your money in 7 days. Invest now.,1,04ef3105889d9fa7,0.4374992434694124,0
+Loan approved! Send your details to receive funds today.,1,f006fae7f002aa08,0.8152302575532138,1
+Your online order is ready. View details here.,0,ceba5da8156ca0d8,0.8549791016005387,1
+Fake invoice attached. Please review and click the link to pay.,1,6c2ed54eeaa73493,0.8702202218165882,1
+Your car insurance claim has been approved. Contact us to finalize.,1,0f0ca48896671750,0.940384885657329,1
+It’s your last chance to claim your cashback. Act now!,1,40212e47f88ec204,0.8750884458397467,1
+You have been selected for a surveys. Complete now and win BDT <NUMBER> .,1,26968b8790cb4edb,0.9525872123299095,1
+Attention! Your mobile data plan will expire tomorrow. Renew now.,1,723242290723cde1,0.609506818750777,1
+Fake urgent message: You owe BDT 500 for missed payment. Pay now.,1,f67bc5e7d9631ecd,0.8150246172024797,1
+Your bank account is locked. Verify now to regain access.,1,a1b9cd72a3cd5ed3,0.9628326791431954,1
+Limited-time deal: Buy now and get 50% discount on all products.,1,d68a615ac82a7353,0.4873025523244079,0
+Mystery shopping opportunity! Earn BDT <NUMBER> daily. Sign up now.,1,8bee8aad92ae3113,0.5223311645069824,1
+Your recent transaction of BDT <NUMBER> was successfully processed.,0,a50de9615760534a,0.9674447180409825,1
+Warning! Suspicious activity detected. Change your credentials now.,1,4a50e8c84e1ab670,0.7268989111041653,1
+Your gaming account has been hacked. Change your password immediately.,1,f67c53ec6d0cec66,0.9184826808866737,1
+"Hello from BLOrange club. For 1 month's free access to games, news and sport, plus 10 free texts and 20 photo messages, reply YES. Terms apply: <URL>",1,ec8917d189a73ecc,0.9279962382098947,1
+Call FREEPHONE <PHONE> now!,1,e01851ead397f45f,0.8889261913006322,1
+"7 wonders in My WORLD 7th You 6th Ur style 5th Ur smile 4th Ur Personality 3rd Ur Nature 2nd Ur SMS and 1st \Ur Lovely Friendship\""... good morning dear""",0,b2bc35d4c4ae41ef,0.03749471081474363,0
+"Loan for any purpose 500 tk- 75,000tk. Homeowners + Tenants welcome. Have you been previously refused? We can still help. Call Free <PHONE> or text back 'help'",1,c7bfc61cd6d53eeb,0.8082830506699912,1
+BIG BROTHER ALERT! The computer has selected u for 10k cash or #150 voucher. Call <PHONE> . NTT PO Box CRO1327 18+ BT Landline Cost 150ppm mobiles vary,1,30cbad36e5f52935,0.8455145146295084,1
+Your package delivery is delayed. Track now at this fake link.,1,875279672f0861a9,0.952522142175517,1
+Get rich quick! Invest BDT <NUMBER> today and double your money fast.,1,ce8713efdac9a420,0.46530531740019826,0
+Your job application was successful! Reply to claim your position,1,b5539c4af9d02f7c,0.9610343107590832,1
+Verify your phone number now to avoid service interruption.,1,7185e2bc94d88ec5,0.9824712963393943,1
+Free <NUMBER> gift card! Click here to redeem before it expires.,1,ea94322b94b615fc,0.9303684833357041,1
+Your recent online purchase has been shipped successfully.,0,d810806c5a0ac18f,0.8677784197552134,1
+Alert: Classified documents found linked to your account. Contact now!,1,68f1c1c436da99e4,0.9604950883275287,1
+Your electricity bill of BDT <NUMBER> is overdue. Pay now to avoid cut-off.,1,016f3c91a7a4cee8,0.9466839074243162,1
+Congratulations! You’ve won a holiday trip. Reply to claim.,1,085fd1d2bcea87bb,0.8927369454965631,1
+Payment of BDT <NUMBER> received. Thank you for your timely payment.,0,939e592a907dfafa,0.9929023289772871,1
+Urgent notice! Verify your social security number immediately.,1,3954dd7a89a752b5,0.9517816743563677,1
+Your bank loan has been approved. Send documents to finalize.,1,bcf3f10fcb583437,0.8732705541685097,1
+Your subscription payment failed. Update billing info to continue.,1,22544d73eb394c49,0.9749541844992359,1
+Your ticket to the concert is confirmed. Thank you for your purchase.,0,a6f393eb536bf2a4,0.8462285177238623,1
+You've been selected for a secret shopper job. Earn BDT <NUMBER> daily.,1,0bdef5d34d82416c,0.8986268874567149,1
+Important: Claim your tax refund of BDT <NUMBER> today via this link,1,ed9d4eec2a4d8580,0.985921390533663,1
+Your online account will be suspended soon. Verify credentials now.,1,18ac4c07dedcbe90,0.9082630881064052,1
+Your medical insurance claim has been processed successfully.,0,d07650ff8924b731,0.8366040948935548,1
+New investment opportunity: Guaranteed 30% monthly returns.,1,08aca670c64083ff,0.5215470710890975,1
+Your parcel has been dispatched. Track with tracking number XYZ123.,0,1dafb3bd14d907fc,0.943885607585895,1
+Claim your free BDT <NUMBER> reward now by clicking this link before it expires!,1,a5ff39cb42472712,0.9678092990207323,1
+You have unclaimed cashback waiting. Submit your details to claim it immediately.,1,31bd7b13ed575182,0.8862549496642682,1
+Final notice: Claim your government grant of BDT <NUMBER> within 24 hours,1,4657c88e21aedbe6,0.8967467687598356,1
+Congratulations! Claim your exclusive shopping voucher by replying with YES.,1,856a24a246e0602b,0.764649618826435,1
+You are eligible to claim a BDT <NUMBER> bonus from your telecom operator.,1,388ec98214a992b0,0.9617520324029992,1
+Claim your prize by verifying your phone number within 2 hours.,1,8c0710898f45b844,0.9359263723861998,1
+Claim your loan disbursed amount now by confirming your bank details.,1,a115ab5bc430e24b,0.9052632953315957,1
+Urgent: Claim compensation for delayed delivery by visiting this link.,1,924041d434a17266,0.9536006772869404,1
+Claim your free ticket for the concert happening near you this weekend.,1,3fcf3904b97b596b,0.47025385598786457,0
+Claim your BDT <NUMBER> insurance payout by contacting us immediately.,1,988ebd736e7c57e7,0.9651533322880308,1
+Claim your cashback by logging into your account with this link.,1,58a83cb316f26600,0.9240466292481855,1
+"You have been selected to claim a new government subsidy, respond with your ID",1,4861ca383b4be1e4,0.9632604108173127,1
+Claim your refund for the recent transaction now before the offer expires.,1,76a22b2166613f30,0.9532316261542643,1
+Claim your mystery gift by sending a reply with your full name and address.,1,2c6b00a69e067469,0.8878743754711143,1
+Claim your free mobile upgrade by confirming your account info via SMS.,1,73d00c576a7c82fd,0.9780540101873928,1
+You have a new message from the lottery office. Claim your winnings ASAP.,1,9a1ce2ea5e75506f,0.8268461203131493,1
+Claim your prize money by paying a small processing fee at the link below,1,c8ea44201eb6a176,0.8692995493392549,1
+Claim your BDT <NUMBER> bonus credits from our new app by signing up now.,1,46f9e2d7a438fc1c,0.9558481870665861,1
+Claim your tax refund by uploading your financial documents immediately.,1,60000f30608d18b9,0.927957569576412,1
+Claim your exclusive membership rewards by clicking here. Limited time offer!,1,0f4df1859030e742,0.8117341648005669,1
+Your BDT <NUMBER> payment has been received. Thank you for using our service.,0,f04f03abfb474c81,0.9982980808617472,1
+Urgent: Verify your identity to avoid account closure. Click this link now.,1,1eba67c462e76ed2,0.9866160922037411,1
+Congratulations! You have been selected for a free smartwatch. Reply YES.,1,c1490696ba136e57,0.9248507273449166,1
+Your electricity bill of BDT <NUMBER> is due tomorrow. Please pay on time.,0,c451d8616580cc93,0.9453168312824513,1
+Immediate action required! Suspicious login detected. Confirm your password.,1,c70f3ba961a12d63,0.9206770947205041,1
+Your mobile recharge of BDT 500 was successful.,0,3b133d2fa135df0d,0.8879490833449304,1
+Last chance to claim your cashback offer worth BDT <NUMBER> !,1,f18bbe3045bb533c,0.9535498065712642,1
+Package delivered! Track it anytime using tracking number # <NUMBER> .,0,ffde7b0dbc64d97e,0.9685344183703205,1
+You won an exclusive holiday package. Contact us immediately to claim.,1,d88f8dd6f720cc70,0.912406971108357,1
+Your online subscription has been renewed successfully,0,c051149f68887c76,0.8759735643560297,1
+Warning! Your account has been suspended due to suspicious activity.,1,df0dda56e92b5794,0.9507210805710538,1
+Enjoy 20% discount on your next purchase. Use code SAVE20.,0,9df0760bd26a0ee7,0.722560710399059,1
+Your loan application was approved. Submit documents to receive payment.,1,a09ffa2822b8a30c,0.972303726156433,1
+Thank you for your recent payment of BDT <NUMBER> .,0,757cbc1742a78bfe,0.9967484489804618,1
+Alert! Unrecognized device logged in to your account. Verify immediately.,1,bfc239f47ec92fab,0.9093464536922514,1
+Your food delivery has arrived. Please collect it.,0,de07b22bb1ba3229,0.9058768627604514,1
+Claim your prize money worth BDT <NUMBER> by sending your bank details now.,1,9e5222097658a5eb,0.9704365289771225,1
+Your appointment with Dr. Rahman has been confirmed for tomorrow.,0,62323616faa5d5a1,0.6117983449150176,1
+You are selected for government subsidy. Verify details to claim BDT <NUMBER> .,1,90382f3b4c95e921,0.9764670689924638,1
+Your electricity bill payment of BDT <NUMBER> was successful.,0,7e91bab6c657dcb4,0.978210550954389,1
+Your BDT <NUMBER> utility bill has been paid successfully.,0,adff0dfa00020656,0.9793744425715443,1
+Urgent! Confirm your credit card details to avoid suspension.,1,c0598f92a9328df4,0.9634479289876536,1
+Congratulations! You won a free trip. Reply YES to claim your prize.,1,494a6d2e05276091,0.9583557560095174,1
+Your mobile data has been recharged with 2GB. Enjoy surfing.,0,8c8bbd25788fc679,0.8364390427991115,1
+Warning: Suspicious transaction detected. Verify your identity immediately.,1,ee87b2b70159146a,0.9602017259360127,1
+Your food order from FoodieApp is delivered. Enjoy your meal!,0,0435d596f733bd96,0.8675835013325508,1
+Limited-time offer! Double your investment in 15 days. Call now.,1,85bd16c3022d77ea,0.485554486672818,0
+You have successfully booked a taxi for 9 AM tomorrow.,0,51207892e202ef77,0.18107370233590925,0
+Final notice! Claim your BDT <NUMBER> insurance payout today.,1,f0bbc8ae4aefe1aa,0.838772401744604,1
+Your monthly gym subscription has been renewed. Thank you.,0,a7a7370209c74ff0,0.7995064647230231,1
+You have unpaid fines totaling BDT <NUMBER> . Pay now to avoid penalties.,1,f57b047cc412f748,0.8548477709089959,1
+Event reminder: Music concert tonight at 7 PM at City Arena.,0,3a45ee9f6d31340d,0.1545845781986526,0
+Your debit card has been temporarily blocked for security reasons.,1,e3efe86e533c43b6,0.9316401584035456,1
+Your parcel #XZ1234 is ready for pickup at the post office.,0,731a9ffc2d0663e9,0.6842364110173317,1
+Urgent: Your loan approval is pending. Submit documents to proceed.,1,87e29e9ee860ecc8,0.81556197099632,1
+Your cab driver will arrive in 5 minutes. Please be ready,0,16d08c2b87bf6563,0.37317989166892884,0
+Get rich quick! Invest BDT <NUMBER> in crypto mining and earn huge profits.,1,8d5ddfe1af70d199,0.49329179762386066,0
+Thank you for registering for the webinar. We will email the link soon.,0,e9c3fe6c1555cab5,0.6884122466739935,1
+Your electricity meter reading is due. Please pay your bill of BDT <NUMBER> .,0,af9334156c814b40,0.9723461767357943,1
+Last chance: Claim your cashback by verifying your account details now.,1,c668ac22000f28c2,0.9337653997878054,1
+Your BDT <NUMBER> electricity bill has been paid. Thank you for your payment.,1,3e9c8a331c942b0b,0.9982817999966869,1
+Alert: Suspicious account activity detected. Verify your info immediately.,0,5439ff971a2b8d41,0.9789792182048006,1
+Congratulations! You are selected for a free smartphone giveaway. Reply YES.,1,c8fe151766470419,0.8742070664023427,1
+Your monthly mobile recharge of BDT 600 was successful.,0,0209d73397011327,0.7755400916537802,1
+Urgent! Your login was from an unknown device. Confirm your identity now.,1,8b0b18d8a303b328,0.9525941574955703,1
+Your food delivery order has arrived. Enjoy your meal!,0,09087c4418aba8bd,0.8961139445383406,1
+Double your money with our new investment plan. Call us today,1,d91d14e764f35593,0.6263571921746012,1
+Urgent! Verify your bank details to prevent account suspension.,1,a154b4e8da4b0ae0,0.9637052816046692,1
+Claim your prize worth BDT <NUMBER> by replying,1,bb83d020a86b381d,0.938126320216124,1
+Your recent payment of BDT <NUMBER> was successful,0,8a9c400c3dfac317,0.9816786088005006,1
+Your parcel #AB123 is out for delivery.,0,370f9c4b716e9ca8,0.9540755361048531,1
+Your electricity bill of BDT 800 is due tomorrow.,0,be25ed3f3aa067fc,0.6129915585865464,1
+"Immediate notice: Unauthorized transaction detected, act now!",1,0f82fa8b2177bd57,0.845219047911146,1
+You have won a free luxury watch. Reply to claim now.,1,e6b10d9581e5b17b,0.7066271887425026,1
+Your mobile recharge of BDT 300 was successful.,0,98068a755e814822,0.8653289786498666,1
+Reminder: Doctor’s appointment tomorrow at 10 AM,0,aaa0e8bca332d423,0.12304767523303108,0
+Thank you for your recent bank deposit of BDT <NUMBER> .,0,5ad149a4f688282f,0.9891791739134244,1
+Claim your government grant of BDT <NUMBER> now.,1,f4f572f6ca77ed17,0.9484222960455025,1
+"Alert! Suspicious login attempt detected, verify your account.",1,96403ab9aba52191,0.9484688704403713,1
+Your cab driver will arrive in 10 minutes.,0,a33f5f31f206bbc2,0.247591189927113,0
+Your online subscription has been renewed. Thank you!,0,e575f564a5833150,0.9078165914976482,1
+You have a new message from the lottery office. Claim winnings.,0,168e8ec8576f7232,0.7438136017346504,1
+Your credit card has been temporarily blocked. Confirm details.,1,6eb316ed68dcbad7,0.967574785917763,1
+Congratulations! You are selected for exclusive cashback offer.,1,56d4d8f6be86a91a,0.8604355181423975,1
+Your electricity payment of BDT <NUMBER> was successful.,0,5d0c045a3b076d08,0.9782758090531763,1
+Your order # <NUMBER> has been processed and shipped.,0,d3548878c5ba4f39,0.9833325020461277,1
+Payment reminder: Your internet bill of BDT <NUMBER> is due.,0,ba1a74f5c6a1177f,0.9745195383399193,1
+Alert: Suspicious debit card transaction of BDT <NUMBER> detected. Verify immediately.,1,91957c8249d773be,0.9819761862107408,1
+You won a free vacation to the Bahamas! Reply YES to claim your prize.,1,bcfb3ea6598d3b54,0.9475881658295395,1
+Your package #ZX12345 is out for delivery. Track it using our app.,0,732e27f319254215,0.9777843450650203,1
+Reminder: Doctor appointment scheduled for tomorrow at 9:30 AM.,0,5bf8613ea4cdf4e6,0.24440050737386781,0
+Urgent: Your bank account has been locked due to suspicious activity. Verify now.,1,777f9db232ac2414,0.987476669070178,1
+Claim your cash reward of BDT <NUMBER> now. Send your bank details to proceed.,1,af8850489a82e9f2,0.9873013814068169,1
+Your Uber ride has been confirmed for 3 PM today.,0,ddfe3b58ddcc656d,0.5492688050843346,1
+Last chance to update your payment info or your subscription will be suspended.,1,fbd4d7a7340c3bb4,0.9850736173996555,1
+Congratulations! You have been pre-approved for a loan. Apply now to get instant approval.,1,bae3be4b62fb153e,0.9136872561523462,1
+Your recent grocery order # <NUMBER> has been delivered. Enjoy your purchase!,0,42578b8935d02d62,0.9859105240873411,1
+Your Netflix subscription has been renewed. Thank you for staying with us.,0,ce9257af7217902a,0.8999040121802667,1
+Alert: Unrecognized login attempt detected on your email. Secure your account now.,1,01583d3097027a3e,0.9232961823985308,1
+You've received BDT <NUMBER> cashback from your last purchase,0,81388284ae0e2a3c,0.9686282781373674,1
+Please verify your social security number to claim your government grant.,1,60ce610f7825d8dd,0.9821393914566886,1
+Your cab driver is on the way and will arrive in 5 minutes.,0,b114a15ba6b05157,0.21639188928977582,0
+Verify your Apple ID to prevent permanent lockout. Ignore if you did not request.,1,cff24169613ace62,0.8023693886489867,1
+Thank you for your donation of BDT 500. Your generosity is appreciated.,0,6b6651408b29d92b,0.9347023245372889,1
+Let's meet at the cafe around 8 PM?,0,3dd704d0b42050f4,0.09303949282082442,0
+Claim your cashback reward #10 now! Limited time offer.,1,725c99f9ac44f555,0.8719549060471036,1
+Congratulations! You won a free iPhone. Claim now at <URL>,1,6efef237efc7438b,0.9802783018945167,1
+Don't forget to bring the documents for tomorrow's meeting,0,00c70beb376faa6f,0.1057032736358531,0
+Limited offer! Get 50% cashback on your next payment. Click here,1,d7596dd742a59f11,0.9194494834788504,1
+Can you send me your notes for today's class?,0,54d94304ba6d2999,0.12782104329778182,0
+Win <NUMBER> instantly! Verify your account at <URL>,1,003f5caaf3c34585,0.9953281372192435,1
+Alert: Unusual withdrawal of BDT <NUMBER> from your account. Verify now to avoid loss.,1,4b3a74824a8537b4,0.9822628452496069,1
+Congratulations! You have won a BDT <NUMBER> shopping voucher. Reply to claim your prize.,1,3b7fe10620bdbb0a,0.9905050792631532,1
+Your water bill of BDT <NUMBER> has been paid successfully.,0,6a44dfab894e4d4a,0.9660568246943756,1
+Your parcel #YZ6789 will be delivered today. Track live through our app,0,6bd711666d610ca7,0.9187312105139275,1
+Reminder: Your flight booking to Dhaka is scheduled for tomorrow at 6 AM.,0,e91558fca61a929d,0.2833779908106291,0
+Important: Your bank account is locked due to suspicious activity. Verify your identity now.,1,34cf1527bb29732b,0.9912875246700323,1
+Claim instant loan approval up to BDT <NUMBER> . Send your documents to proceed.,1,62c0a82518926c9d,0.9372968015144356,1
+Your mobile recharge of BDT 350 was processed successfully.,0,8e8ee713aadb9027,0.859573130264776,1
+Your hotel booking confirmation # <NUMBER> for 3 nights in London.,0,e055eac31873d72c,0.7614075993107813,1
+Payment of BDT <NUMBER> received. Thank you for your payment to ABC Store,0,88dd26d7e5481209,0.996651338315782,1
+Final notice: Update your billing info or your mobile service will be suspended.,1,f13844d34b83687f,0.9774665408808771,1
+Congratulations! You’re pre-qualified for a credit card with a <NUMBER> limit. Apply now.,1,78764261592de0a1,0.9717672829302134,1
+Your online shopping order # <NUMBER> is confirmed and will be delivered soon.,0,bfde74eecdc79680,0.9706602190096999,1
+Your subscription to Sports Daily renewed successfully. Enjoy your exclusive content!,0,48ce99c9268b4951,0.7947711783861512,1
+Alert: Suspicious login attempt on your email account. Secure it immediately.,1,a8e5361d996d4a40,0.9233216320769908,1
+You’ve earned BDT <NUMBER> cashback on your last grocery purchase.,0,52b3bf91e8ed3ba1,0.8057922258144246,1
+Claim your government relief fund of BDT <NUMBER> . Submit your documents today.,1,541f054a1115ebc0,0.9101685644449337,1
+"Your taxi will arrive in 7 minutes. Driver: Saiful, Car: Blue Toyota.",0,d6949a1485b8f9ed,0.20495663496411004,0
+Your Apple ID has been temporarily disabled. Verify now to avoid permanent lockout,1,28fa5c222d74bf9d,0.932812645259236,1
+Thank you for your charitable donation of BDT <NUMBER> . Your kindness is appreciated.,0,c977e6d1ec0b378f,0.967821191022059,1
+Urgent payment required: Your credit card bill of BDT <NUMBER> is overdue. Pay now to avoid fees,1,80d0d4ef0669183e,0.9911849657494801,1
+Your bank transfer of BDT <NUMBER> has been successfully processed,0,de20cbee087c1b01,0.9842916771313581,1
+You’ve won a free entry to the VIP concert! Reply YES to claim your tickets.,1,e47d402c21766f7c,0.8056953482406933,1
+Your parcel #A7821 was successfully delivered. Thank you for shopping with us.,0,55d2d363623d32c0,0.9432882772546869,1
+Warning: Multiple failed login attempts on your social media account. Check activity now.,1,a745640305b73e5e,0.8694200092086373,1
+Your insurance claim was approved. BDT <NUMBER> will be credited to your account shortly.,0,de62a9ef6ba485b2,0.9897959752832771,1
+Last chance to claim your cashback offer worth BDT <NUMBER> . Verify now.,1,2b6028f02fe19581,0.9606184372399991,1
+Your flight to Chittagong is on schedule for 10 AM tomorrow. Have a safe trip!,0,efbc10b0810d7b5c,0.30673219553006437,0
+Confirm your bank details now to avoid loan application cancellation.,1,da52aea7b9952dc9,0.9782998482744009,1
+Your electricity bill for this month is BDT <NUMBER> . Please pay by the due date.,0,d4a93218c2fd5ce5,0.9856565690071903,1
+Congratulations! You have been selected to get an exclusive reward! Your name came up for a YETI War Survival Kit. This special gift is from Tractor Supply. Hurry up! Your Reward is Ready,1,98c55d17e296369f,0.9339914560946008,1
+Enjoy Annual Fee Waiver on Your Medical Quota Debit Card for Safe and Convenient Payment Abroad!,1,5168147090f0172f,0.7891058462634623,1
+Your cloud storage is full. Please take action to free up space. Cloud Storage – Storage Limit Reached Your storage reached 100%,1,a0d1e11e44f81703,0.6515259736547077,1
+ANSWER FOR FREE!You have been chosen to participate in our Loyalty Program for FREE! It will take you only a minute to receive this fantastic prize.,1,e0759ddf715f4b82,0.7950395387038964,1
+Get a free Amazon voucher by completing this survey now.,1,20b51378542abe93,0.6921757730707212,1
+Congratulations! Your subscription is upgraded. Click to confirm,1,3c63afc63bf9f5ea,0.9689506331599805,1
+Alert: Suspicious activity detected in your PayPal account. Verify now,1,6f7f1947a7c9af99,0.9429568194099305,1
+bKash: You received <NUMBER> BDT. Click here to confirm your account,1,53ca16e681961525,0.9974130303884361,1
+Do you want to join the study group this evening?,0,4b0fca54879e0dd5,0.12340575108519641,0
+Bank Alert: Your account will be locked due to pending verification.,1,e9c725af13d461fe,0.9926281033451924,1
+Earn $100 per day from home with this financial program. Apply now!,1,4c490306ce1da412,0.6657303730522804,1
+"Bhai, I sent you <NUMBER> taka via bKash. Check and confirm",0,2764c8bac71e8fcb,0.7282611923615832,1
+Congratulations! You have been selected for a <NUMBER> government loan with 0% interest. Apply now!,1,e282dca87c839b28,0.990818459566306,1
+Can you return the <NUMBER> BDT I lent you last week? Need it urgently,1,6bba3cff2ff620a5,0.621108868653685,1
+Get 200% return by investing just $100 in our crypto program. Limited seats!,1,f911a85a536718fb,0.6169105954300079,1
+Salary credited: <NUMBER> BDT has been deposited to your account,0,6fac11b6dcb88bfe,0.9851473190856316,1
+Claim your free cashback of $250 today by entering your card details,1,c3e43f9d70e65558,0.8979255681376227,1
+Your Tax Refund of <NUMBER> BDT is pending. Submit your details to receive it instantly,1,1432ba84d281573b,0.9888779418956329,1
+"Nagad e 500 taka pathaisi, mama. Dekho paiso naki",0,099ea6bd7cb0e902,0.24405667127825065,0
+Last chance! Clear your loan dues now to avoid legal action,1,53a50e2e94d93f21,0.8156697341166536,1
+Please approve the <NUMBER> BDT payment request I sent on Payoneer.,0,d512bfc2a46f32f7,0.9522925893324627,1
+Win a brand new iPhone 15 by paying just $5 registration fee!,1,2f8ca1e269fca055,0.6041844208565924,1
+Your credit card has been temporarily blocked. Reactivate by verifying your PIN.,1,9e00984410a601a2,0.9621915630577834,1
+Client sent the 40% advance today. Check the bank statement,0,63e1f1cfb6dd32d4,0.3701402892283845,0
+Earn $300 per day without investment. Just forward messages!,1,a6066645834ef905,0.2701941828712277,0
+Can you share the bank details for transferring the rent money?,0,699ddbb59504df47,0.7451713933114551,1
+Your bank flagged a transaction of <NUMBER> . Verify at <URL> within 24 hours to avoid suspension,1,55921daebf952d57,0.9866569420891066,1
+Sent <NUMBER> BDT via bKash just now. Please confirm when you get it,0,7f7c0886542b190e,0.6465831353483023,1
+"Congratulations, you have been pre-approved for an instant <NUMBER> loan. Apply here to receive funds within 24 hours",1,ed41ad5828a2d9ed,0.9830362238837609,1
+Invoice INV- <NUMBER> for <NUMBER> BDT has been paid and receipt uploaded to your email,0,29c85bdb013c2706,0.9802988120515991,1
+Alert: Unusual login detected on your PayPal. Confirm identity to prevent account hold,1,fa0ce563c53d5dbd,0.9754515203512205,1
+I transferred the rent <NUMBER> BDT to your account. Check and tell me if it cleared,0,a64069cff057b8b6,0.8671738462079043,1
+Limited offer: Get 15% cashback on utility bill payments. Submit card details to claim reward,1,c0c5ec47245b9823,0.9435314666751378,1
+Company salary transfer of <NUMBER> BDT processed today. Payslip sent to your inbox,0,a65edfdd0102fce0,0.876025117198502,1
+Immediate action required: Confirm your bank OTP to stop a pending fraudulent transfer,1,ccc6253ebc092482,0.9740074454150758,1
+I have paid the supplier <NUMBER> BDT via bank transfer; please confirm delivery schedule,0,48abe7a95e7c7e86,0.9887380455178494,1
+You are shortlisted for a high-return investment program. Invest $200 to get <NUMBER> monthly returns. Limited seats,1,d8529fd65bf7db76,0.8383722190789373,1
+Shared the invoice for last month. Please approve payment of <NUMBER> BDT by Friday,0,075b2f0f040eba50,0.9014833655514005,1
+Final notice: Overdue loan amount of $850 must be cleared or legal action will follow. Click to resolve,1,2d70b1bdae5bbbae,0.8958371286280213,1
+Reward claim: Your tax refund of $420 is pending. Submit bank details to process immediately,1,ae3273303654517c,0.9675824437511383,1
+Payment confirmation: Received <NUMBER> BDT for the event booking. Thanks for the prompt payment,0,86d14b83547e5f2a,0.9533290085361629,1
+Urgent verification requested: Reactivate your debit card by confirming 4-digit PIN at banklink.verify,1,d207d94e42764f3f,0.969819400293682,1
+"I sent the freelance payment of $150 via Payoneer. Check and confirm receipt, please",0,995b4bf211886736,0.8583977266844969,1
+Exclusive: Instant credit limit increase to <NUMBER> available. Click link to accept the offer now,1,42f298eb5089dcdf,0.9587762393000288,1
+Reminder: Utility bill of <NUMBER> BDT due tomorrow. Please pay to avoid late fee,0,3f328d85115b7928,0.8983737585088166,1
+Claim your cashback reward of $300 now. Complete the form to receive instant transfer,1,20074f2dad994fc5,0.9607919528269018,1
+Transferred <NUMBER> BDT for the project materials. Inform me when it arrives,0,6463b06d83da2e95,0.5205701728306071,1
+Your credit score has been upgraded. Unlock premium loan access with zero documentation,1,98e8b9e170522314,0.9217588632151349,1
+Sent the advance payment of $200 via Wise. Check your email for confirmation,0,0b6680bf7266309a,0.900086157725169,1
+Lottery draw result: Your mobile number has won <NUMBER> BDT. Submit bank info to collect winning,1,1997d23d901ba60e,0.9723778022250784,1
+I refunded the extra 850 BDT you sent earlier. Please recheck your balance,0,55e50655771d629c,0.7556376755536552,1
+PayPal alert: Unverified login attempt blocked. Recover account before suspension,1,e8ecfbdde5b216fd,0.8884155749984595,1
+Final payment of <NUMBER> BDT processed successfully. Kindly send delivery schedule,0,3d6e2482a277e57a,0.9691052857607281,1
+Government relief fund available for selected citizens. Register to receive $500 instantly,1,1dbf56a9cac0e467,0.9159833779956581,1
+Rent of <NUMBER> BDT paid via Nagad. Let me know if it shows pending,0,250243594d8a70d3,0.7225424500622776,1
+Your insurance refund request is approved. Submit billing address to release payment,1,03a2c21ea728d3f6,0.9715058430873563,1
+Paid the tuition installment of <NUMBER> BDT today. Please confirm on your side,0,d462a8557e020285,0.905219472056989,1
+Crypto investment deal: Deposit $100 and earn <NUMBER> monthly return guaranteed,1,11cd6ef9141eb8ed,0.8300282240358069,1
+Can you send <NUMBER> BDT by evening? Need to settle an urgent bill,0,53b0961bbaa8a499,0.6913509422479084,1
+Security alert: Suspicious transaction of <NUMBER> BDT detected on your card. Approve or decline immediately,1,5a805391bf5817b5,0.9868342763249727,1
+Salary allowance of $120 added separately. Check your payroll slip,0,52d4343c4b88599f,0.5274144360312769,1
+Your subscription payment failed. Update card details to avoid service halt,1,fdbfe06d3517fba7,0.992253014276839,1
+Settled the vendor payment through bank draft just now. Awaiting your acknowledgment,0,2577920ff99d14d5,0.5127987994548174,1
+Limited stock: Get gold savings account with 5x bonus interest. Activate through special code,1,4eed50290a2a3cdd,0.864401473941965,1
+Received <NUMBER> BDT on Rocket just now. Sending receipt shortly,0,ebe0698ec3bc0fdb,0.7547110468275772,1
+Immediate action required to prevent permanent block on your debit card. Confirm identity at <URL>,1,4ed6648e12516674,0.9915130668970024,1
+Just sent <NUMBER> BDT to your account for the utility bills. Please check and confirm,0,ab49dd478d06b0a8,0.9721166429709674,1
+Exclusive loan offer of <NUMBER> with no credit check. Apply before midnight,1,ff9112453419bf48,0.7643937369099493,1
+Client transferred <NUMBER> BDT this morning. Update the balance sheet,0,279d3bea0b701c13,0.7620547942867368,1
+Final reminder: Your pending tax fee of $260 must be cleared to avoid penalty,1,7be97fb30a8f1bca,0.8013953055830877,1
+Your online order payment of <NUMBER> BDT is successfully received. Thank you,0,40896b435dc9f337,0.9950955001914825,1
+"Congratulations, your wallet has been credited with $700 bonus. Activate reward using secure link",1,05168aabdcc2fa93,0.9812335587900214,1
+I will return your <NUMBER> BDT tomorrow once my salary arrives,0,dde995e92f2d06b5,0.4617703908483095,0
+Suspicious payment attempt detected on your MasterCard. Validate transaction immediately,1,3cdb9abcb711260d,0.974787911913165,1
+Sent the advance booking amount of <NUMBER> BDT. Please reserve the slot,0,067cb93de8e8662f,0.7978603673906869,1
+Your reward of $950 is waiting for withdrawal. Submit bank details to receive instantly,1,f027e9e1a5a04952,0.9045409950564117,1
+I transferred <NUMBER> BDT for the exam fees. Please verify if it reached your account,0,701db951a04cf8dd,0.9569701710192283,1
+Urgent notification: Loan recovery team assigned to your case. Clear dues to avoid legal visit,1,5787fa5cf96317b6,0.9303427958947333,1
+The vendor confirmed receipt of <NUMBER> BDT. Delivery will be dispatched tomorrow,0,34f5c88134b21470,0.8109653201412135,1
+Increase your credit limit to <NUMBER> instantly without documentation. Click to activate,1,863e36b56c9fd8eb,0.9816890590420712,1
+Mom sent <NUMBER> BDT through Rocket. Check if it reflects in your balance,0,b62b0846829816b1,0.7185252953300825,1
+Your insurance refund of $350 is ready. Complete verification before it expires,1,b6b307be61915756,0.8925610431955847,1
+I paid the hotel booking charge via Visa. Check the confirmation email,0,2db0310fd9e9c21e,0.7399691565570499,1
+Security alert: Multiple failed login attempts on your wallet. Restore access now,1,c5648cff0b0d628c,0.9127123646254237,1
+The rent of <NUMBER> BDT has been transferred. Please send acknowledgment,0,33a4b93d3595504f,0.9243828798836016,1
+Final warning: Your credit card account will be frozen within 24 hours. Verify now at <URL>,1,c5a24527dd4aa37f,0.938294068581601,1
+I sent <NUMBER> BDT for groceries via bKash. Let me know once it reaches,0,84ed08181b282e00,0.39929922473397655,0
+Congratulations! You are selected for a <NUMBER> investment bonus. Submit details to claim,1,82c691de9216726c,0.9857628312125287,1
+Paid the electricity bill of <NUMBER> BDT today. Please check if it cleared,0,05bb7b41ef9e15ab,0.9066738382943125,1
+Your PayPal account is under review due to suspicious activity. Confirm identity immediately,1,0f286f6e1294e345,0.9834231703145468,1
+I transferred <NUMBER> BDT for the office stationery. Confirm receipt,0,de92258bc5bea9d2,0.9150958698636289,1
+Exclusive: Unlock a high-yield savings account with 5% bonus interest. Apply now,1,f0c302fe2802171a,0.7269750809506066,1
+Sent advance payment of <NUMBER> BDT for the event hall booking. Await confirmation,0,4dda37951135f821,0.8589518381941943,1
+Alert: Unauthorized loan application detected in your name. Verify or report now,1,17c94449c7a1f664,0.9534596375420195,1
+I repaid the <NUMBER> BDT loan you gave last week. Please confirm,0,c34ef0a7496573c2,0.7711287058128989,1
+Urgent: Your bank account has been flagged for multiple failed login attempts. Verify now to avoid freeze,1,4e18ce4df7ffd769,0.9637181404210269,1
+I transferred <NUMBER> BDT for the monthly internet bill. Check and confirm receipt,0,7275c5cf2262a9e6,0.8943180705155966,1
+Limited offer: Apply for an instant <NUMBER> payday loan without credit check,1,2cb12341e09e834b,0.9300139434242263,1
+Client has deposited <NUMBER> BDT today. Update your records accordingly,0,cc39c808cf8b9929,0.9034146893174128,1
+Your lottery reward of <NUMBER> is pending. Submit bank details to claim before deadline,1,d8c07d85c171fa5f,0.9607439039853223,1
+Paid the school fees of <NUMBER> BDT today. Please acknowledge,0,3daa07c2b0f9e25a,0.5896731206203504,1
+Security alert: Your debit card shows suspicious activity. Confirm transaction immediately,1,2942ab3daef87714,0.9698184064893465,1
+I sent <NUMBER> BDT to settle the grocery expenses. Let me know if it’s received,0,78dac371a0b24708,0.6745567026299012,1
+Exclusive crypto investment opportunity: Deposit $200 to earn <NUMBER> monthly. Limited seats,1,cd453ae513bdfd90,0.7787765925108934,1
+Salary of <NUMBER> BDT has been credited. Check your payroll slip,0,41f985988759b7ed,0.9161616394773812,1
+Congratulations! You have won a prize. Send OTP to claim your reward.,1,9e4323af8e1e94be,0.9514706677671992,1
+"Urgent! Your account will be suspended, verify now by sending OTP.",1,31638e7c5a4849c2,0.9059069261632294,1
+Your loan approved! Send your personal details to receive funds.,1,e6dff2207d0267fd,0.9283131493804673,1
+Monthly subscription payment received. Thank you for your service usage.,0,e1b097ae480ed31c,0.9742598444075277,1
+"Warning! Suspicious login detected, confirm your identity with OTP.",1,3d83eb2dfa122397,0.8736500842271715,1
+Account locked! Provide OTP now to unlock your account.,1,86e73ecb172f42b1,0.945424311067088,1
+Urgent! Update your bank details to continue service.,1,13d173ac41f5ee7b,0.9753037762769677,1
+Your account balance is BDT <NUMBER> . Thank you for banking with us.,0,cdfac5a5e6d97345,0.9805789593337313,1
+Congratulations! You are selected for a free gift. Send OTP to claim.,1,4b16252b70c37270,0.9366826657437911,1
+Urgent action required! Verify your account with OTP within 10 minutes.,1,1d6a9996a9fe0761,0.9266677733533896,1
+Your debit card is blocked for suspicious activity. Call now to unblock.,1,c9a3382b52df969d,0.9043643592001773,1
+New mobile plan launched. Contact customer care for details.,0,faf2ea503ca4ebdf,0.8866027422889452,1
+OTP verification failed. Please try again.,0,aa06ccc541874841,0.844399307961592,1
+Warning! Unauthorized access attempt detected. Verify with OTP now.,1,4d9a330d5c00ccec,0.7419510007152399,1
+Your subscription has been renewed successfully.,0,633463e9620e3b3d,0.8521852668144219,1
+Earn BDT <NUMBER> daily working from home. Register now.,1,76803a1d2d02e439,0.7072108127276192,1
+Your debit card has been temporarily blocked due to suspicious activity.,1,7f8ebf1b870af472,0.9594956002727335,1
+Your subscription has been renewed successfully. Thank you.,0,a0626319cb96d275,0.8741924891684589,1
+Update your bank details now to avoid service disruption.,1,93cdeac25c1a8d6b,0.9617374186812966,1
+"Dear user, update your payment info to avoid account suspension. Click the link now.",1,751831036936e1f3,0.9965413254777984,1
+Your package delivery is scheduled for tomorrow. Track here: <URL>,0,0439850cab780d83,0.9783326941123072,1
+Urgent: Verify your email by clicking the verification link within 24 hours.,1,673a5dd3beb97548,0.92789875835427,1
+Congratulations! You are selected for a free iPhone. Claim by replying with your address.,1,9245ac466081dccd,0.979588708165624,1
+"Team meeting is rescheduled to 3 PM, please confirm your availability.",0,98d206766169fbc5,0.8523531753778205,1
+Win big with our new lottery. Reply WIN to participate.,1,8ae6ae5213fead26,0.6620989153207946,1
+A new login to your account was detected from an unknown device. Secure your login now.,0,23bf6ef0632b334b,0.9630444565173203,1
+Thank you for your recent purchase. Your order # <NUMBER> will arrive soon.,0,e0c620cca2de5419,0.9733899898606003,1
+Update your password immediately to safeguard your account.,1,6a278e9d5b63e30e,0.9322869445592294,1
+Limited time offer: Upgrade your plan now and save 30%.,1,e03305ad04e93fd4,0.626141665073649,1
+Your bank statement is ready. Download your PDF here.,0,9e144e8115e3421f,0.8469303557982462,1
+New message from support team. Check your inbox for details.,0,72dd59fc893b96db,0.9321313558098494,1
+Payment of BDT <NUMBER> received successfully. Thank you for your payment.,0,0b9297a49b2f8472,0.9939306994485081,1
+Friend request from Raisa Moni.,0,3a4bcf9538faaeca,0.3435320593026122,0
+Earn BDT <NUMBER> daily from home. Register now!,1,592b60dc1d4fa701,0.844174084565089,1
+Your insurance claim has been approved. Contact us for details.,0,508e5ad1b269c4fe,0.9803543828886695,1
+Your software update is ready to install. Proceed now.,0,b1baae67597bebaa,0.6521951339891371,1
+Verify your email address by clicking this link.,1,1a4cbdfa5a62a505,0.9202502333490759,1
+Your subscription will expire tomorrow. Renew to continue service.,0,474993cda3082620,0.8122790205859861,1
+Friend request from Rafi Ahmed. Accept to connect.,0,5ee5cc842bf4c39e,0.4821443942510545,0

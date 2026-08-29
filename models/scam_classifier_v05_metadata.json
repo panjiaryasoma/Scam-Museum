@@ -1,0 +1,18 @@
+{
+  "version": "0.5",
+  "model": "word_char_balanced_v05",
+  "threshold": 0.8,
+  "selection": {
+    "model": "word_char_balanced_v05",
+    "threshold": 0.8,
+    "primary_oof_f1_macro": 0.9668973822910536,
+    "primary_oof_precision_scam": 0.9925925925925926,
+    "primary_oof_recall_scam": 0.8933333333333333,
+    "family_macro_recall": 0.668132279987436,
+    "family_weighted_recall": 0.8413096482061999,
+    "family_min_recall": 0.18181818181818182,
+    "negative_source_macro_specificity": 0.605059543833681,
+    "negative_source_min_specificity": 0.49101796407185627,
+    "selection_score": 0.7170728362485553
+  }
+}

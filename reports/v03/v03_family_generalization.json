@@ -1,0 +1,264 @@
+{
+  "version": "0.3",
+  "imc_rows_nonspam": 14361,
+  "imc_holdout_clean_rows": 14355,
+  "conflicting_template_groups_removed_from_lofo": 3,
+  "families": {
+    "banking": 6441,
+    "delivery": 1236,
+    "government": 1331,
+    "hey mum/dad": 55,
+    "others": 3691,
+    "telecom": 1379,
+    "wrong number": 222
+  },
+  "selected_model": "word_char_lr_v03",
+  "models": {
+    "word_lr_v03": {
+      "primary_grouped_cv": {
+        "f1_macro_mean": 0.9763131477584279,
+        "f1_macro_std": 0.002876057379549823
+      },
+      "family_results": [
+        {
+          "family": "banking",
+          "n": 6441,
+          "template_groups": 6367,
+          "detected": 6415,
+          "missed": 26,
+          "recall": 0.9959633597267505,
+          "group_overlap": 0
+        },
+        {
+          "family": "delivery",
+          "n": 1236,
+          "template_groups": 1231,
+          "detected": 1204,
+          "missed": 32,
+          "recall": 0.9741100323624595,
+          "group_overlap": 0
+        },
+        {
+          "family": "government",
+          "n": 1331,
+          "template_groups": 1331,
+          "detected": 1298,
+          "missed": 33,
+          "recall": 0.9752066115702479,
+          "group_overlap": 0
+        },
+        {
+          "family": "hey mum/dad",
+          "n": 55,
+          "template_groups": 55,
+          "detected": 32,
+          "missed": 23,
+          "recall": 0.5818181818181818,
+          "group_overlap": 0
+        },
+        {
+          "family": "others",
+          "n": 3691,
+          "template_groups": 3678,
+          "detected": 3277,
+          "missed": 414,
+          "recall": 0.8878352749932268,
+          "group_overlap": 0
+        },
+        {
+          "family": "telecom",
+          "n": 1379,
+          "template_groups": 1376,
+          "detected": 1368,
+          "missed": 11,
+          "recall": 0.9920232052211748,
+          "group_overlap": 0
+        },
+        {
+          "family": "wrong number",
+          "n": 222,
+          "template_groups": 222,
+          "detected": 109,
+          "missed": 113,
+          "recall": 0.49099099099099097,
+          "group_overlap": 0
+        }
+      ],
+      "family_macro_recall": 0.8425639509547188,
+      "family_weighted_recall": 0.9545802856147684,
+      "selection_score": 0.9045209967472483
+    },
+    "char_lr_v03": {
+      "primary_grouped_cv": {
+        "f1_macro_mean": 0.9864393101118392,
+        "f1_macro_std": 0.00632974698098183
+      },
+      "family_results": [
+        {
+          "family": "banking",
+          "n": 6441,
+          "template_groups": 6367,
+          "detected": 6403,
+          "missed": 38,
+          "recall": 0.9941002949852508,
+          "group_overlap": 0
+        },
+        {
+          "family": "delivery",
+          "n": 1236,
+          "template_groups": 1231,
+          "detected": 1192,
+          "missed": 44,
+          "recall": 0.9644012944983819,
+          "group_overlap": 0
+        },
+        {
+          "family": "government",
+          "n": 1331,
+          "template_groups": 1331,
+          "detected": 1304,
+          "missed": 27,
+          "recall": 0.9797145003756574,
+          "group_overlap": 0
+        },
+        {
+          "family": "hey mum/dad",
+          "n": 55,
+          "template_groups": 55,
+          "detected": 38,
+          "missed": 17,
+          "recall": 0.6909090909090909,
+          "group_overlap": 0
+        },
+        {
+          "family": "others",
+          "n": 3691,
+          "template_groups": 3678,
+          "detected": 3307,
+          "missed": 384,
+          "recall": 0.895963153616906,
+          "group_overlap": 0
+        },
+        {
+          "family": "telecom",
+          "n": 1379,
+          "template_groups": 1376,
+          "detected": 1366,
+          "missed": 13,
+          "recall": 0.990572878897752,
+          "group_overlap": 0
+        },
+        {
+          "family": "wrong number",
+          "n": 222,
+          "template_groups": 222,
+          "detected": 131,
+          "missed": 91,
+          "recall": 0.5900900900900901,
+          "group_overlap": 0
+        }
+      ],
+      "family_macro_recall": 0.8722501861961612,
+      "family_weighted_recall": 0.9572274468826193,
+      "selection_score": 0.925837127315089
+    },
+    "word_char_lr_v03": {
+      "primary_grouped_cv": {
+        "f1_macro_mean": 0.9846717816846043,
+        "f1_macro_std": 0.0038380647878969894
+      },
+      "family_results": [
+        {
+          "family": "banking",
+          "n": 6441,
+          "template_groups": 6367,
+          "detected": 6418,
+          "missed": 23,
+          "recall": 0.9964291259121254,
+          "group_overlap": 0
+        },
+        {
+          "family": "delivery",
+          "n": 1236,
+          "template_groups": 1231,
+          "detected": 1203,
+          "missed": 33,
+          "recall": 0.9733009708737864,
+          "group_overlap": 0
+        },
+        {
+          "family": "government",
+          "n": 1331,
+          "template_groups": 1331,
+          "detected": 1304,
+          "missed": 27,
+          "recall": 0.9797145003756574,
+          "group_overlap": 0
+        },
+        {
+          "family": "hey mum/dad",
+          "n": 55,
+          "template_groups": 55,
+          "detected": 39,
+          "missed": 16,
+          "recall": 0.7090909090909091,
+          "group_overlap": 0
+        },
+        {
+          "family": "others",
+          "n": 3691,
+          "template_groups": 3678,
+          "detected": 3354,
+          "missed": 337,
+          "recall": 0.9086968301273368,
+          "group_overlap": 0
+        },
+        {
+          "family": "telecom",
+          "n": 1379,
+          "template_groups": 1376,
+          "detected": 1369,
+          "missed": 10,
+          "recall": 0.9927483683828862,
+          "group_overlap": 0
+        },
+        {
+          "family": "wrong number",
+          "n": 222,
+          "template_groups": 222,
+          "detected": 134,
+          "missed": 88,
+          "recall": 0.6036036036036037,
+          "group_overlap": 0
+        }
+      ],
+      "family_macro_recall": 0.8805120440523293,
+      "family_weighted_recall": 0.9628004179728318,
+      "selection_score": 0.9296835531684952
+    }
+  },
+  "final_training_rows": 12542,
+  "final_training_class_counts": {
+    "0": 3867,
+    "1": 8675
+  },
+  "primary_locked_test_after_selection": {
+    "f1_macro": 0.9689602903265067,
+    "precision_scam": 0.9024390243902439,
+    "recall_scam": 0.9910714285714286,
+    "f1_scam": 0.9446808510638298,
+    "average_precision": 0.9577087864731938,
+    "balanced_accuracy": 0.9893309573053627,
+    "confusion_matrix": [
+      [
+        955,
+        12
+      ],
+      [
+        1,
+        111
+      ]
+    ]
+  },
+  "model_path": "models\\scam_classifier_v03.joblib"
+}

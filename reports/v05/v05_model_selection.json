@@ -1,0 +1,194 @@
+{
+  "version": "0.5",
+  "development_sources": {
+    "primary_development_rows": 4317,
+    "imc_capped_rows": 8223,
+    "financial_ham_after_cross_source_dedup": 167,
+    "smishx_legitimate_after_cross_source_dedup": 178,
+    "imc_family_conflict_groups_removed": 3
+  },
+  "selected": {
+    "model": "word_char_balanced_v05",
+    "threshold": 0.8,
+    "primary_oof_f1_macro": 0.9668973822910536,
+    "primary_oof_precision_scam": 0.9925925925925926,
+    "primary_oof_recall_scam": 0.8933333333333333,
+    "family_macro_recall": 0.668132279987436,
+    "family_weighted_recall": 0.8413096482061999,
+    "family_min_recall": 0.18181818181818182,
+    "negative_source_macro_specificity": 0.605059543833681,
+    "negative_source_min_specificity": 0.49101796407185627,
+    "selection_score": 0.7170728362485553
+  },
+  "all_choices": [
+    {
+      "model": "word_char_balanced_v05",
+      "threshold": 0.8,
+      "primary_oof_f1_macro": 0.9668973822910536,
+      "primary_oof_precision_scam": 0.9925925925925926,
+      "primary_oof_recall_scam": 0.8933333333333333,
+      "family_macro_recall": 0.668132279987436,
+      "family_weighted_recall": 0.8413096482061999,
+      "family_min_recall": 0.18181818181818182,
+      "negative_source_macro_specificity": 0.605059543833681,
+      "negative_source_min_specificity": 0.49101796407185627,
+      "selection_score": 0.7170728362485553
+    },
+    {
+      "model": "word_char_balanced_v05",
+      "threshold": 0.7,
+      "primary_oof_f1_macro": 0.9771780771386045,
+      "primary_oof_precision_scam": 0.9836448598130841,
+      "primary_oof_recall_scam": 0.9355555555555556,
+      "family_macro_recall": 0.7465876193473434,
+      "family_weighted_recall": 0.8922326715430163,
+      "family_min_recall": 0.34545454545454546,
+      "negative_source_macro_specificity": 0.5023043800040369,
+      "negative_source_min_specificity": 0.3473053892215569,
+      "selection_score": 0.689083754220939
+    },
+    {
+      "model": "word_char_balanced_v05",
+      "threshold": 0.6,
+      "primary_oof_f1_macro": 0.9863554865959832,
+      "primary_oof_precision_scam": 0.9755555555555555,
+      "primary_oof_recall_scam": 0.9755555555555555,
+      "family_macro_recall": 0.8063864654758538,
+      "family_weighted_recall": 0.9242075931731104,
+      "family_min_recall": 0.4909090909090909,
+      "negative_source_macro_specificity": 0.4401702213550427,
+      "negative_source_min_specificity": 0.24550898203592814,
+      "selection_score": 0.6628688977077176
+    },
+    {
+      "model": "word_char_neg3_v05",
+      "threshold": 0.5,
+      "primary_oof_f1_macro": 0.9485147192958789,
+      "primary_oof_precision_scam": 0.9946949602122016,
+      "primary_oof_recall_scam": 0.8333333333333334,
+      "family_macro_recall": 0.8290275198595871,
+      "family_weighted_recall": 0.929362591431557,
+      "family_min_recall": 0.5818181818181818,
+      "negative_source_macro_specificity": 0.41939716073471034,
+      "negative_source_min_specificity": 0.20958083832335328,
+      "selection_score": 0.6458714404563815
+    },
+    {
+      "model": "word_char_balanced_v05",
+      "threshold": 0.5,
+      "primary_oof_f1_macro": 0.9846602724722211,
+      "primary_oof_precision_scam": 0.9609544468546638,
+      "primary_oof_recall_scam": 0.9844444444444445,
+      "family_macro_recall": 0.8565181807092347,
+      "family_weighted_recall": 0.9464298153953327,
+      "family_min_recall": 0.6126126126126126,
+      "negative_source_macro_specificity": 0.40161811209042586,
+      "negative_source_min_specificity": 0.17964071856287425,
+      "selection_score": 0.6419826084646706
+    },
+    {
+      "model": "word_char_neg2_v05",
+      "threshold": 0.5,
+      "primary_oof_f1_macro": 0.9499601644116349,
+      "primary_oof_precision_scam": 0.9947229551451188,
+      "primary_oof_recall_scam": 0.8377777777777777,
+      "family_macro_recall": 0.8580589804107721,
+      "family_weighted_recall": 0.941692789968652,
+      "family_min_recall": 0.6351351351351351,
+      "negative_source_macro_specificity": 0.398624100114378,
+      "negative_source_min_specificity": 0.17365269461077845,
+      "selection_score": 0.6346888118479548
+    }
+  ],
+  "selected_family_results": [
+    {
+      "family": "banking",
+      "n": 6441,
+      "recall": 0.9422449930135072,
+      "detected": 6069,
+      "missed": 372
+    },
+    {
+      "family": "delivery",
+      "n": 1236,
+      "recall": 0.633495145631068,
+      "detected": 783,
+      "missed": 453
+    },
+    {
+      "family": "government",
+      "n": 1331,
+      "recall": 0.8827948910593538,
+      "detected": 1175,
+      "missed": 156
+    },
+    {
+      "family": "hey mum/dad",
+      "n": 55,
+      "recall": 0.18181818181818182,
+      "detected": 10,
+      "missed": 45
+    },
+    {
+      "family": "others",
+      "n": 3691,
+      "recall": 0.72879978325657,
+      "detected": 2690,
+      "missed": 1001
+    },
+    {
+      "family": "telecom",
+      "n": 1379,
+      "recall": 0.9158810732414794,
+      "detected": 1263,
+      "missed": 116
+    },
+    {
+      "family": "wrong number",
+      "n": 222,
+      "recall": 0.3918918918918919,
+      "detected": 87,
+      "missed": 135
+    }
+  ],
+  "selected_negative_source_results": [
+    {
+      "source": "financial_ham",
+      "n": 167,
+      "specificity": 0.49101796407185627,
+      "false_positive_rate": 0.5089820359281437
+    },
+    {
+      "source": "smishx_legitimate",
+      "n": 178,
+      "specificity": 0.7191011235955056,
+      "false_positive_rate": 0.2808988764044944
+    }
+  ],
+  "primary_locked_test_after_selection": {
+    "f1_macro": 0.950514742266797,
+    "precision_scam": 0.9603960396039604,
+    "recall_scam": 0.8660714285714286,
+    "f1_scam": 0.9107981220657277,
+    "specificity": 0.9958634953464323,
+    "average_precision": 0.9648360426040192,
+    "balanced_accuracy": 0.9309674619589304,
+    "confusion_matrix": [
+      [
+        963,
+        4
+      ],
+      [
+        15,
+        97
+      ]
+    ]
+  },
+  "final_training_rows": 12885,
+  "final_training_class_counts": {
+    "0": 4212,
+    "1": 8673
+  },
+  "model_path": "models\\scam_classifier_v05.joblib",
+  "metadata_path": "models\\scam_classifier_v05_metadata.json"
+}
