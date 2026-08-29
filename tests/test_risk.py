@@ -73,6 +73,12 @@ def analyze(
             "LOW RISK",
         ),
         (
+            "Hey Mum, dinner is at 7 tonight. "
+            "I'll probably get there around 6:45.",
+            "WEAK",
+            "LOW RISK",
+        ),
+        (
             "A security-related notification "
             "was generated.",
             "STRONG",
@@ -170,6 +176,16 @@ def analyze(
             "HIGH RISK",
         ),
 
+        # Executable attachment request.
+        (
+            "Hello, this is DHL Express. We have a package for you, but the "
+            "delivery address is incomplete. Please download and check the "
+            "digital invoice attached below to verify your shipment details. "
+            "Attachment: Delivery_Invoice.apk",
+            "STRONG",
+            "HIGH RISK",
+        ),
+
         # RC17: money alone is observable, not automatically scam.
         (
             "hey can u send me the $18 from dinner "
@@ -239,6 +255,18 @@ def test_benign_informational_context_can_remain_low_risk():
     assert result["verdict"] == "LOW RISK"
     assert (
         "BENIGN_INFORMATIONAL_CONTEXT_WITHOUT_ACTIONABLE_RISK"
+        in result["reason_codes"]
+    )
+
+
+def test_risky_attachment_has_explicit_high_risk_reason():
+    result = analyze(
+        "Please download the attached invoice. Attachment: Delivery_Invoice.apk",
+        "WEAK",
+    )
+    assert result["verdict"] == "HIGH RISK"
+    assert (
+        "EXECUTABLE_ATTACHMENT_INTERACTION_REQUEST"
         in result["reason_codes"]
     )
 
