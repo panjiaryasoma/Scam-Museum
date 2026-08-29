@@ -2,12 +2,12 @@
   "version": "0.1",
   "model": "v0.5",
   "n": 24,
-  "review_target_matches": 23,
-  "review_target_match_rate": 0.9583333333333334,
+  "review_target_matches": 21,
+  "review_target_match_rate": 0.875,
   "actual_verdict_counts": {
     "HIGH RISK": 9,
-    "LOW RISK": 11,
-    "INSUFFICIENT EVIDENCE": 4
+    "INSUFFICIENT EVIDENCE": 7,
+    "LOW RISK": 8
   },
   "results": [
     {
@@ -26,6 +26,7 @@
       },
       "evidence_ids": [
         "FAMILY_IMPERSONATION",
+        "NEW_NUMBER_CLAIM",
         "MONEY_TRANSFER_REQUEST"
       ],
       "protective_evidence_ids": [],
@@ -48,7 +49,7 @@
       "evidence_ids": [
         "FAMILY_IMPERSONATION",
         "NEW_NUMBER_CLAIM",
-        "FAMILY_IMPERSONATION",
+        "NEW_NUMBER_CLAIM",
         "MONEY_TRANSFER_REQUEST",
         "TIME_URGENCY",
         "TIME_URGENCY"
@@ -116,8 +117,6 @@
       },
       "evidence_ids": [
         "GIFT_CARD_REQUEST",
-        "NEED_AND_GREED",
-        "MONEY_TRANSFER_REQUEST",
         "TIME_URGENCY"
       ],
       "protective_evidence_ids": [],
@@ -152,7 +151,7 @@
       "family": "job_task",
       "format": "single_message",
       "review_target": "SUSPICIOUS",
-      "actual_verdict": "LOW RISK",
+      "actual_verdict": "INSUFFICIENT EVIDENCE",
       "target_match": false,
       "ml_signal": {
         "label": "ELEVATED",
@@ -392,8 +391,8 @@
       "family": "delivery_update",
       "format": "single_message",
       "review_target": "LOW RISK",
-      "actual_verdict": "LOW RISK",
-      "target_match": true,
+      "actual_verdict": "INSUFFICIENT EVIDENCE",
+      "target_match": false,
       "ml_signal": {
         "label": "ELEVATED",
         "score": 0.7760354635939304,
@@ -446,8 +445,8 @@
       "family": "support_warning",
       "format": "single_message",
       "review_target": "LOW RISK",
-      "actual_verdict": "LOW RISK",
-      "target_match": true,
+      "actual_verdict": "INSUFFICIENT EVIDENCE",
+      "target_match": false,
       "ml_signal": {
         "label": "ELEVATED",
         "score": 0.6458843853404499,
