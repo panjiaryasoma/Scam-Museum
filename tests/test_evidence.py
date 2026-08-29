@@ -1,4 +1,4 @@
-import pytest
+﻿import pytest
 
 from app.core.evidence import detect_evidence
 
@@ -7,42 +7,141 @@ from app.core.evidence import detect_evidence
     "text,expected_id",
     [
         ("Send us your OTP immediately.", "OTP_REQUEST"),
-        ("Provide your password to restore access.", "CREDENTIAL_REQUEST"),
+        (
+            "Provide your password to restore access.",
+            "CREDENTIAL_REQUEST",
+        ),
         ("Transfer £900 today.", "MONEY_TRANSFER_REQUEST"),
-        ("Your account will be suspended immediately.", "ACCOUNT_THREAT"),
-        ("You won a prize. Claim your reward now.", "NEED_AND_GREED"),
-        ("Hi Mum, this is my new number.", "FAMILY_IMPERSONATION"),
-        ("Hi Mum, this is my new number.", "NEW_NUMBER_CLAIM"),
+        (
+            "Your account will be suspended immediately.",
+            "ACCOUNT_THREAT",
+        ),
+        (
+            "You won a prize. Claim your reward now.",
+            "NEED_AND_GREED",
+        ),
+        (
+            "Hi Mum, this is my new number.",
+            "FAMILY_IMPERSONATION",
+        ),
+        (
+            "Hi Mum, this is my new number.",
+            "NEW_NUMBER_CLAIM",
+        ),
         ("Hi, is this Sarah?", "UNEXPECTED_CONTACT"),
+
+        # Realistic-chat hardening cases.
+        (
+            "Reply YES and send the 6 digit code we just texted you.",
+            "OTP_REQUEST",
+        ),
+        (
+            "Need £650 for the repair guy asap, "
+            "can you transfer it now?",
+            "MONEY_TRANSFER_REQUEST",
+        ),
+        (
+            "Need 5 Apple gift cards. Buy them now and "
+            "send me pics of the codes.",
+            "GIFT_CARD_REQUEST",
+        ),
+        (
+            "Your account will close in 30 minutes.",
+            "TIME_URGENCY",
+        ),
+        (
+            "The network fee of $180 needs paying first.",
+            "PAYMENT_REQUEST",
+        ),
+        (
+            "We recovered the crypto you lost last year.",
+            "RECOVERY_LURE",
+        ),
     ],
 )
-def test_detects_expected_evidence(text, expected_id):
+def test_detects_expected_evidence(
+    text,
+    expected_id,
+):
     evidence, _ = detect_evidence(text)
-    assert expected_id in {item.id for item in evidence}
+    assert expected_id in {
+        item.id for item in evidence
+    }
 
 
 def test_legitimate_otp_warning_is_protective_not_request():
     evidence, protective = detect_evidence(
-        "Your OTP is 482193. Do not share your OTP with anyone."
+        "Your OTP is 482193. "
+        "Do not share your OTP with anyone."
     )
-    assert "OTP_REQUEST" not in {item.id for item in evidence}
-    assert "PROTECTIVE_DO_NOT_SHARE" in {item.id for item in protective}
+    assert "OTP_REQUEST" not in {
+        item.id for item in evidence
+    }
+    assert "PROTECTIVE_DO_NOT_SHARE" in {
+        item.id for item in protective
+    }
 
 
 def test_shortener_is_suspicious():
-    evidence, _ = detect_evidence("Verify at https://bit.ly/example")
-    assert "SUSPICIOUS_URL" in {item.id for item in evidence}
+    evidence, _ = detect_evidence(
+        "Verify at https://bit.ly/example"
+    )
+    assert "SUSPICIOUS_URL" in {
+        item.id for item in evidence
+    }
 
 
 def test_normal_url_not_automatically_suspicious():
     evidence, _ = detect_evidence(
-        "Track your parcel at https://amazon.com/orders"
+        "Track your parcel at "
+        "https://amazon.com/orders"
     )
-    assert "SUSPICIOUS_URL" not in {item.id for item in evidence}
+    assert "SUSPICIOUS_URL" not in {
+        item.id for item in evidence
+    }
 
 
 def test_evidence_span_matches_source_text():
-    text = "Your account will be suspended immediately."
+    text = (
+        "Your account will be suspended immediately."
+    )
     evidence, _ = detect_evidence(text)
-    item = next(x for x in evidence if x.id == "ACCOUNT_THREAT")
-    assert text[item.start:item.end] == item.matched_text
+    item = next(
+        x
+        for x in evidence
+        if x.id == "ACCOUNT_THREAT"
+    )
+    assert (
+        text[item.start:item.end]
+        == item.matched_text
+    )
+
+
+def test_wifi_password_is_not_account_credential_request():
+    evidence, _ = detect_evidence(
+        "Can you send me the wifi password "
+        "when you get home?"
+    )
+    assert "CREDENTIAL_REQUEST" not in {
+        item.id for item in evidence
+    }
+
+
+def test_money_request_is_observable_but_not_critical_by_itself():
+    evidence, _ = detect_evidence(
+        "Can you send me the $18 from dinner "
+        "when you get a sec?"
+    )
+    item = next(
+        x
+        for x in evidence
+        if x.id == "MONEY_TRANSFER_REQUEST"
+    )
+    assert item.strength == "strong"
+
+
+def test_card_details_is_financial_info_request():
+    evidence, _ = detect_evidence(
+        "Open this link to receive the money and enter your card details."
+    )
+    assert "FINANCIAL_INFO_REQUEST" in {item.id for item in evidence}

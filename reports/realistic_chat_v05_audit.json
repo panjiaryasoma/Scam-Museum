@@ -1,0 +1,498 @@
+{
+  "version": "0.1",
+  "model": "v0.5",
+  "n": 24,
+  "review_target_matches": 23,
+  "review_target_match_rate": 0.9583333333333334,
+  "actual_verdict_counts": {
+    "HIGH RISK": 9,
+    "LOW RISK": 11,
+    "INSUFFICIENT EVIDENCE": 4
+  },
+  "results": [
+    {
+      "id": "RC01",
+      "kind": "scam_like",
+      "family": "family_impersonation",
+      "format": "single_message",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.1489823826822477,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "FAMILY_IMPERSONATION",
+        "MONEY_TRANSFER_REQUEST"
+      ],
+      "protective_evidence_ids": [],
+      "message": "mum its me 😭 smashed my phone so this is my temp number. can u send £420 to this account today? i'll pay u back tomorrow x"
+    },
+    {
+      "id": "RC02",
+      "kind": "scam_like",
+      "family": "family_impersonation",
+      "format": "pasted_chat",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "ELEVATED",
+        "score": 0.6690237155561725,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "FAMILY_IMPERSONATION",
+        "NEW_NUMBER_CLAIM",
+        "FAMILY_IMPERSONATION",
+        "MONEY_TRANSFER_REQUEST",
+        "TIME_URGENCY",
+        "TIME_URGENCY"
+      ],
+      "protective_evidence_ids": [],
+      "message": "Unknown: Hi Mum, new phone here\nMum: who is this?\nUnknown: it's me, Sam. old phone died\nUnknown: need £650 for the repair guy asap, can you transfer it now?"
+    },
+    {
+      "id": "RC03",
+      "kind": "scam_like",
+      "family": "bank_otp",
+      "format": "single_message",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "STRONG",
+        "score": 0.8472652921565268,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "ACCOUNT_THREAT",
+        "MONEY_TRANSFER_REQUEST",
+        "OTP_REQUEST"
+      ],
+      "protective_evidence_ids": [],
+      "message": "Hi, fraud team here. We blocked a £786 card payment. Reply YES and send the 6 digit code we just texted you so we can cancel it."
+    },
+    {
+      "id": "RC04",
+      "kind": "scam_like",
+      "family": "delivery_fee",
+      "format": "single_message",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "ELEVATED",
+        "score": 0.785862646550467,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "PAYMENT_REQUEST",
+        "SUSPICIOUS_URL",
+        "TIME_URGENCY"
+      ],
+      "protective_evidence_ids": [],
+      "message": "parcel 8842 couldn't be delivered today. small £1.49 redelivery fee due: https://bit.ly/redeliver8842 pls sort before 6pm"
+    },
+    {
+      "id": "RC05",
+      "kind": "scam_like",
+      "family": "boss_impersonation",
+      "format": "pasted_chat",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.2980017579711577,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "GIFT_CARD_REQUEST",
+        "NEED_AND_GREED",
+        "MONEY_TRANSFER_REQUEST",
+        "TIME_URGENCY"
+      ],
+      "protective_evidence_ids": [],
+      "message": "Boss: hey are you free?\nYou: yep what's up\nBoss: stuck in a client meeting. need 5 apple gift cards for the team\nBoss: £100 each. buy them now and send me pics of the codes"
+    },
+    {
+      "id": "RC06",
+      "kind": "scam_like",
+      "family": "marketplace_payment",
+      "format": "pasted_chat",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "ELEVATED",
+        "score": 0.7534936196566547,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "AUTHORITY_CLAIM",
+        "MONEY_TRANSFER_REQUEST",
+        "SUSPICIOUS_URL",
+        "FINANCIAL_INFO_REQUEST"
+      ],
+      "protective_evidence_ids": [],
+      "message": "Buyer: still available?\nSeller: yes\nBuyer: perfect i paid already through courier secure checkout\nBuyer: open this to receive the money https://bit.ly/market-pay-91 and enter your card details"
+    },
+    {
+      "id": "RC07",
+      "kind": "scam_like",
+      "family": "job_task",
+      "format": "single_message",
+      "review_target": "SUSPICIOUS",
+      "actual_verdict": "LOW RISK",
+      "target_match": false,
+      "ml_signal": {
+        "label": "ELEVATED",
+        "score": 0.6577511072022434,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "hey! saw your profile and we have easy remote work. like 3 videos a day and earn $200-500. message our manager on telegram @workteam88 to start"
+    },
+    {
+      "id": "RC08",
+      "kind": "scam_like",
+      "family": "crypto_recovery",
+      "format": "single_message",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.32644511782232644,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "RECOVERY_LURE",
+        "PAYMENT_REQUEST"
+      ],
+      "protective_evidence_ids": [],
+      "message": "Good news, we recovered the crypto you lost last year. Wallet is ready to release 4.2 ETH, only the network fee of $180 needs paying first."
+    },
+    {
+      "id": "RC09",
+      "kind": "scam_like",
+      "family": "romance_emergency",
+      "format": "pasted_chat",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.06237042855910772,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "MONEY_TRANSFER_REQUEST",
+        "TIME_URGENCY"
+      ],
+      "protective_evidence_ids": [],
+      "message": "Chris: babe i'm stuck at the airport 😔\nChris: card isn't working here\nChris: can you send me $300 right now? promise i'll explain when i land"
+    },
+    {
+      "id": "RC10",
+      "kind": "scam_like",
+      "family": "account_takeover",
+      "format": "single_message",
+      "review_target": "HIGH RISK",
+      "actual_verdict": "HIGH RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "STRONG",
+        "score": 0.917189827590351,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "ACCOUNT_THREAT",
+        "TIME_URGENCY",
+        "TIME_URGENCY",
+        "SUSPICIOUS_URL"
+      ],
+      "protective_evidence_ids": [],
+      "message": "SECURITY ALERT: unusual login detected. Your account will be closed in 30 minutes unless you verify now: https://bit.ly/account-check"
+    },
+    {
+      "id": "RC11",
+      "kind": "ambiguous",
+      "family": "wrong_number_opener",
+      "format": "pasted_chat",
+      "review_target": "INSUFFICIENT EVIDENCE",
+      "actual_verdict": "INSUFFICIENT EVIDENCE",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.06288063780870862,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "UNEXPECTED_CONTACT"
+      ],
+      "protective_evidence_ids": [],
+      "message": "Unknown: hey anna, still on for coffee tomorrow?\nYou: wrong number sorry\nUnknown: oh wow my bad 😅 hope i didn't bother you"
+    },
+    {
+      "id": "RC12",
+      "kind": "ambiguous",
+      "family": "wrong_number_social",
+      "format": "pasted_chat",
+      "review_target": "INSUFFICIENT EVIDENCE",
+      "actual_verdict": "INSUFFICIENT EVIDENCE",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.3119481911310124,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "UNEXPECTED_CONTACT",
+        "UNEXPECTED_CONTACT"
+      ],
+      "protective_evidence_ids": [],
+      "message": "Unknown: is this Daniel from the wine tasting?\nYou: nope\nUnknown: sorry! saved the wrong number apparently"
+    },
+    {
+      "id": "RC13",
+      "kind": "ambiguous",
+      "family": "new_number_no_request",
+      "format": "single_message",
+      "review_target": "INSUFFICIENT EVIDENCE",
+      "actual_verdict": "INSUFFICIENT EVIDENCE",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.17608455519055882,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "FAMILY_IMPERSONATION"
+      ],
+      "protective_evidence_ids": [],
+      "message": "hey dad new number, old phone finally died lol. save this one pls. still coming round sunday?"
+    },
+    {
+      "id": "RC14",
+      "kind": "ambiguous",
+      "family": "unexpected_contact",
+      "format": "single_message",
+      "review_target": "INSUFFICIENT EVIDENCE",
+      "actual_verdict": "INSUFFICIENT EVIDENCE",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.30393846954460013,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "UNEXPECTED_CONTACT"
+      ],
+      "protective_evidence_ids": [],
+      "message": "hey, random question, do i know you from somewhere? your number was in my contacts"
+    },
+    {
+      "id": "RC15",
+      "kind": "legitimate_like",
+      "family": "protective_otp",
+      "format": "single_message",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "STRONG",
+        "score": 0.8227777268770673,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [
+        "PROTECTIVE_DO_NOT_SHARE"
+      ],
+      "message": "Your verification code is 483920. Don't share this code with anyone, including support staff. We will never ask you for it."
+    },
+    {
+      "id": "RC16",
+      "kind": "legitimate_like",
+      "family": "ordinary_chat",
+      "format": "pasted_chat",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.05412466001953931,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "Maya: grabbing dinner around 7?\nYou: yep\nMaya: same place as last week?\nYou: works for me 👍"
+    },
+    {
+      "id": "RC17",
+      "kind": "legitimate_like",
+      "family": "peer_payment",
+      "format": "single_message",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.10983346879733205,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [
+        "MONEY_TRANSFER_REQUEST"
+      ],
+      "protective_evidence_ids": [],
+      "message": "hey can u send me the $18 from dinner when you get a sec? no rush"
+    },
+    {
+      "id": "RC18",
+      "kind": "legitimate_like",
+      "family": "wifi_password",
+      "format": "single_message",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.0640390885224896,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "can you send me the wifi password when you get home? i forgot to save it 😭"
+    },
+    {
+      "id": "RC19",
+      "kind": "legitimate_like",
+      "family": "delivery_update",
+      "format": "single_message",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "ELEVATED",
+        "score": 0.7760354635939304,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "Amazon: your package is out for delivery. Track the latest status in the Amazon app."
+    },
+    {
+      "id": "RC20",
+      "kind": "legitimate_like",
+      "family": "bank_notice",
+      "format": "single_message",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.31181848120919314,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "Your monthly statement is ready. Sign in to the official banking app if you'd like to view it."
+    },
+    {
+      "id": "RC21",
+      "kind": "legitimate_like",
+      "family": "friend_new_number",
+      "format": "pasted_chat",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.16974435034997154,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "Jamie: yo new number, finally switched phones\nYou: noted lol\nJamie: football saturday still?\nYou: absolutely"
+    },
+    {
+      "id": "RC22",
+      "kind": "legitimate_like",
+      "family": "support_warning",
+      "format": "single_message",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "ELEVATED",
+        "score": 0.6458843853404499,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "Reminder from IT: support will never ask for your password or verification code. Report suspicious requests through the help desk."
+    },
+    {
+      "id": "RC23",
+      "kind": "hard_negative",
+      "family": "legitimate_transfer",
+      "format": "pasted_chat",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.13574451918857502,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "Alex: got the concert tickets\nYou: niceee\nAlex: your half was £42 btw\nYou: sending it now"
+    },
+    {
+      "id": "RC24",
+      "kind": "hard_negative",
+      "family": "legitimate_password_context",
+      "format": "pasted_chat",
+      "review_target": "LOW RISK",
+      "actual_verdict": "LOW RISK",
+      "target_match": true,
+      "ml_signal": {
+        "label": "WEAK",
+        "score": 0.03249417787347896,
+        "model_version": "0.5",
+        "threshold": 0.8
+      },
+      "evidence_ids": [],
+      "protective_evidence_ids": [],
+      "message": "Roommate: netflix logged me out again 💀\nYou: lol\nRoommate: what's the password?\nYou: i'll tell you when i'm home"
+    }
+  ]
+}
