@@ -30,10 +30,16 @@ def create_app(
 ) -> FastAPI:
     app = FastAPI(
         title="Scam Museum API",
+        description=(
+            "Text-analysis API for Scam Museum. "
+            "The ML model contributes a risk signal; the final verdict "
+            "combines that signal with observable evidence and explicit "
+            "uncertainty."
+        ),
         version="0.1.0",
-        docs_url=None,
+        docs_url="/docs",
         redoc_url=None,
-        openapi_url=None,
+        openapi_url="/openapi.json",
     )
 
     app.state.analysis_service = analysis_service
@@ -50,14 +56,25 @@ def create_app(
             return injected
         return get_analysis_service()
 
-    @app.get("/", include_in_schema=False)
+    @app.get(
+        "/",
+        include_in_schema=False,
+        summary="Scam Museum frontend",
+    )
     async def museum_home() -> FileResponse:
         return FileResponse(
             TEMPLATE_DIR / "index.html",
             media_type="text/html",
         )
 
-    @app.get("/health")
+    @app.get(
+        "/health",
+        tags=["System"],
+        summary="Health check",
+        description=(
+            "Returns service availability without loading the ML model."
+        ),
+    )
     async def health() -> dict[str, str]:
         return {
             "status": "ok",
@@ -65,7 +82,17 @@ def create_app(
             "api_version": "0.1",
         }
 
-    @app.post("/api/analyze")
+    @app.post(
+        "/api/analyze",
+        tags=["Analysis"],
+        summary="Analyze a suspicious message",
+        description=(
+            "Screens submitted message text using the frozen ML risk scorer, "
+            "observable evidence detection, hybrid decision logic, and the "
+            "museum exhibit formatter. The numeric ML score is not presented "
+            "as a calibrated probability."
+        ),
+    )
     async def analyze(payload: AnalyzeRequest) -> JSONResponse:
         try:
             result = current_service().analyze_message(payload.message)
