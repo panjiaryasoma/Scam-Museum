@@ -1,0 +1,184 @@
+SCAM MUSEUM
+MANUAL LOW-RISK & AMBIGUITY TEST CASES
+======================================
+
+Purpose:
+Manual copy-paste cases for testing Scam Museum through the real UI.
+
+Expected distribution:
+- 7 LOW RISK
+- 4 INSUFFICIENT EVIDENCE
+- 3 SUSPICIOUS
+
+
+1. Normal Family Coordination
+
+Target: LOW RISK
+
+The Message:
+"Hey Mum, dinner is at 7 tonight. I'll probably get there around 6:45. Do you want me to pick up anything from the supermarket on the way?"
+
+Why:
+A normal family conversation. There is no credential request, money-transfer pressure, suspicious link, or manipulative urgency.
+
+
+2. Friend Asking for a Small Favor
+
+Target: LOW RISK
+
+The Message:
+"Hey, can you bring my blue notebook to class tomorrow? I think I left it on your desk yesterday. No rush if you can't find it."
+
+Why:
+There is a request, but it is harmless. This checks that the system does not treat every imperative or favor request as suspicious.
+
+
+3. Normal Meeting Update
+
+Target: LOW RISK
+
+The Message:
+"Morning everyone. Today's project meeting has been moved from 2 PM to 3 PM because the previous room is still being used. Same building, room 204."
+
+Why:
+The message contains time references and a schedule change, but no pressure tactic or risky request.
+
+
+4. Legitimate Purchase Conversation
+
+Target: LOW RISK
+
+The Message:
+"I bought the groceries already. Your half came to £18. Just send it whenever you get a chance, there's no rush."
+
+Why:
+Money is mentioned, but the context is ordinary and contains no suspicious link, impersonation, credential request, or forced urgency.
+
+
+5. Ordinary Package Update
+
+Target: LOW RISK
+
+The Message:
+"Your order has been packed and is scheduled for delivery tomorrow between 10 AM and 2 PM. You don't need to do anything. We'll notify you once the driver is nearby."
+
+Why:
+It resembles the delivery-message domain but asks for no payment, credential, link click, or other action.
+
+
+6. Protective Security Message
+
+Target: LOW RISK
+
+The Message:
+"Your verification code is 482193. Do not share this code with anyone, including people claiming to work for us. If you did not request this code, you can safely ignore this message."
+
+Why:
+The message contains an OTP, but the instruction is protective rather than extractive. It explicitly tells the recipient not to share the code.
+
+
+7. Normal Wi-Fi Password Conversation
+
+Target: LOW RISK
+
+The Message:
+"Can you send me the Wi-Fi password when you get home? I forgot to save it on my laptop. It's just for the house network."
+
+Why:
+The word "password" appears, but the context is a household Wi-Fi credential rather than an account credential.
+
+
+8. Unknown Number, Minimal Context
+
+Target: INSUFFICIENT EVIDENCE
+
+The Message:
+"Hi, is this Sarah? I got this number from someone at work but I'm not sure I copied it correctly."
+
+Why:
+The sender is unknown, but there is no concrete scam behavior, risky request, link, payment demand, or credential request.
+
+
+9. New Number Claim Without Request
+
+Target: INSUFFICIENT EVIDENCE
+
+The Message:
+"Hi Mum, it's me. My old phone stopped working, so I'm using this number for a few days. I'll explain later."
+
+Why:
+A family impersonation pattern is possible, but there is no request for money, OTP, credential, or other risky action.
+
+
+10. Vague Account Notification
+
+Target: INSUFFICIENT EVIDENCE
+
+The Message:
+"We noticed something unusual on your account earlier today. Please review your recent activity when you have time."
+
+Why:
+The message mentions account activity, but includes no link, credential request, threat, deadline, or urgent action.
+
+
+11. Unclear Marketplace Buyer
+
+Target: INSUFFICIENT EVIDENCE
+
+The Message:
+"Hi, is the desk you listed yesterday still available? I'm interested but I have a couple of questions before deciding."
+
+Why:
+Contact from a stranger is normal in a marketplace context. There is no payment manipulation, suspicious URL, or other material risk signal.
+
+
+12. Security Message With Pressure, No Action
+
+Target: SUSPICIOUS
+
+The Message:
+"Security alert: unusual activity was detected on your account. Please check your account as soon as possible to make sure everything is okay."
+
+Why:
+The message uses authority and mild urgency, but still contains no link, credential request, OTP request, or direct harmful action.
+
+
+13. Remote Job Approach Without Payment Request
+
+Target: SUSPICIOUS
+
+The Message:
+"Hi! I found your profile online and thought you might be interested in some flexible remote work. The tasks are simple and can be completed from your phone. Let me know if you'd like the details."
+
+Why:
+The message resembles the opening stage of a task or job scam, but does not yet request payment, credentials, or other risky action.
+
+
+14. Unexpected Prize Without Link or Payment
+
+Target: SUSPICIOUS
+
+The Message:
+"Congratulations! Your number was selected for a promotional reward from this month's customer campaign. Reply if you'd like information about how to claim it."
+
+Why:
+The unexpected reward lure is suspicious, but the message contains no payment demand, credential request, suspicious URL, or other strong evidence yet.
+
+
+QUICK MANUAL EXPECTATIONS
+=========================
+
+01 -> LOW RISK
+02 -> LOW RISK
+03 -> LOW RISK
+04 -> LOW RISK
+05 -> LOW RISK
+06 -> LOW RISK
+07 -> LOW RISK
+08 -> INSUFFICIENT EVIDENCE
+09 -> INSUFFICIENT EVIDENCE
+10 -> INSUFFICIENT EVIDENCE
+11 -> INSUFFICIENT EVIDENCE
+12 -> SUSPICIOUS
+13 -> SUSPICIOUS
+14 -> SUSPICIOUS
