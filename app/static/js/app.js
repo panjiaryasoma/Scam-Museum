@@ -15,6 +15,7 @@ const evidenceList = document.getElementById("evidence-list");
 const protectiveBlock = document.getElementById("protective-block");
 const protectiveList = document.getElementById("protective-list");
 const curatorialNote = document.getElementById("curatorial-note");
+const warningNote = document.querySelector(".warning-note");
 
 const EVIDENCE_LABELS = {
   OTP_REQUEST: "OTP request",
@@ -36,6 +37,25 @@ const EVIDENCE_LABELS = {
   UNEXPECTED_CONTACT: "Unexpected contact",
   PROTECTIVE_DO_NOT_SHARE: "Do-not-share warning",
   ANTI_SCAM_ADVICE: "Anti-scam advice",
+};
+
+const VERDICT_NOTES = {
+  "HIGH RISK": {
+    text: "↳ Please do not interact with the exhibit.",
+    color: "#fca5a5",
+  },
+  SUSPICIOUS: {
+    text: "↳ Verify before interacting.",
+    color: "#fde047",
+  },
+  "INSUFFICIENT EVIDENCE": {
+    text: "↳ More context required.",
+    color: "var(--text-tertiary)",
+  },
+  "LOW RISK": {
+    text: "↳ No material deception pattern observed.",
+    color: "#bef264",
+  },
 };
 
 function updateCharacterCount() {
@@ -184,12 +204,28 @@ function renderProtective(items) {
   });
 }
 
+function renderVerdictNote(verdict) {
+  if (!warningNote) {
+    return;
+  }
+
+  const note = VERDICT_NOTES[verdict] || {
+    text: "↳ Review the result before acting.",
+    color: "var(--text-tertiary)",
+  };
+
+  warningNote.textContent = note.text;
+  warningNote.style.color = note.color;
+}
+
 function renderResult(data) {
   const exhibit = data.exhibit || {};
+  const verdict = data.verdict || "";
 
   exhibitTitle.textContent = exhibit.title || "Unclassified artifact";
-  verdictText.textContent = data.verdict || "—";
-  verdictPlaque.dataset.verdict = data.verdict || "";
+  verdictText.textContent = verdict || "—";
+  verdictPlaque.dataset.verdict = verdict;
+  renderVerdictNote(verdict);
 
   const signalLabel = data.ml_signal?.label || "—";
   mlSignal.textContent = `ML risk signal: ${signalLabel}`;
