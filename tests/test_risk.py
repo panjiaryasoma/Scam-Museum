@@ -84,6 +84,12 @@ def analyze(
             "WEAK",
             "HIGH RISK",
         ),
+        (
+            "We noticed something unusual on your account earlier today. "
+            "Please review your recent activity when you have time.",
+            "ELEVATED",
+            "INSUFFICIENT EVIDENCE",
+        ),
 
         # RC02
         (
@@ -162,13 +168,13 @@ def analyze(
             "LOW RISK",
         ),
 
-        # RC07 is intentionally NOT promoted just to satisfy the audit.
+        # RC07: elevated ML signal without observable evidence remains unresolved.
         (
             "hey! saw your profile and we have easy remote work. "
             "like 3 videos a day and earn $200-500. "
             "message our manager on telegram @workteam88 to start",
             "ELEVATED",
-            "LOW RISK",
+            "INSUFFICIENT EVIDENCE",
         ),
     ],
 )
@@ -191,6 +197,19 @@ def test_strong_ml_alone_never_means_high_risk():
             "STRONG",
         )["verdict"]
         != "HIGH RISK"
+    )
+
+
+def test_elevated_ml_without_observable_evidence_is_unresolved():
+    result = analyze(
+        "We noticed something unusual on your account earlier today. "
+        "Please review your recent activity when you have time.",
+        "ELEVATED",
+    )
+    assert result["verdict"] == "INSUFFICIENT EVIDENCE"
+    assert (
+        "ML_ELEVATED_WITHOUT_OBSERVABLE_EVIDENCE"
+        in result["reason_codes"]
     )
 
 
