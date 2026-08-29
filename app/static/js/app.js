@@ -86,10 +86,9 @@ function mergeHighlightRanges(items, textLength) {
 
 function renderHighlightedText(text, evidence) {
   highlightedMessage.replaceChildren();
-
   const ranges = mergeHighlightRanges(evidence, text.length);
 
-  if (ranges.length === 0) {
+  if (!ranges.length) {
     highlightedMessage.append(document.createTextNode(text));
     return;
   }
@@ -106,23 +105,20 @@ function renderHighlightedText(text, evidence) {
     const mark = document.createElement("mark");
     mark.textContent = text.slice(range.start, range.end);
     highlightedMessage.append(mark);
-
     cursor = range.end;
   }
 
   if (cursor < text.length) {
-    highlightedMessage.append(
-      document.createTextNode(text.slice(cursor))
-    );
+    highlightedMessage.append(document.createTextNode(text.slice(cursor)));
   }
 }
 
-function makeEvidenceItem(item, index) {
+function makeFindingItem(item, index) {
   const row = document.createElement("div");
-  row.className = "evidence-item";
+  row.className = "finding-item";
 
   const number = document.createElement("span");
-  number.className = "evidence-index";
+  number.className = "finding-index";
   number.textContent = String(index + 1).padStart(2, "0");
 
   const content = document.createElement("div");
@@ -144,14 +140,14 @@ function renderEvidence(items) {
 
   if (!items.length) {
     const empty = document.createElement("p");
-    empty.className = "evidence-empty";
+    empty.className = "finding-empty";
     empty.textContent = "No material observable risk artifacts were cataloged.";
     evidenceList.append(empty);
     return;
   }
 
   items.forEach((item, index) => {
-    evidenceList.append(makeEvidenceItem(item, index));
+    evidenceList.append(makeFindingItem(item, index));
   });
 }
 
@@ -166,32 +162,31 @@ function renderProtective(items) {
   protectiveBlock.hidden = false;
 
   items.forEach((item, index) => {
-    protectiveList.append(makeEvidenceItem(item, index));
+    protectiveList.append(makeFindingItem(item, index));
   });
 }
 
 function renderResult(data) {
   const exhibit = data.exhibit || {};
 
-  exhibitTitle.textContent = exhibit.title || "UNCLASSIFIED ARTIFACT";
+  exhibitTitle.textContent = exhibit.title || "Unclassified artifact";
   verdictText.textContent = data.verdict || "—";
   verdictPlaque.dataset.verdict = data.verdict || "";
 
   const signalLabel = data.ml_signal?.label || "—";
   mlSignal.textContent = `ML risk signal: ${signalLabel}`;
 
-  const artifactText =
-    exhibit.artifact_text || input.value.trim();
+  const artifactText = exhibit.artifact_text || input.value.trim();
 
   renderHighlightedText(artifactText, data.evidence || []);
   renderEvidence(data.evidence || []);
   renderProtective(data.protective_evidence || []);
 
   curatorialNote.textContent =
-    exhibit.curatorial_note ||
-    "No curatorial note was returned.";
+    exhibit.curatorial_note || "No curatorial note was returned.";
 
   resultSection.hidden = false;
+
   resultSection.scrollIntoView({
     behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
       ? "auto"
@@ -202,7 +197,6 @@ function renderResult(data) {
 
 async function analyzeMessage() {
   clearError();
-
   const message = input.value.trim();
 
   if (!message) {
@@ -216,9 +210,7 @@ async function analyzeMessage() {
   try {
     const response = await fetch("/api/analyze", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),
     });
 
@@ -226,8 +218,7 @@ async function analyzeMessage() {
 
     if (!response.ok) {
       throw new Error(
-        data?.error?.message ||
-        "The artifact could not be analyzed."
+        data?.error?.message || "The artifact could not be analyzed."
       );
     }
 
@@ -256,6 +247,7 @@ analyzeButton.addEventListener("click", analyzeMessage);
 analyzeAnother.addEventListener("click", () => {
   resultSection.hidden = true;
   input.focus();
+
   document.getElementById("analyzer").scrollIntoView({
     behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
       ? "auto"

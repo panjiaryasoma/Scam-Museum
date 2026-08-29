@@ -3,235 +3,201 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Scam Museum turns suspicious messages into interactive exhibits that reveal observable scam patterns."
-  >
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Scam Museum screens suspicious messages for observable scam patterns, risk signals, and uncertainty.">
   <title>Scam Museum — Gallery of Digital Deception</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
   <a class="skip-link" href="#analyzer">Skip to analyzer</a>
 
   <header class="site-header">
-    <div class="brand-block">
-      <p class="eyebrow">SCAM MUSEUM</p>
-      <h1>Gallery of Digital Deception</h1>
-    </div>
-
-    <div class="accession">
-      <span>ACCESSION</span>
-      <strong>SM.2026</strong>
+    <div class="shell header-inner">
+      <div>
+        <p class="overline">SCAM MUSEUM</p>
+        <p class="brand-title">Gallery of Digital Deception</p>
+      </div>
+      <div class="accession">
+        <span class="overline">Accession</span>
+        <strong>SM.2026</strong>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="kicker">Every scam leaves artifacts.</p>
-        <h2 id="hero-title">
-          Examine the message.<br>
-          Not the sender.
-        </h2>
-        <p class="hero-description">
-          Paste a suspicious message and Scam Museum will surface the
-          observable requests, pressure tactics, and manipulation patterns
-          hidden inside the text.
-        </p>
-      </div>
-
-      <aside class="museum-note" aria-label="Museum note">
-        <p class="note-index">01 / ABOUT THE EXHIBIT</p>
-        <p>
-          This tool screens message text for risk signals. It does not verify
-          identity, reputation, or real-world intent.
-        </p>
-      </aside>
-    </section>
-
-    <section id="analyzer" class="analyzer" aria-labelledby="analyzer-title">
-      <div class="section-label">
-        <span>ROOM I</span>
-        <span>MESSAGE EXAMINATION</span>
-      </div>
-
-      <div class="analyzer-grid">
-        <div class="input-panel">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">SUBMIT AN ARTIFACT</p>
-              <h2 id="analyzer-title">Paste a suspicious message</h2>
-            </div>
-            <span id="character-count" class="character-count">0 / 5000</span>
-          </div>
-
-          <label class="sr-only" for="message-input">Suspicious message</label>
-          <textarea
-            id="message-input"
-            maxlength="5000"
-            rows="10"
-            spellcheck="false"
-            placeholder="Example: Your account will be suspended immediately. Send us your OTP to verify your account."
-          ></textarea>
-
-          <div class="input-actions">
-            <p class="privacy-note">
-              Analysis runs on the text you submit. Do not paste passwords,
-              OTPs, or other secrets that are still valid.
-            </p>
-            <button id="analyze-button" type="button">
-              Analyze artifact
-            </button>
-          </div>
-
-          <div id="form-error" class="form-error" role="alert" hidden></div>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="overline accent">Every scam leaves artifacts.</p>
+          <h1>Examine the message. Not the sender.</h1>
+          <p class="lede">
+            Paste a suspicious message and Scam Museum will surface the observable
+            requests, pressure tactics, and manipulation patterns hidden inside the text.
+          </p>
         </div>
 
-        <aside class="catalog-card">
-          <div class="catalog-rule"></div>
-          <p class="eyebrow">CATALOG NOTE</p>
-          <dl>
-            <div>
-              <dt>Medium</dt>
-              <dd>Digital message</dd>
-            </div>
-            <div>
-              <dt>Method</dt>
-              <dd>Hybrid text screening</dd>
-            </div>
-            <div>
-              <dt>Model</dt>
-              <dd>v0.5 risk signal</dd>
-            </div>
-            <div>
-              <dt>Decision</dt>
-              <dd>Evidence + uncertainty</dd>
-            </div>
-          </dl>
+        <aside class="context-note">
+          <p class="overline">01 / About the exhibit</p>
+          <p>
+            This tool screens message text for risk signals. It does not verify
+            identity, reputation, or real-world intent.
+          </p>
         </aside>
       </div>
     </section>
 
-    <section
-      id="result-section"
-      class="result-section"
-      aria-live="polite"
-      hidden
-    >
-      <div class="section-label">
-        <span>ROOM II</span>
-        <span>CURATED FINDINGS</span>
-      </div>
+    <section id="analyzer" class="section">
+      <div class="shell">
+        <div class="section-heading">
+          <span class="overline">Room I</span>
+          <span class="overline">Message Examination</span>
+        </div>
 
-      <article class="exhibit">
-        <header class="exhibit-header">
-          <div>
-            <p id="exhibit-accession" class="eyebrow">
-              ACCESSION NO. SM.2026.001
-            </p>
-            <h2 id="exhibit-title">UNCLASSIFIED ARTIFACT</h2>
-            <p class="artifact-meta">
-              Unknown sender, digital message
-            </p>
-          </div>
+        <div class="analysis-grid">
+          <section class="panel">
+            <header class="panel-header">
+              <div>
+                <p class="overline">Submit an artifact</p>
+                <h2>Paste a suspicious message</h2>
+              </div>
+              <span id="character-count" class="caption">0 / 5000</span>
+            </header>
 
-          <div id="verdict-plaque" class="verdict-plaque" data-verdict="">
-            <span>ASSESSMENT</span>
-            <strong id="verdict-text">—</strong>
-          </div>
-        </header>
+            <label class="sr-only" for="message-input">Suspicious message</label>
+            <textarea
+              id="message-input"
+              maxlength="5000"
+              spellcheck="false"
+              placeholder="Example: Your account will be suspended immediately. Send us your OTP to verify your account."
+            ></textarea>
 
-        <div class="exhibit-body">
-          <section class="artifact-frame" aria-labelledby="artifact-frame-title">
-            <div class="frame-topline">
-              <h3 id="artifact-frame-title">The submitted artifact</h3>
-              <span id="ml-signal">ML risk signal: —</span>
-            </div>
+            <footer class="panel-footer">
+              <p class="helper">
+                Analysis runs on the text you submit. Do not paste passwords,
+                OTPs, or other secrets that are still valid.
+              </p>
+              <button id="analyze-button" class="button-primary" type="button">
+                Analyze artifact
+              </button>
+            </footer>
 
-            <blockquote id="highlighted-message" class="artifact-message"></blockquote>
-
-            <p class="frame-caption">
-              Highlighted passages are observable text patterns detected by
-              the evidence layer. They are not claims about sender identity.
-            </p>
+            <div id="form-error" class="form-error" role="alert" hidden></div>
           </section>
 
-          <aside class="evidence-panel" aria-labelledby="evidence-title">
-            <h3 id="evidence-title">Observed artifacts</h3>
-            <div id="evidence-list" class="evidence-list"></div>
-
-            <div
-              id="protective-block"
-              class="protective-block"
-              hidden
-            >
-              <h4>Protective language</h4>
-              <div id="protective-list"></div>
-            </div>
+          <aside class="catalog">
+            <p class="overline">Catalog note</p>
+            <dl>
+              <div><dt>Medium</dt><dd>Digital message</dd></div>
+              <div><dt>Method</dt><dd>Hybrid text screening</dd></div>
+              <div><dt>Model</dt><dd>v0.5 risk signal</dd></div>
+              <div><dt>Decision</dt><dd>Evidence + uncertainty</dd></div>
+            </dl>
           </aside>
         </div>
-
-        <footer class="curatorial-footer">
-          <div>
-            <p class="eyebrow">CURATORIAL NOTE</p>
-            <p id="curatorial-note"></p>
-          </div>
-
-          <div class="museum-warning">
-            <span aria-hidden="true">↳</span>
-            <p>Please do not interact with the exhibit.</p>
-          </div>
-        </footer>
-      </article>
-
-      <button id="analyze-another" class="text-button" type="button">
-        Examine another message
-      </button>
+      </div>
     </section>
 
-    <section class="method-strip" aria-labelledby="method-title">
-      <div class="section-label">
-        <span>ARCHIVE NOTE</span>
-        <span>HOW TO READ THE RESULT</span>
-      </div>
+    <section id="result-section" class="section result-section" aria-live="polite" hidden>
+      <div class="shell">
+        <div class="section-heading">
+          <span class="overline">Room II</span>
+          <span class="overline">Curated Findings</span>
+        </div>
 
-      <div class="method-grid">
-        <div>
-          <span class="method-number">01</span>
-          <h2 id="method-title">ML is a signal, not the verdict.</h2>
-          <p>
-            The classifier contributes a text-risk signal. It does not decide
-            whether a sender is fraudulent.
-          </p>
+        <article class="result-card">
+          <header class="result-header">
+            <div>
+              <p class="overline">Accession No. SM.2026.001</p>
+              <h2 id="exhibit-title">Unclassified artifact</h2>
+              <p class="caption">Unknown sender, digital message</p>
+            </div>
+
+            <div id="verdict-plaque" class="status-block" data-verdict="">
+              <span class="overline">Assessment</span>
+              <strong id="verdict-text">—</strong>
+            </div>
+          </header>
+
+          <div class="result-grid">
+            <section class="artifact-column artifact-frame">
+              <div class="artifact-topline">
+                <h3>Submitted artifact</h3>
+                <span id="ml-signal" class="caption">ML risk signal: —</span>
+              </div>
+              <blockquote id="highlighted-message" class="artifact-text"></blockquote>
+              <p class="caption">
+                Highlighted passages are observable text patterns detected by the
+                evidence layer. They are not claims about sender identity.
+              </p>
+            </section>
+
+            <aside class="findings-column">
+              <h3>Observed artifacts</h3>
+              <div id="evidence-list" class="finding-list"></div>
+
+              <section id="protective-block" class="protective" hidden>
+                <h4>Protective language</h4>
+                <div id="protective-list" class="finding-list"></div>
+              </section>
+            </aside>
+          </div>
+
+          <footer class="curatorial">
+            <div>
+              <p class="overline">Curatorial note</p>
+              <p id="curatorial-note"></p>
+            </div>
+            <div class="warning-note">↳ Please do not interact with the exhibit.</div>
+          </footer>
+        </article>
+
+        <button id="analyze-another" class="button-secondary" type="button">
+          Examine another message
+        </button>
+      </div>
+    </section>
+
+    <section class="section archive">
+      <div class="shell">
+        <div class="section-heading">
+          <span class="overline">Archive Note</span>
+          <span class="overline">How to Read the Result</span>
         </div>
-        <div>
-          <span class="method-number">02</span>
-          <h2>Evidence stays observable.</h2>
-          <p>
-            The museum highlights requests, threats, urgency, suspicious URLs,
-            and other patterns found directly in the submitted text.
-          </p>
-        </div>
-        <div>
-          <span class="method-number">03</span>
-          <h2>Ambiguity is allowed.</h2>
-          <p>
-            When a single message does not contain enough evidence, the system
-            can return Insufficient Evidence instead of pretending certainty.
-          </p>
+
+        <div class="principles">
+          <article>
+            <span class="principle-index">01</span>
+            <h2>ML is a signal, not the verdict.</h2>
+            <p>The classifier contributes a text-risk signal. It does not decide whether a sender is fraudulent.</p>
+          </article>
+          <article>
+            <span class="principle-index">02</span>
+            <h2>Evidence stays observable.</h2>
+            <p>The museum highlights requests, threats, urgency, suspicious URLs, and other patterns found directly in the submitted text.</p>
+          </article>
+          <article>
+            <span class="principle-index">03</span>
+            <h2>Ambiguity is allowed.</h2>
+            <p>When a single message does not contain enough evidence, the system can return Insufficient Evidence instead of pretending certainty.</p>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>SCAM MUSEUM / GALLERY OF DIGITAL DECEPTION</p>
-    <p>Built for HackSocial 2026</p>
+    <div class="shell footer-inner">
+      <span>Scam Museum / Gallery of Digital Deception</span>
+      <span>Built for HackSocial 2026</span>
+    </div>
   </footer>
 
   <div id="loading-overlay" class="loading-overlay" hidden>
-    <div class="loading-card" role="status" aria-live="polite">
-      <span class="loading-mark" aria-hidden="true"></span>
+    <div class="loading-box" role="status" aria-live="polite">
+      <span class="loading-line"></span>
       <p>Cataloging artifact…</p>
     </div>
   </div>
