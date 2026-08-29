@@ -11,6 +11,7 @@ CRITICAL = {
     "CREDENTIAL_REQUEST",
     "FINANCIAL_INFO_REQUEST",
     "GIFT_CARD_REQUEST",
+    "RISKY_ATTACHMENT",
 }
 
 STRONG = {
@@ -75,6 +76,12 @@ def decide_risk(
         verdict = "HIGH RISK"
         reason_codes = [
             "MULTIPLE_CRITICAL_REQUESTS"
+        ]
+
+    elif "RISKY_ATTACHMENT" in critical:
+        verdict = "HIGH RISK"
+        reason_codes = [
+            "EXECUTABLE_ATTACHMENT_INTERACTION_REQUEST"
         ]
 
     elif critical and (
