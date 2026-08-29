@@ -14,6 +14,7 @@ def exhibit_for(text, ml_label="WEAK"):
         },
         evidence,
         protective,
+        text=text,
     )
     return build_exhibit(analysis, text)
 
@@ -24,6 +25,21 @@ def test_urgency_trap_title():
         "https://bit.ly/example"
     )
     assert exhibit["title"] == "THE URGENCY TRAP"
+
+
+def test_otp_request_gets_verification_trap_title():
+    exhibit = exhibit_for(
+        "Send us your OTP.",
+    )
+    assert exhibit["title"] == "THE VERIFICATION TRAP"
+
+
+def test_risky_attachment_gets_dangerous_download_title():
+    exhibit = exhibit_for(
+        "Please download the attached invoice. Attachment: Delivery_Invoice.apk",
+        ml_label="STRONG",
+    )
+    assert exhibit["title"] == "THE DANGEROUS DOWNLOAD"
 
 
 def test_incomplete_artifact_title():
