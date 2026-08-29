@@ -1,0 +1,453 @@
+{
+  "version": "0.1",
+  "purpose": "Synthetic test-only message fixtures for Scam Museum. Not training data and not evidence of real-world prevalence.",
+  "counts": {
+    "HIGH RISK": 8,
+    "SUSPICIOUS": 8,
+    "LOW RISK": 8,
+    "INSUFFICIENT EVIDENCE": 8,
+    "total": 32
+  },
+  "cases": [
+    {
+      "id": "H01",
+      "fixture_type": "scam_like",
+      "family": "otp_phishing",
+      "message": "Your account will be suspended immediately. Send us your OTP to verify your account.",
+      "ml_label": "WEAK",
+      "expected_verdict": "HIGH RISK",
+      "expected_evidence": [
+        "ACCOUNT_THREAT",
+        "TIME_URGENCY",
+        "OTP_REQUEST"
+      ],
+      "forbidden_evidence": [
+        "PROTECTIVE_DO_NOT_SHARE"
+      ],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "H02",
+      "fixture_type": "scam_like",
+      "family": "credential_phishing",
+      "message": "Bank security team: your account is locked. Provide your password immediately to restore access.",
+      "ml_label": "WEAK",
+      "expected_verdict": "HIGH RISK",
+      "expected_evidence": [
+        "ACCOUNT_THREAT",
+        "CREDENTIAL_REQUEST",
+        "TIME_URGENCY"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "H03",
+      "fixture_type": "scam_like",
+      "family": "money_transfer_threat",
+      "message": "Transfer £900 today or your service will be blocked.",
+      "ml_label": "WEAK",
+      "expected_verdict": "HIGH RISK",
+      "expected_evidence": [
+        "MONEY_TRANSFER_REQUEST",
+        "ACCOUNT_THREAT"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "H04",
+      "fixture_type": "scam_like",
+      "family": "government_refund",
+      "message": "Government notice: provide your bank account immediately to receive your refund.",
+      "ml_label": "WEAK",
+      "expected_verdict": "HIGH RISK",
+      "expected_evidence": [
+        "FINANCIAL_INFO_REQUEST",
+        "TIME_URGENCY",
+        "NEED_AND_GREED"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "H05",
+      "fixture_type": "scam_like",
+      "family": "suspicious_link_threat",
+      "message": "Your account is locked. Verify immediately at https://bit.ly/secure-now",
+      "ml_label": "WEAK",
+      "expected_verdict": "HIGH RISK",
+      "expected_evidence": [
+        "ACCOUNT_THREAT",
+        "TIME_URGENCY",
+        "SUSPICIOUS_URL"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "H06",
+      "fixture_type": "scam_like",
+      "family": "family_impersonation",
+      "message": "Hi Mum, this is my new number. Please send £900 today.",
+      "ml_label": "WEAK",
+      "expected_verdict": "HIGH RISK",
+      "expected_evidence": [
+        "FAMILY_IMPERSONATION",
+        "NEW_NUMBER_CLAIM",
+        "MONEY_TRANSFER_REQUEST"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "H07",
+      "fixture_type": "scam_like",
+      "family": "fee_and_card_request",
+      "message": "Pay the verification fee now and provide your card number to release the funds.",
+      "ml_label": "WEAK",
+      "expected_verdict": "HIGH RISK",
+      "expected_evidence": [
+        "PAYMENT_REQUEST",
+        "FINANCIAL_INFO_REQUEST"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "H08",
+      "fixture_type": "scam_like",
+      "family": "pin_request",
+      "message": "Your card is blocked. Reply with your PIN immediately.",
+      "ml_label": "WEAK",
+      "expected_verdict": "HIGH RISK",
+      "expected_evidence": [
+        "ACCOUNT_THREAT",
+        "CREDENTIAL_REQUEST",
+        "TIME_URGENCY"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "S01",
+      "fixture_type": "scam_like",
+      "family": "bare_otp_request",
+      "message": "Send us your OTP.",
+      "ml_label": "WEAK",
+      "expected_verdict": "SUSPICIOUS",
+      "expected_evidence": [
+        "OTP_REQUEST"
+      ],
+      "forbidden_evidence": [
+        "PROTECTIVE_DO_NOT_SHARE"
+      ],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "S02",
+      "fixture_type": "scam_like",
+      "family": "bare_password_request",
+      "message": "Provide your password.",
+      "ml_label": "WEAK",
+      "expected_verdict": "SUSPICIOUS",
+      "expected_evidence": [
+        "CREDENTIAL_REQUEST"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "S03",
+      "fixture_type": "scam_like",
+      "family": "prize_fee",
+      "message": "You won a prize. Pay a processing fee today to claim it.",
+      "ml_label": "WEAK",
+      "expected_verdict": "SUSPICIOUS",
+      "expected_evidence": [
+        "NEED_AND_GREED",
+        "PAYMENT_REQUEST"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": false
+    },
+    {
+      "id": "S04",
+      "fixture_type": "risky_but_ambiguous",
+      "family": "authority_contact_request",
+      "message": "Bank security team requests that you contact us now.",
+      "ml_label": "WEAK",
+      "expected_verdict": "SUSPICIOUS",
+      "expected_evidence": [
+        "AUTHORITY_CLAIM",
+        "REPLY_OR_CALL_REQUEST"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": false
+    },
+    {
+      "id": "S05",
+      "fixture_type": "risky_but_ambiguous",
+      "family": "account_threat_ml_support",
+      "message": "Your account is locked.",
+      "ml_label": "STRONG",
+      "expected_verdict": "SUSPICIOUS",
+      "expected_evidence": [
+        "ACCOUNT_THREAT"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": false
+    },
+    {
+      "id": "S06",
+      "fixture_type": "risky_but_ambiguous",
+      "family": "shortened_url_ml_support",
+      "message": "Verify at https://bit.ly/example",
+      "ml_label": "STRONG",
+      "expected_verdict": "SUSPICIOUS",
+      "expected_evidence": [
+        "SUSPICIOUS_URL"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": false
+    },
+    {
+      "id": "S07",
+      "fixture_type": "risky_but_ambiguous",
+      "family": "delivery_fee",
+      "message": "Courier notice: delivery fee required today.",
+      "ml_label": "WEAK",
+      "expected_verdict": "SUSPICIOUS",
+      "expected_evidence": [
+        "AUTHORITY_CLAIM",
+        "PAYMENT_REQUEST"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": false
+    },
+    {
+      "id": "S08",
+      "fixture_type": "risky_but_ambiguous",
+      "family": "ml_only_strong",
+      "message": "A security-related notification was generated.",
+      "ml_label": "STRONG",
+      "expected_verdict": "SUSPICIOUS",
+      "expected_evidence": [],
+      "forbidden_evidence": [],
+      "actual_model_smoke": false
+    },
+    {
+      "id": "L01",
+      "fixture_type": "legitimate_like",
+      "family": "protective_otp",
+      "message": "Your OTP is 482193. Do not share your OTP with anyone.",
+      "ml_label": "STRONG",
+      "expected_verdict": "LOW RISK",
+      "expected_evidence": [],
+      "expected_protective_evidence": [
+        "PROTECTIVE_DO_NOT_SHARE"
+      ],
+      "forbidden_evidence": [
+        "OTP_REQUEST"
+      ],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "L02",
+      "fixture_type": "legitimate_like",
+      "family": "anti_scam_advice",
+      "message": "We will never ask for your password. Report fraud if you receive suspicious messages.",
+      "ml_label": "STRONG",
+      "expected_verdict": "LOW RISK",
+      "expected_evidence": [],
+      "expected_protective_evidence": [
+        "ANTI_SCAM_ADVICE"
+      ],
+      "forbidden_evidence": [
+        "CREDENTIAL_REQUEST"
+      ],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "L03",
+      "fixture_type": "legitimate_like",
+      "family": "plain_conversation",
+      "message": "Dinner is at seven. See you at home.",
+      "ml_label": "WEAK",
+      "expected_verdict": "LOW RISK",
+      "expected_evidence": [],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "L04",
+      "fixture_type": "legitimate_like",
+      "family": "normal_delivery_link",
+      "message": "Your parcel has shipped. Track it at https://amazon.com/orders",
+      "ml_label": "WEAK",
+      "expected_verdict": "LOW RISK",
+      "expected_evidence": [],
+      "forbidden_evidence": [
+        "SUSPICIOUS_URL"
+      ],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "L05",
+      "fixture_type": "legitimate_like",
+      "family": "bank_notification",
+      "message": "Your bank statement is ready to view in the official app.",
+      "ml_label": "WEAK",
+      "expected_verdict": "LOW RISK",
+      "expected_evidence": [
+        "AUTHORITY_CLAIM"
+      ],
+      "forbidden_evidence": [
+        "CREDENTIAL_REQUEST",
+        "OTP_REQUEST"
+      ],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "L06",
+      "fixture_type": "legitimate_like",
+      "family": "meeting_reminder",
+      "message": "Meeting moved to 3 PM tomorrow.",
+      "ml_label": "WEAK",
+      "expected_verdict": "LOW RISK",
+      "expected_evidence": [],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "L07",
+      "fixture_type": "legitimate_like",
+      "family": "order_update",
+      "message": "Your order has been delivered successfully.",
+      "ml_label": "WEAK",
+      "expected_verdict": "LOW RISK",
+      "expected_evidence": [],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "L08",
+      "fixture_type": "legitimate_like",
+      "family": "password_reset_notice",
+      "message": "Password reset completed successfully. If this was not you, contact support through the official app.",
+      "ml_label": "WEAK",
+      "expected_verdict": "LOW RISK",
+      "expected_evidence": [],
+      "forbidden_evidence": [
+        "CREDENTIAL_REQUEST"
+      ],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "I01",
+      "fixture_type": "ambiguous",
+      "family": "wrong_number_opening",
+      "message": "Hi, is this Sarah?",
+      "ml_label": "WEAK",
+      "expected_verdict": "INSUFFICIENT EVIDENCE",
+      "expected_evidence": [
+        "UNEXPECTED_CONTACT"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "I02",
+      "fixture_type": "ambiguous",
+      "family": "family_new_number_opening",
+      "message": "Hi Mum, this is my new number.",
+      "ml_label": "WEAK",
+      "expected_verdict": "INSUFFICIENT EVIDENCE",
+      "expected_evidence": [
+        "FAMILY_IMPERSONATION",
+        "NEW_NUMBER_CLAIM"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "I03",
+      "fixture_type": "ambiguous",
+      "family": "wrong_number_apology",
+      "message": "Sorry, wrong number.",
+      "ml_label": "WEAK",
+      "expected_verdict": "INSUFFICIENT EVIDENCE",
+      "expected_evidence": [
+        "UNEXPECTED_CONTACT"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "I04",
+      "fixture_type": "ambiguous",
+      "family": "unknown_contact",
+      "message": "Do I know you?",
+      "ml_label": "WEAK",
+      "expected_verdict": "INSUFFICIENT EVIDENCE",
+      "expected_evidence": [
+        "UNEXPECTED_CONTACT"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "I05",
+      "fixture_type": "ambiguous",
+      "family": "family_new_phone",
+      "message": "Dad, new phone here.",
+      "ml_label": "WEAK",
+      "expected_verdict": "INSUFFICIENT EVIDENCE",
+      "expected_evidence": [
+        "FAMILY_IMPERSONATION",
+        "NEW_NUMBER_CLAIM"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "I06",
+      "fixture_type": "ambiguous",
+      "family": "found_number",
+      "message": "Found your number in my contacts.",
+      "ml_label": "WEAK",
+      "expected_verdict": "INSUFFICIENT EVIDENCE",
+      "expected_evidence": [
+        "UNEXPECTED_CONTACT"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "I07",
+      "fixture_type": "ambiguous",
+      "family": "identity_check",
+      "message": "Is this Michael?",
+      "ml_label": "WEAK",
+      "expected_verdict": "INSUFFICIENT EVIDENCE",
+      "expected_evidence": [
+        "UNEXPECTED_CONTACT"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    },
+    {
+      "id": "I08",
+      "fixture_type": "ambiguous",
+      "family": "wrong_number_variant",
+      "message": "Wrong number, apologies.",
+      "ml_label": "WEAK",
+      "expected_verdict": "INSUFFICIENT EVIDENCE",
+      "expected_evidence": [
+        "UNEXPECTED_CONTACT"
+      ],
+      "forbidden_evidence": [],
+      "actual_model_smoke": true
+    }
+  ]
+}
