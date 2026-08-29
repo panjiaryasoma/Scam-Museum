@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Scam Museum turns suspicious messages into interactive exhibits that reveal observable scam patterns."
+  >
+  <title>Scam Museum — Gallery of Digital Deception</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+  <a class="skip-link" href="#analyzer">Skip to analyzer</a>
+
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">SCAM MUSEUM</p>
+      <h1>Gallery of Digital Deception</h1>
+    </div>
+
+    <div class="accession">
+      <span>ACCESSION</span>
+      <strong>SM.2026</strong>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">Every scam leaves artifacts.</p>
+        <h2 id="hero-title">
+          Examine the message.<br>
+          Not the sender.
+        </h2>
+        <p class="hero-description">
+          Paste a suspicious message and Scam Museum will surface the
+          observable requests, pressure tactics, and manipulation patterns
+          hidden inside the text.
+        </p>
+      </div>
+
+      <aside class="museum-note" aria-label="Museum note">
+        <p class="note-index">01 / ABOUT THE EXHIBIT</p>
+        <p>
+          This tool screens message text for risk signals. It does not verify
+          identity, reputation, or real-world intent.
+        </p>
+      </aside>
+    </section>
+
+    <section id="analyzer" class="analyzer" aria-labelledby="analyzer-title">
+      <div class="section-label">
+        <span>ROOM I</span>
+        <span>MESSAGE EXAMINATION</span>
+      </div>
+
+      <div class="analyzer-grid">
+        <div class="input-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">SUBMIT AN ARTIFACT</p>
+              <h2 id="analyzer-title">Paste a suspicious message</h2>
+            </div>
+            <span id="character-count" class="character-count">0 / 5000</span>
+          </div>
+
+          <label class="sr-only" for="message-input">Suspicious message</label>
+          <textarea
+            id="message-input"
+            maxlength="5000"
+            rows="10"
+            spellcheck="false"
+            placeholder="Example: Your account will be suspended immediately. Send us your OTP to verify your account."
+          ></textarea>
+
+          <div class="input-actions">
+            <p class="privacy-note">
+              Analysis runs on the text you submit. Do not paste passwords,
+              OTPs, or other secrets that are still valid.
+            </p>
+            <button id="analyze-button" type="button">
+              Analyze artifact
+            </button>
+          </div>
+
+          <div id="form-error" class="form-error" role="alert" hidden></div>
+        </div>
+
+        <aside class="catalog-card">
+          <div class="catalog-rule"></div>
+          <p class="eyebrow">CATALOG NOTE</p>
+          <dl>
+            <div>
+              <dt>Medium</dt>
+              <dd>Digital message</dd>
+            </div>
+            <div>
+              <dt>Method</dt>
+              <dd>Hybrid text screening</dd>
+            </div>
+            <div>
+              <dt>Model</dt>
+              <dd>v0.5 risk signal</dd>
+            </div>
+            <div>
+              <dt>Decision</dt>
+              <dd>Evidence + uncertainty</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section
+      id="result-section"
+      class="result-section"
+      aria-live="polite"
+      hidden
+    >
+      <div class="section-label">
+        <span>ROOM II</span>
+        <span>CURATED FINDINGS</span>
+      </div>
+
+      <article class="exhibit">
+        <header class="exhibit-header">
+          <div>
+            <p id="exhibit-accession" class="eyebrow">
+              ACCESSION NO. SM.2026.001
+            </p>
+            <h2 id="exhibit-title">UNCLASSIFIED ARTIFACT</h2>
+            <p class="artifact-meta">
+              Unknown sender, digital message
+            </p>
+          </div>
+
+          <div id="verdict-plaque" class="verdict-plaque" data-verdict="">
+            <span>ASSESSMENT</span>
+            <strong id="verdict-text">—</strong>
+          </div>
+        </header>
+
+        <div class="exhibit-body">
+          <section class="artifact-frame" aria-labelledby="artifact-frame-title">
+            <div class="frame-topline">
+              <h3 id="artifact-frame-title">The submitted artifact</h3>
+              <span id="ml-signal">ML risk signal: —</span>
+            </div>
+
+            <blockquote id="highlighted-message" class="artifact-message"></blockquote>
+
+            <p class="frame-caption">
+              Highlighted passages are observable text patterns detected by
+              the evidence layer. They are not claims about sender identity.
+            </p>
+          </section>
+
+          <aside class="evidence-panel" aria-labelledby="evidence-title">
+            <h3 id="evidence-title">Observed artifacts</h3>
+            <div id="evidence-list" class="evidence-list"></div>
+
+            <div
+              id="protective-block"
+              class="protective-block"
+              hidden
+            >
+              <h4>Protective language</h4>
+              <div id="protective-list"></div>
+            </div>
+          </aside>
+        </div>
+
+        <footer class="curatorial-footer">
+          <div>
+            <p class="eyebrow">CURATORIAL NOTE</p>
+            <p id="curatorial-note"></p>
+          </div>
+
+          <div class="museum-warning">
+            <span aria-hidden="true">↳</span>
+            <p>Please do not interact with the exhibit.</p>
+          </div>
+        </footer>
+      </article>
+
+      <button id="analyze-another" class="text-button" type="button">
+        Examine another message
+      </button>
+    </section>
+
+    <section class="method-strip" aria-labelledby="method-title">
+      <div class="section-label">
+        <span>ARCHIVE NOTE</span>
+        <span>HOW TO READ THE RESULT</span>
+      </div>
+
+      <div class="method-grid">
+        <div>
+          <span class="method-number">01</span>
+          <h2 id="method-title">ML is a signal, not the verdict.</h2>
+          <p>
+            The classifier contributes a text-risk signal. It does not decide
+            whether a sender is fraudulent.
+          </p>
+        </div>
+        <div>
+          <span class="method-number">02</span>
+          <h2>Evidence stays observable.</h2>
+          <p>
+            The museum highlights requests, threats, urgency, suspicious URLs,
+            and other patterns found directly in the submitted text.
+          </p>
+        </div>
+        <div>
+          <span class="method-number">03</span>
+          <h2>Ambiguity is allowed.</h2>
+          <p>
+            When a single message does not contain enough evidence, the system
+            can return Insufficient Evidence instead of pretending certainty.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>SCAM MUSEUM / GALLERY OF DIGITAL DECEPTION</p>
+    <p>Built for HackSocial 2026</p>
+  </footer>
+
+  <div id="loading-overlay" class="loading-overlay" hidden>
+    <div class="loading-card" role="status" aria-live="polite">
+      <span class="loading-mark" aria-hidden="true"></span>
+      <p>Cataloging artifact…</p>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js" defer></script>
+</body>
+</html>
