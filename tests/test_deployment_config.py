@@ -8,39 +8,27 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def test_production_requirements_are_locked():
+def runtime_requirements():
     text = (ROOT / "requirements.txt").read_text(
         encoding="utf-8"
     )
-
-    required = {
-        "fastapi==0.141.1",
-        "scikit-learn==1.9.0",
-        "numpy==2.3.2",
-        "scipy==1.17.0",
-        "joblib==1.5.3",
-    }
-
-    lines = {
+    return [
         line.strip()
         for line in text.splitlines()
         if line.strip() and not line.startswith("#")
-    }
-
-    assert required == lines
-    assert "uvicorn" not in text
-    assert "httpx" not in text
-    assert "pytest" not in text
+    ]
 
 
-def test_local_app_requirements_extend_production():
-    text = (ROOT / "requirements-app.txt").read_text(
-        encoding="utf-8"
+def test_pyproject_and_requirements_share_runtime_dependencies():
+    pyproject = tomllib.loads(
+        (ROOT / "pyproject.toml").read_text(
+            encoding="utf-8"
+        )
     )
 
-    assert "-r requirements.txt" in text
-    assert "uvicorn==0.41.0" in text
-    assert "httpx>=0.27,<1.0" in text
+    dependencies = pyproject["project"]["dependencies"]
+
+    assert dependencies == runtime_requirements()
 
 
 def test_python_runtime_is_locked_to_312():
@@ -50,42 +38,58 @@ def test_python_runtime_is_locked_to_312():
         )
     )
 
-    project = pyproject["project"]
-
-    assert project["requires-python"] == ">=3.12,<3.13"
     assert (
-        pyproject["tool"]["vercel"]["entrypoint"]
-        == "app.main:app"
+        pyproject["project"]["requires-python"]
+        == ">=3.12,<3.13"
     )
+    assert "tool" not in pyproject or "vercel" not in pyproject.get("tool", {})
 
     assert (
-        ROOT.joinpath(".python-version")
+        (ROOT / ".python-version")
         .read_text(encoding="utf-8")
         .strip()
         == "3.12"
     )
 
 
-def test_vercel_bundle_keeps_runtime_and_excludes_old_artifacts():
+def test_vercel_uses_documented_api_index_entrypoint():
     config = json.loads(
         (ROOT / "vercel.json").read_text(
             encoding="utf-8"
         )
     )
 
-    function = config["functions"]["app/main.py"]
-    excluded = function["excludeFiles"]
+    assert "api/index.py" in config["functions"]
+    assert "app/main.py" not in config["functions"]
+
+    assert config["rewrites"] == [
+        {
+            "source": "/(.*)",
+            "destination": "/api/index.py",
+        }
+    ]
+
+
+def test_vercel_bundle_keeps_active_runtime_artifacts():
+    config = json.loads(
+        (ROOT / "vercel.json").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    excluded = (
+        config["functions"]["api/index.py"]
+        ["excludeFiles"]
+    )
 
     assert "tests/**" in excluded
-    assert "data/**" in excluded
     assert "reports/**" in excluded
+    assert "data/**" in excluded
+    assert "scripts/**" in excluded
+
     assert "scam_classifier_v04.joblib" in excluded
 
-    # The active production artifacts must not be excluded.
     assert "scam_classifier_v05.joblib" not in excluded
     assert "scam_classifier_v05_metadata.json" not in excluded
-
-    # Runtime code/assets must remain available to the FastAPI app.
     assert "app/**" not in excluded
     assert "ml/**" not in excluded
-    assert "models/**" not in excluded

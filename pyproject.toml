@@ -3,6 +3,10 @@ name = "scam-museum"
 version = "0.1.0"
 description = "An AI-powered museum of digital deception."
 requires-python = ">=3.12,<3.13"
-
-[tool.vercel]
-entrypoint = "app.main:app"
+dependencies = [
+  "fastapi==0.141.1",
+  "scikit-learn==1.9.0",
+  "numpy==2.3.2",
+  "scipy==1.17.0",
+  "joblib==1.5.3",
+]

@@ -1,5 +1,5 @@
 # Production runtime dependencies.
-# Keep this aligned with the frozen v0.5 model environment.
+# Kept intentionally identical to [project].dependencies in pyproject.toml.
 fastapi==0.141.1
 scikit-learn==1.9.0
 numpy==2.3.2
