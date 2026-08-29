@@ -55,6 +55,7 @@ class ScamAnalysisService:
             ml_signal=ml_signal,
             evidence=evidence,
             protective_evidence=protective,
+            text=text,
         )
 
         exhibit = build_exhibit(decision, text)
