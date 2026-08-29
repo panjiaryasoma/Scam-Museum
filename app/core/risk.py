@@ -168,6 +168,16 @@ def decide_risk(
         ]
 
     elif (
+        ml_signal.get("label") == "ELEVATED"
+        and not ids
+        and not protective_ids
+    ):
+        verdict = "INSUFFICIENT EVIDENCE"
+        reason_codes = [
+            "ML_ELEVATED_WITHOUT_OBSERVABLE_EVIDENCE"
+        ]
+
+    elif (
         ids
         and not critical
         and not strong
