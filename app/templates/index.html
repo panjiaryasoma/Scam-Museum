@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/css/share-card.css">
 </head>
 <body>
   <a class="skip-link" href="#analyzer">Skip to analyzer</a>
@@ -154,9 +155,15 @@
           </footer>
         </article>
 
-        <button id="analyze-another" class="button-secondary" type="button">
-          Examine another message
-        </button>
+        <div class="result-actions">
+          <button id="share-exhibit" class="button-secondary share-button" type="button">
+            Share exhibit
+          </button>
+          <button id="analyze-another" class="button-secondary" type="button">
+            Examine another message
+          </button>
+          <span id="share-status" class="caption share-status" role="status" aria-live="polite"></span>
+        </div>
       </div>
     </section>
 
@@ -203,5 +210,6 @@
   </div>
 
   <script src="/static/js/app.js" defer></script>
+  <script src="/static/js/share-card.js" defer></script>
 </body>
 </html>

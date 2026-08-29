@@ -186,12 +186,20 @@ def analyze(
             "HIGH RISK",
         ),
 
-        # RC17: money alone is observable, not automatically scam.
+        # RC17: ordinary repayment context remains low risk.
         (
             "hey can u send me the $18 from dinner "
             "when you get a sec? no rush",
             "WEAK",
             "LOW RISK",
+        ),
+
+        # Standalone money request is actionable but not enough to infer deception.
+        (
+            "mom i have a problem, i was driving my car and got a $10 fine, "
+            "could you please transfer the money to me?",
+            "WEAK",
+            "INSUFFICIENT EVIDENCE",
         ),
 
         # RC18: household Wi-Fi password is not an account credential.
@@ -267,6 +275,46 @@ def test_risky_attachment_has_explicit_high_risk_reason():
     assert result["verdict"] == "HIGH RISK"
     assert (
         "EXECUTABLE_ATTACHMENT_INTERACTION_REQUEST"
+        in result["reason_codes"]
+    )
+
+
+def test_ocr_payment_request_with_new_phone_context_is_not_ambiguous_only():
+    result = analyze(
+        "I was just trying to order a new phone but it wont let me do it. "
+        "That's because the notification number goes to my old number. "
+        "Might it be okey if you pay the payment until I get back into "
+        "my banking? That will be on Saturday",
+        "WEAK",
+    )
+    ids = {item["id"] for item in result["evidence"]}
+    assert "NEW_NUMBER_CLAIM" in ids
+    assert "PAYMENT_REQUEST" in ids
+    assert result["verdict"] == "SUSPICIOUS"
+    assert "MULTIPLE_OBSERVABLE_RISK_SIGNALS" in result["reason_codes"]
+
+
+def test_standalone_money_request_remains_unresolved():
+    result = analyze(
+        "mom i have a problem, i was driving my car and got a $10 fine, "
+        "could you please transfer the money to me?",
+        "WEAK",
+    )
+    assert result["verdict"] == "INSUFFICIENT EVIDENCE"
+    assert (
+        "MONEY_TRANSFER_REQUEST_WITHOUT_DECEPTION_CONTEXT"
+        in result["reason_codes"]
+    )
+
+
+def test_benign_repayment_context_can_remain_low_risk():
+    result = analyze(
+        "hey can u send me the $18 from dinner when you get a sec? no rush",
+        "WEAK",
+    )
+    assert result["verdict"] == "LOW RISK"
+    assert (
+        "BENIGN_REPAYMENT_CONTEXT_WITHOUT_ADDITIONAL_RISK"
         in result["reason_codes"]
     )
 

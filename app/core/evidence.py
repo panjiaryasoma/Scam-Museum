@@ -103,10 +103,16 @@ RULES = [
         "PAYMENT_REQUEST",
         "operational",
         "strong",
-        r"\b(?:pay|payment|fee|deposit|settlement|charge)\b.{0,45}\b"
-        r"(?:now|today|required|due|release|receive|claim|process|"
-        r"pay|paying|paid|first|before|upfront)\b"
-        r"|\b(?:processing fee|delivery fee|release fee|verification fee)\b",
+        r"\b(?:payment|fee|deposit|settlement|charge)\b.{0,45}\b"
+        r"(?:required|due|payable|upfront|in advance|first|before|"
+        r"needs?\s+(?:paying|to be paid)|must\s+be\s+(?:paid|made))\b"
+        r"|\b(?:processing fee|delivery fee|release fee|verification fee)\b"
+        r"|\b(?:can|could|would|will|might)\s+(?:it\s+be\s+\w+\s+if\s+)?"
+        r"you\s+(?:please\s+)?(?:pay|cover)\b"
+        r"|\bplease\s+(?:pay|cover)\b"
+        r"|\b(?:pay|cover)\s+(?:it|this|that|the\s+"
+        r"(?:payment|bill|fee|charge|invoice))\b"
+        r"|\bmake\s+(?:the\s+|a\s+)?payment\b",
         "Requests or conditions an action on a payment or fee.",
     ),
     (
