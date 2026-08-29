@@ -310,3 +310,7 @@ analyzeAnother.addEventListener("click", () => {
 });
 
 updateCharacterCount();
+
+import("/static/js/ocr.js").catch((error) => {
+  console.warn("Screenshot OCR adapter could not be loaded.", error);
+});
