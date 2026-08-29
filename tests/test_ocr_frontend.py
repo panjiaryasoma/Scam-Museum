@@ -5,6 +5,8 @@ ROOT = Path(__file__).resolve().parents[1]
 APP_JS = ROOT / "app" / "static" / "js" / "app.js"
 OCR_JS = ROOT / "app" / "static" / "js" / "ocr.js"
 OCR_CSS = ROOT / "app" / "static" / "css" / "ocr.css"
+INDEX_HTML = ROOT / "app" / "templates" / "index.html"
+SHARE_JS = ROOT / "app" / "static" / "js" / "share-card.js"
 
 
 def test_core_frontend_progressively_loads_ocr_adapter():
@@ -46,3 +48,23 @@ def test_ocr_styles_preserve_square_museum_controls():
     assert ".ocr-adapter" in source
     assert ".ocr-upload-button" in source
     assert "border-radius" not in source
+
+
+def test_message_input_accepts_pasted_screenshot_without_hijacking_text_paste():
+    source = OCR_JS.read_text(encoding="utf-8")
+
+    assert 'input.addEventListener("paste"' in source
+    assert "clipboardImageFile(event)" in source
+    assert "event.preventDefault()" in source
+    assert "if (!file)" in source
+
+
+def test_ocr_branch_preserves_share_exhibit_feature():
+    html = INDEX_HTML.read_text(encoding="utf-8")
+    share_source = SHARE_JS.read_text(encoding="utf-8")
+
+    assert 'id="share-exhibit"' in html
+    assert '/static/css/share-card.css' in html
+    assert '/static/js/share-card.js' in html
+    assert "navigator.share" in share_source
+    assert 'fetch("/api/analyze"' not in share_source
