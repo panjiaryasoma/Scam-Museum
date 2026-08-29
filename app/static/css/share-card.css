@@ -1,0 +1,43 @@
+.result-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.result-actions .button-secondary {
+  margin-top: 0;
+}
+
+.share-button {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.share-button:hover {
+  border-color: var(--primary);
+}
+
+.share-button:disabled {
+  opacity: 0.45;
+  cursor: wait;
+}
+
+.share-status {
+  min-height: 1.6em;
+}
+
+@media (max-width: 640px) {
+  .result-actions {
+    align-items: stretch;
+  }
+
+  .result-actions .button-secondary {
+    width: 100%;
+  }
+
+  .share-status {
+    width: 100%;
+  }
+}
