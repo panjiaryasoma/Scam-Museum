@@ -11,6 +11,9 @@ dependencies = [
   "joblib==1.5.3",
 ]
 
+[tool.vercel]
+entrypoint = "app.main:app"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra"
