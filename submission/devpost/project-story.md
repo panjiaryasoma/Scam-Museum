@@ -41,6 +41,22 @@ The final training corpus contains 12,885 messages:
 - 4,212 legitimate / hard-negative messages
 - 8,673 scam-risk messages
 
+### Core Decision Flow
+
+<img width="1162" height="2788" alt="E2E_Diagram" src="https://github.com/user-attachments/assets/ad9ad407-3d2c-442c-96e1-3315c019c161" />
+
+The end-to-end pipeline takes reviewed message text through preparation, ML risk signaling, deterministic evidence detection, explicit uncertainty handling, and final museum-style presentation. Screenshot input joins the same path after browser-side OCR and user review.
+
+<img width="2211" height="6746" alt="Flowchart" src="https://github.com/user-attachments/assets/cb210a2e-3b96-4ccc-906c-a7131077c036" />
+
+The system flowchart shows the operational decision path from text or screenshot input to validation, evidence-aware assessment, exhibit generation, optional sharing, and human verification. Each final verdict is produced by the same decision contract rather than by the classifier alone.
+
+### Architecture
+
+<img width="2682" height="2570" alt="Architecture" src="https://github.com/user-attachments/assets/3ba7848f-8c79-4c01-8152-21aeaeee2c72" />
+
+Scam Museum separates browser-side OCR and share-card rendering from the FastAPI analysis service. The backend combines the frozen v0.5 model artifact, deterministic evidence rules, contextual and protective evidence, and the uncertainty-aware decision contract before returning structured exhibit metadata.
+
 Model selection was deliberately broader than a single random train/test split. We compared candidates using grouped out-of-fold performance on the primary dataset, leave-one-scam-family-out recall on newer scam families, and leave-one-negative-source-out specificity on legitimate-but-scam-like messages. Only after model and threshold selection did we evaluate the original locked test set.
 
 On the 1,079-message locked test set, v0.5 produced:
