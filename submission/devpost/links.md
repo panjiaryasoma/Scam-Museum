@@ -4,7 +4,7 @@
 
 - **Repository:** https://github.com/panjiaryasoma/Scam-Museum
 - **Live demo:** https://scam-museum-psi.vercel.app
-- **Submission release tag:** https://github.com/panjiaryasoma/Scam-Museum/releases/tag/submission-final-2026-08-30-v2
+- **Submission release tag:** https://github.com/panjiaryasoma/Scam-Museum/releases/tag/submission-final-2026-08-30-v3
 
 ## Technical references
 
