@@ -43,41 +43,38 @@ That separation matters because the model is useful, but it is not an oracle. Hu
 - Generate a museum-style exhibit title and curatorial note.
 - Export the result as a shareable exhibit card.
 
-## How it works
+## Quick Start
 
-```text
-Text input ─────────────────────────────┐
-                                       │
-Screenshot upload / clipboard paste    │
-        │                              │
-        └── Tesseract.js OCR ──────────┤
-                                       ▼
-                              Reviewed message text
-                                       │
-                         ┌─────────────┴─────────────┐
-                         │                           │
-                         ▼                           ▼
-                 ML v0.5 risk signal       Deterministic evidence
-                 WEAK / ELEVATED /         + protective evidence
-                 STRONG                    + context checks
-                         │                           │
-                         └─────────────┬─────────────┘
-                                       ▼
-                              Decision / uncertainty
-                                       │
-                  ┌────────────────────┼────────────────────┐
-                  ▼                    ▼                    ▼
-              LOW RISK        INSUFFICIENT EVIDENCE    SUSPICIOUS
-                                                           │
-                                                           ▼
-                                                       HIGH RISK
-                                       │
-                                       ▼
-                              Museum-style exhibit
-                                       │
-                                       ▼
-                               Shareable image card
+Requires **Python 3.12.x** and [`uv`](https://docs.astral.sh/uv/).
+
+```bash
+git clone https://github.com/panjiaryasoma/Scam-Museum.git
+cd Scam-Museum
+
+uv python install 3.12.7
+uv venv --python 3.12.7
+uv pip install -r requirements-app.txt
+
+uv run uvicorn app.main:app --reload
 ```
+
+Open `http://127.0.0.1:8000` in your browser. To install the evaluation and test dependencies as well, run `uv pip install -r requirements-eval.txt -r requirements-test.txt`.
+
+## Core Decision Flow
+
+![Scam Museum end-to-end decision flow](docs/05_arch/E2E_Diagram.png)
+
+The end-to-end pipeline takes reviewed message text through preparation, ML risk signaling, deterministic evidence detection, explicit uncertainty handling, and final museum-style presentation. Screenshot input joins the same path after browser-side OCR and user review.
+
+![Scam Museum system flowchart](docs/05_arch/Flowchart.png)
+
+The system flowchart shows the operational decision path from text or screenshot input to validation, evidence-aware assessment, exhibit generation, optional sharing, and human verification. Each final verdict is produced by the same decision contract rather than by the classifier alone.
+
+## Architecture
+
+![Scam Museum runtime architecture](docs/05_arch/Architecture.png)
+
+Scam Museum separates browser-side OCR and share-card rendering from the FastAPI analysis service. The backend combines the frozen v0.5 model artifact, deterministic evidence rules, contextual and protective evidence, and the uncertainty-aware decision contract before returning structured exhibit metadata.
 
 ## Decision model
 
@@ -268,48 +265,6 @@ The feature uses browser-side rendering, so sharing does not require storing the
 | Python | 3.12.x |
 | Deployment target | Vercel |
 
-## Run locally
-
-### 1. Clone
-
-```bash
-git clone https://github.com/panjiaryasoma/Scam-Museum.git
-cd Scam-Museum
-```
-
-### 2. Create the Python environment
-
-Using [`uv`](https://docs.astral.sh/uv/):
-
-```bash
-uv python install 3.12.7
-uv venv --python 3.12.7
-```
-
-### 3. Install application dependencies
-
-```bash
-uv pip install -r requirements-app.txt
-```
-
-For evaluation and tests as well:
-
-```bash
-uv pip install -r requirements-eval.txt -r requirements-test.txt
-```
-
-### 4. Run the app
-
-```bash
-uv run uvicorn app.main:app --reload
-```
-
-Open:
-
-```text
-http://127.0.0.1:8000
-```
-
 ## Testing
 
 Run the full suite with:
@@ -330,8 +285,6 @@ The suite covers the API, evidence rules, risk decisions, ambiguity behavior, ha
 
 ```text
 Scam-Museum/
-├── api/
-│   └── index.py                 # serverless entry point
 ├── app/
 │   ├── core/
 │   │   ├── evidence.py          # deterministic evidence extraction
@@ -346,23 +299,25 @@ Scam-Museum/
 │   │   └── js/                  # app, OCR, and share-card behavior
 │   ├── templates/
 │   │   └── index.html
-│   └── main.py
+│   └── main.py                  # FastAPI application
 ├── data/
 │   ├── processed/
 │   └── samples/
-├── docs/                        # contracts, design decisions, evaluation notes
+├── docs/
+│   └── 05_arch/                 # E2E, flowchart, and architecture diagrams
 ├── ml/                          # training and evaluation code
 ├── models/                      # frozen runtime model + metadata
 ├── reports/                     # model-selection and behavioral audit records
 ├── scripts/                     # data preparation and audit utilities
 ├── submission/                  # Devpost/submission material
 ├── tests/                       # automated regression suite
+├── main.py                      # Vercel zero-config FastAPI entry point
+├── .vercelignore
 ├── pyproject.toml
 ├── requirements.txt
 ├── requirements-app.txt
 ├── requirements-eval.txt
-├── requirements-test.txt
-└── vercel.json
+└── requirements-test.txt
 ```
 
 ## API
@@ -418,6 +373,9 @@ Key project records include:
 - [`SCAM_MUSEUM_SIMPLE_PRD_v0.1.md`](SCAM_MUSEUM_SIMPLE_PRD_v0.1.md)
 - [`SCAM_MUSEUM_DATASET_LABEL_STRATEGY_v0.1.md`](SCAM_MUSEUM_DATASET_LABEL_STRATEGY_v0.1.md)
 - [`docs/03_data_eval/EVIDENCE_DECISION_CONTRACT.md`](docs/03_data_eval/EVIDENCE_DECISION_CONTRACT.md)
+- [`docs/05_arch/E2E_Diagram.png`](docs/05_arch/E2E_Diagram.png)
+- [`docs/05_arch/Flowchart.png`](docs/05_arch/Flowchart.png)
+- [`docs/05_arch/Architecture.png`](docs/05_arch/Architecture.png)
 - [`reports/v05/v05_model_selection.json`](reports/v05/v05_model_selection.json)
 - [`reports/realistic_chat_v05_audit.json`](reports/realistic_chat_v05_audit.json)
 
