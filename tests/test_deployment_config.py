@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 import tomllib
 from pathlib import Path
 
@@ -52,44 +51,33 @@ def test_python_runtime_is_locked_to_312():
     )
 
 
-def test_vercel_uses_documented_api_index_entrypoint():
-    config = json.loads(
-        (ROOT / "vercel.json").read_text(
-            encoding="utf-8"
-        )
+def test_vercel_uses_zero_config_root_fastapi_entrypoint():
+    assert not (ROOT / "vercel.json").exists()
+    assert not (ROOT / "api" / "index.py").exists()
+
+    entrypoint = (ROOT / "main.py").read_text(
+        encoding="utf-8"
     )
 
-    assert "api/index.py" in config["functions"]
-    assert "app/main.py" not in config["functions"]
-
-    assert config["rewrites"] == [
-        {
-            "source": "/(.*)",
-            "destination": "/api/index.py",
-        }
-    ]
+    assert "from app.main import app" in entrypoint
+    assert '__all__ = ["app"]' in entrypoint
 
 
 def test_vercel_bundle_keeps_active_runtime_artifacts():
-    config = json.loads(
-        (ROOT / "vercel.json").read_text(
-            encoding="utf-8"
-        )
+    ignored = (ROOT / ".vercelignore").read_text(
+        encoding="utf-8"
     )
 
-    excluded = (
-        config["functions"]["api/index.py"]
-        ["excludeFiles"]
-    )
+    assert "tests/" in ignored
+    assert "reports/" in ignored
+    assert "data/" in ignored
+    assert "scripts/" in ignored
 
-    assert "tests/**" in excluded
-    assert "reports/**" in excluded
-    assert "data/**" in excluded
-    assert "scripts/**" in excluded
+    assert "models/scam_classifier_v04.joblib" in ignored
+    assert "models/scam_classifier_v04_metadata.json" in ignored
 
-    assert "scam_classifier_v04.joblib" in excluded
-
-    assert "scam_classifier_v05.joblib" not in excluded
-    assert "scam_classifier_v05_metadata.json" not in excluded
-    assert "app/**" not in excluded
-    assert "ml/**" not in excluded
+    assert "models/scam_classifier_v05.joblib" not in ignored
+    assert "models/scam_classifier_v05_metadata.json" not in ignored
+    assert "app/" not in ignored
+    assert "ml/" not in ignored
+    assert "main.py" not in ignored
