@@ -178,9 +178,35 @@
     font-size: 11px;
   }
 
+  /* Mobile collection behaves like a touch carousel. A small next-card peek
+     makes the horizontal interaction discoverable without adding JS controls. */
   .exhibit-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    grid-template-columns: none;
     gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 14px 14px 0;
+  }
+
+  .exhibit-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .exhibit-card {
+    flex: 0 0 calc(100% - 38px);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .exhibit-card:hover,
+  .exhibit-card:focus-visible {
+    transform: none;
   }
 
   .exhibit-card-art {
@@ -456,6 +482,10 @@
     font-size: clamp(36px, 11vw, 48px);
   }
 
+  .exhibit-card {
+    flex-basis: calc(100% - 28px);
+  }
+
   .exhibit-card-art {
     min-height: 205px;
   }
@@ -541,6 +571,10 @@
 
   .collection-filter {
     padding-inline: 11px;
+  }
+
+  .exhibit-card {
+    flex-basis: calc(100% - 22px);
   }
 
   .exhibit-mini-frame {
