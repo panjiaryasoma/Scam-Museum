@@ -85,6 +85,16 @@ def test_museum_css_is_served(client):
     assert ".exhibit-dialog" in response.text
 
 
+def test_mobile_css_is_served_and_scoped(client):
+    response = client.get("/static/css/mobile.css")
+
+    assert response.status_code == 200
+    assert "@media (max-width: 820px)" in response.text
+    assert "@media (max-width: 520px)" in response.text
+    assert ".collection-filters" in response.text
+    assert ".exhibit-dialog" in response.text
+
+
 def test_javascript_is_served(client):
     response = client.get("/static/js/app.js")
 
@@ -92,6 +102,8 @@ def test_javascript_is_served(client):
     assert 'fetch("/api/analyze"' in response.text
     assert "renderHighlightedText" in response.text
     assert "scam-museum:analysis-rendered" in response.text
+    assert 'link.href = "/static/css/mobile.css"' in response.text
+    assert 'link.media = "(max-width: 820px)"' in response.text
 
 
 def test_gallery_javascript_is_served(client):
