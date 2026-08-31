@@ -1,3 +1,16 @@
+function loadMobileStylesheet() {
+  if (document.querySelector('link[data-mobile-museum="true"]')) return;
+
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = "/static/css/mobile.css";
+  link.media = "(max-width: 820px)";
+  link.dataset.mobileMuseum = "true";
+  document.head.append(link);
+}
+
+loadMobileStylesheet();
+
 const input = document.getElementById("message-input");
 const analyzeButton = document.getElementById("analyze-button");
 const characterCount = document.getElementById("character-count");
