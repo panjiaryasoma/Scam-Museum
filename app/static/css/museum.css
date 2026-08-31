@@ -1,0 +1,653 @@
+:root {
+  --gallery-black: #050505;
+  --gallery-ink: #0b0908;
+  --gallery-wall: #140c0b;
+  --gallery-burgundy: #3d0d12;
+  --gallery-burgundy-2: #5a1319;
+  --gallery-brass: #a78045;
+  --gallery-brass-soft: #c7a568;
+  --gallery-ivory: #e8dfcf;
+  --gallery-paper: #cfc1aa;
+  --gallery-muted: #918779;
+  --gallery-line: rgba(167, 128, 69, 0.34);
+  --gallery-line-soft: rgba(232, 223, 207, 0.12);
+  --gallery-shadow: 0 30px 90px rgba(0, 0, 0, 0.48);
+}
+
+body {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(90, 19, 25, 0.18), transparent 32%),
+    radial-gradient(circle at 20% 38%, rgba(167, 128, 69, 0.05), transparent 25%),
+    var(--gallery-black);
+  color: var(--gallery-ivory);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.shell { width: min(calc(100% - 48px), 1380px); }
+
+.museum-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid var(--gallery-line);
+  background: rgba(5, 5, 5, 0.92);
+  backdrop-filter: blur(18px);
+}
+
+.museum-nav {
+  min-height: 86px;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) auto minmax(180px, 1fr);
+  align-items: center;
+  gap: 28px;
+}
+
+.museum-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--gallery-ivory);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.museum-brand img { width: 44px; height: 44px; object-fit: contain; }
+.museum-brand span {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 18px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.museum-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+}
+
+.museum-links a,
+.museum-header-action {
+  color: var(--gallery-paper);
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.museum-links a { position: relative; padding: 34px 0; }
+.museum-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 4px;
+  height: 4px;
+  background: var(--gallery-brass);
+  transform: translateX(-50%) rotate(45deg) scale(0);
+  transition: transform 180ms ease;
+}
+.museum-links a:hover::after,
+.museum-links a:focus-visible::after { transform: translateX(-50%) rotate(45deg) scale(1); }
+
+.museum-header-action {
+  justify-self: end;
+  padding: 14px 18px;
+  border: 1px solid var(--gallery-line);
+  color: var(--gallery-brass-soft);
+}
+
+.museum-hero {
+  position: relative;
+  min-height: calc(100vh - 86px);
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border-bottom: 1px solid var(--gallery-line);
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.96) 0%, rgba(5, 5, 5, 0.86) 43%, rgba(20, 12, 11, 0.48) 66%, rgba(20, 12, 11, 0.76) 100%),
+    radial-gradient(circle at 78% 26%, rgba(167, 128, 69, 0.18), transparent 20%),
+    linear-gradient(135deg, #080706, #1a0c0d 72%, #090707);
+}
+
+.museum-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 28%;
+  pointer-events: none;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.52));
+}
+
+.museum-hero-grid {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: inherit;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(430px, 0.78fr);
+  gap: 70px;
+  align-items: center;
+  padding-block: 74px 88px;
+}
+
+.hero-kicker,
+.gallery-kicker,
+.room-kicker,
+.exhibit-accession,
+.exhibit-meta,
+.collection-count,
+.collection-filter,
+.museum-stat span,
+.museum-note,
+.plaque-label {
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+.hero-kicker,
+.gallery-kicker,
+.room-kicker {
+  margin: 0;
+  color: var(--gallery-brass-soft);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.museum-hero h1 {
+  max-width: 9.8ch;
+  margin: 26px 0 24px;
+  color: var(--gallery-ivory);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(56px, 7vw, 104px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 400;
+}
+
+.hero-rule {
+  width: 160px;
+  height: 1px;
+  margin: 26px 0;
+  background: linear-gradient(90deg, var(--gallery-burgundy-2) 0 70%, transparent 70%);
+  position: relative;
+}
+.hero-rule::after {
+  content: "";
+  position: absolute;
+  left: 172px;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  background: var(--gallery-burgundy-2);
+}
+
+.museum-hero .lede {
+  max-width: 650px;
+  color: #b9ad9d;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; }
+.museum-cta {
+  min-width: 210px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 16px 20px;
+  border: 1px solid var(--gallery-line);
+  color: var(--gallery-brass-soft);
+  background: rgba(5, 5, 5, 0.28);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+.museum-cta.primary {
+  border-color: rgba(174, 55, 55, 0.7);
+  color: var(--gallery-ivory);
+  background: linear-gradient(135deg, #4b0e13, #6c171d);
+}
+.museum-cta:hover { transform: translateY(-2px); border-color: var(--gallery-brass); }
+
+.featured-wall {
+  position: relative;
+  min-height: 590px;
+  display: grid;
+  place-items: center;
+}
+.featured-wall::before {
+  content: "";
+  position: absolute;
+  width: 78%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(210, 171, 103, 0.2), rgba(210, 171, 103, 0.04) 42%, transparent 72%);
+  filter: blur(12px);
+}
+
+.hero-frame {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 530px);
+  padding: 18px;
+  border: 1px solid #9e793f;
+  background: linear-gradient(135deg, #4f3a1d, #b48c50 8%, #1e160d 14%, #806231 21%, #241a0d 29%, #a27b3d 35%, #20170c 46%, #8f6d38 56%, #291e10 64%, #ad8749 76%, #24190d);
+  box-shadow: 0 42px 80px rgba(0, 0, 0, 0.62), inset 0 0 0 5px #160f08;
+}
+.hero-frame-inner {
+  padding: 12px;
+  border: 1px solid rgba(241, 210, 151, 0.55);
+  background: #100d0b;
+}
+.hero-message {
+  min-height: 340px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #29211c;
+  background:
+    linear-gradient(rgba(255,255,255,.36), rgba(255,255,255,.36)),
+    #ded4c5;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.hero-message-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(42, 31, 24, 0.2);
+  font-size: 12px;
+  font-weight: 700;
+}
+.hero-message p { margin: 0 0 16px; }
+.hero-message a { color: #264b88; text-decoration: underline; }
+
+.hero-plaque {
+  position: relative;
+  z-index: 2;
+  width: 310px;
+  margin: 18px auto 0;
+  padding: 13px 18px;
+  text-align: center;
+  color: #20180f;
+  border: 1px solid #4f3617;
+  background: linear-gradient(#b89051, #8c682f);
+  box-shadow: inset 0 0 0 1px rgba(255, 230, 177, 0.35), 0 12px 30px rgba(0,0,0,.42);
+}
+.hero-plaque strong { display: block; font-family: "Libre Baskerville", Georgia, serif; font-size: 19px; }
+.hero-plaque span { display: block; margin-top: 3px; font-family: Georgia, serif; font-size: 12px; }
+
+.collection-section,
+.examination-room,
+.museum-method {
+  border-bottom: 1px solid var(--gallery-line);
+}
+.collection-section { padding: 104px 0 118px; background: rgba(5, 5, 5, 0.74); }
+.collection-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 38px;
+}
+.collection-head h2,
+.examination-copy h2,
+.museum-method h2 {
+  margin: 12px 0 0;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+.collection-head h2 { font-size: clamp(42px, 5vw, 68px); }
+.collection-count { color: var(--gallery-muted); font-size: 11px; letter-spacing: 0.08em; }
+
+.collection-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0 20px;
+  margin-bottom: 34px;
+  border-top: 1px solid var(--gallery-line);
+  border-bottom: 1px solid var(--gallery-line-soft);
+}
+.collection-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.collection-filter {
+  padding: 9px 12px;
+  color: var(--gallery-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.collection-filter:hover,
+.collection-filter[aria-pressed="true"] {
+  color: var(--gallery-brass-soft);
+  border-color: var(--gallery-line);
+  background: rgba(167, 128, 69, 0.05);
+}
+.collection-note { margin: 0; max-width: 510px; color: var(--gallery-muted); font-size: 12px; line-height: 1.6; text-align: right; }
+
+.exhibit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.exhibit-card {
+  position: relative;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  color: inherit;
+  border: 1px solid var(--gallery-line-soft);
+  background: #090807;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.exhibit-card:hover,
+.exhibit-card:focus-visible {
+  transform: translateY(-5px);
+  border-color: var(--gallery-line);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+  outline: 0;
+}
+.exhibit-card[hidden] { display: none; }
+
+.exhibit-card-art {
+  min-height: 280px;
+  padding: 28px 20px;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid var(--gallery-line-soft);
+  background:
+    radial-gradient(circle at 50% 36%, rgba(167, 128, 69, 0.08), transparent 42%),
+    linear-gradient(145deg, #130d0b, #070706 68%);
+}
+.exhibit-mini-frame {
+  width: 88%;
+  padding: 8px;
+  border: 1px solid #775829;
+  background: linear-gradient(135deg, #30210e, #9a7436 12%, #1d150c 23%, #6d4f21 35%, #21160c 49%, #a17a3b 64%, #24190d);
+  box-shadow: 0 20px 38px rgba(0,0,0,.48);
+}
+.exhibit-mini-message {
+  min-height: 170px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: #241f1a;
+  background: #ded5c8;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+.exhibit-card-info { padding: 20px 18px 22px; }
+.exhibit-accession { color: var(--gallery-brass-soft); font-size: 10px; letter-spacing: 0.08em; }
+.exhibit-card h3 {
+  margin: 13px 0 8px;
+  color: var(--gallery-ivory);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 20px;
+  line-height: 1.28;
+  font-weight: 400;
+}
+.exhibit-meta { margin: 0; color: #a63a3d; font-size: 10px; line-height: 1.55; letter-spacing: 0.05em; text-transform: uppercase; }
+.exhibit-card-footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; color: var(--gallery-muted); font-size: 10px; }
+
+.collection-empty {
+  padding: 64px 20px;
+  border: 1px solid var(--gallery-line-soft);
+  text-align: center;
+  color: var(--gallery-muted);
+}
+
+.museum-stats {
+  margin-top: 46px;
+  padding-top: 22px;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 0.65fr);
+  gap: 0;
+  border-top: 1px solid var(--gallery-line);
+}
+.museum-stat {
+  min-height: 86px;
+  padding: 0 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--gallery-line-soft);
+}
+.museum-stat:first-child { padding-left: 0; border-left: 0; }
+.museum-stat strong { color: var(--gallery-brass-soft); font-size: 28px; font-weight: 400; }
+.museum-stat span { margin-top: 3px; color: var(--gallery-muted); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
+.museum-stat.statement strong { font-family: "Libre Baskerville", Georgia, serif; color: var(--gallery-paper); font-size: 18px; }
+
+.examination-room {
+  padding: 112px 0;
+  background:
+    linear-gradient(90deg, #080706 0 52%, #0d0908 52%),
+    var(--gallery-black);
+}
+.examination-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, .68fr) minmax(0, 1.32fr);
+  gap: 58px;
+  align-items: start;
+}
+.examination-copy { position: sticky; top: 126px; }
+.examination-copy h2 { max-width: 8ch; font-size: clamp(46px, 5vw, 74px); line-height: 1.05; }
+.examination-copy > p:not(.room-kicker) { max-width: 460px; color: #aa9e8f; line-height: 1.8; }
+.room-list {
+  margin: 38px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--gallery-line);
+}
+.room-list li {
+  padding: 14px 0;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 12px;
+  border-bottom: 1px solid var(--gallery-line-soft);
+  color: var(--gallery-muted);
+  font-size: 12px;
+}
+.room-list b { color: var(--gallery-brass-soft); font-family: "JetBrains Mono", monospace; font-size: 9px; }
+
+.examination-room .analysis-grid { display: block; }
+.examination-room .panel {
+  border-color: var(--gallery-line);
+  background: rgba(7, 7, 6, 0.78);
+  box-shadow: var(--gallery-shadow);
+}
+.examination-room .panel-header { border-bottom-color: var(--gallery-line-soft); }
+.examination-room .panel-header h2 { color: var(--gallery-ivory); }
+.examination-room textarea {
+  min-height: 330px;
+  color: var(--gallery-ivory);
+  background: rgba(0, 0, 0, 0.18);
+  border-bottom-color: var(--gallery-line-soft);
+}
+.examination-room textarea:focus-visible { box-shadow: inset 0 0 0 1px var(--gallery-brass); }
+.examination-room .button-primary {
+  border-color: #7b1f25;
+  background: linear-gradient(135deg, #541015, #7a1c22);
+  color: var(--gallery-ivory);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.examination-room .button-primary:hover { border-color: #a02a31; background: #6d161c; }
+.examination-room .catalog { display: none; }
+
+.result-section {
+  padding: 112px 0;
+  background: #080706;
+}
+.result-section .result-card {
+  border-color: var(--gallery-line);
+  background: #0a0908;
+  box-shadow: var(--gallery-shadow);
+}
+.result-section .result-header,
+.result-section .result-grid,
+.result-section .curatorial { border-color: var(--gallery-line-soft); }
+.result-section .result-header h2 { color: var(--gallery-ivory); }
+.result-section .artifact-text {
+  border: 8px solid #2e210f;
+  outline: 1px solid #886631;
+  outline-offset: -4px;
+  background: #dcd2c4;
+  color: #25201b;
+  box-shadow: 0 18px 50px rgba(0,0,0,.28);
+}
+.result-section .artifact-text mark { color: #211b17; background: rgba(121, 38, 37, .18); border-bottom-color: #7b2527; }
+.result-section .status-block { border-color: var(--gallery-line); background: rgba(167, 128, 69, .04); }
+.result-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.result-actions .button-secondary { color: var(--gallery-brass-soft); border-color: var(--gallery-line); }
+#view-similar-exhibits { color: var(--gallery-ivory); border-color: #6b1a20; }
+
+.museum-method { padding: 110px 0; background: #060606; }
+.method-grid {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: 80px;
+}
+.museum-method h2 { max-width: 9ch; font-size: clamp(42px, 5vw, 70px); line-height: 1.07; }
+.method-principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--gallery-line);
+}
+.method-principles article { min-height: 230px; padding: 30px 28px; border-right: 1px solid var(--gallery-line-soft); border-bottom: 1px solid var(--gallery-line-soft); }
+.method-principles article:nth-child(even) { border-right: 0; }
+.method-principles span { font-family: "JetBrains Mono", monospace; color: var(--gallery-brass); font-size: 10px; }
+.method-principles h3 { margin: 38px 0 12px; font-family: "Libre Baskerville", Georgia, serif; font-size: 20px; font-weight: 400; }
+.method-principles p { margin: 0; color: var(--gallery-muted); font-size: 13px; line-height: 1.7; }
+
+.museum-footer {
+  padding: 42px 0;
+  background: #030303;
+  color: var(--gallery-muted);
+  border-top: 1px solid var(--gallery-line);
+}
+.museum-footer-inner { display: flex; justify-content: space-between; gap: 28px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+
+.exhibit-dialog {
+  width: min(1040px, calc(100% - 36px));
+  max-height: min(860px, calc(100vh - 36px));
+  padding: 0;
+  overflow: auto;
+  color: var(--gallery-ivory);
+  border: 1px solid var(--gallery-line);
+  background: #080706;
+  box-shadow: 0 40px 120px #000;
+}
+.exhibit-dialog::backdrop { background: rgba(0, 0, 0, .78); backdrop-filter: blur(8px); }
+.dialog-close {
+  position: sticky;
+  top: 16px;
+  z-index: 3;
+  float: right;
+  margin: 16px 16px 0 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--gallery-line);
+  color: var(--gallery-brass-soft);
+  background: #090807;
+  font-size: 22px;
+}
+.dialog-layout { display: grid; grid-template-columns: 1.12fr .88fr; min-height: 620px; }
+.dialog-artifact { padding: 58px 44px; display: grid; place-items: center; background: linear-gradient(145deg, #130c0b, #070706); }
+.dialog-frame { width: 100%; max-width: 520px; padding: 14px; border: 1px solid #8a6731; background: linear-gradient(135deg, #3b2a13, #a57e3c 10%, #1b140b 19%, #7a5b2c 29%, #1d1409 44%, #a07837 58%, #21170b); box-shadow: 0 26px 65px rgba(0,0,0,.58); }
+.dialog-message { min-height: 340px; padding: 34px; display: flex; align-items: center; white-space: pre-line; color: #27211d; background: #ded5c8; font-size: 16px; line-height: 1.55; }
+.dialog-copy { padding: 56px 46px 46px; }
+.dialog-copy h2 { margin: 14px 0 12px; font-family: "Libre Baskerville", Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.1; }
+.dialog-copy .exhibit-meta { color: #b94449; }
+.dialog-copy dl { margin: 34px 0; border-top: 1px solid var(--gallery-line); }
+.dialog-copy dl div { display: grid; grid-template-columns: 120px 1fr; gap: 18px; padding: 12px 0; border-bottom: 1px solid var(--gallery-line-soft); }
+.dialog-copy dt { color: var(--gallery-muted); font-size: 11px; }
+.dialog-copy dd { margin: 0; color: var(--gallery-paper); font-size: 12px; }
+.dialog-artifacts { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 30px; }
+.dialog-artifacts span { padding: 7px 9px; border: 1px solid var(--gallery-line); color: var(--gallery-brass-soft); font-family: "JetBrains Mono", monospace; font-size: 9px; text-transform: uppercase; }
+.dialog-note { color: #aa9e8f; font-size: 13px; line-height: 1.8; }
+
+@media (max-width: 1120px) {
+  .museum-nav { grid-template-columns: 1fr auto; }
+  .museum-links { display: none; }
+  .museum-hero-grid { grid-template-columns: 1fr 0.82fr; gap: 44px; }
+  .exhibit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .museum-stats { grid-template-columns: 1fr 1fr; }
+  .museum-stat:nth-child(3) { border-left: 0; padding-left: 0; border-top: 1px solid var(--gallery-line-soft); }
+  .museum-stat:nth-child(4) { border-top: 1px solid var(--gallery-line-soft); }
+}
+
+@media (max-width: 820px) {
+  .shell { width: min(calc(100% - 30px), 1380px); }
+  .museum-header-action { display: none; }
+  .museum-brand span { font-size: 14px; }
+  .museum-hero { min-height: auto; }
+  .museum-hero-grid { grid-template-columns: 1fr; padding-block: 70px; }
+  .museum-hero h1 { font-size: clamp(52px, 16vw, 82px); }
+  .featured-wall { min-height: auto; padding-top: 16px; }
+  .hero-frame { width: min(100%, 480px); }
+  .collection-head { grid-template-columns: 1fr; gap: 14px; }
+  .collection-toolbar { align-items: flex-start; flex-direction: column; }
+  .collection-note { text-align: left; }
+  .exhibit-grid { grid-template-columns: 1fr; }
+  .museum-stats { grid-template-columns: 1fr 1fr; }
+  .examination-room { background: #080706; }
+  .examination-layout { grid-template-columns: 1fr; }
+  .examination-copy { position: static; }
+  .examination-copy h2 { max-width: none; }
+  .method-grid { grid-template-columns: 1fr; gap: 42px; }
+  .method-principles { grid-template-columns: 1fr; }
+  .method-principles article { border-right: 0; }
+  .dialog-layout { grid-template-columns: 1fr; }
+  .dialog-artifact { padding: 54px 24px 28px; }
+  .dialog-copy { padding: 34px 28px 42px; }
+}
+
+@media (max-width: 520px) {
+  .museum-nav { min-height: 72px; }
+  .museum-brand img { width: 36px; height: 36px; }
+  .museum-brand span { font-size: 12px; letter-spacing: .1em; }
+  .museum-hero h1 { font-size: 54px; }
+  .hero-actions { flex-direction: column; }
+  .museum-cta { width: 100%; }
+  .hero-message { min-height: 280px; padding: 24px; font-size: 14px; }
+  .hero-plaque { width: min(86%, 300px); }
+  .collection-section, .examination-room, .museum-method, .result-section { padding-block: 78px; }
+  .museum-stats { grid-template-columns: 1fr; }
+  .museum-stat, .museum-stat:nth-child(3) { padding: 18px 0; border-left: 0; border-top: 1px solid var(--gallery-line-soft); }
+  .museum-stat:first-child { border-top: 0; }
+  .panel-header, .panel-footer { padding-inline: 22px; }
+  .panel-footer { align-items: stretch; flex-direction: column; }
+  textarea { padding: 26px 22px; }
+  .museum-footer-inner { flex-direction: column; }
+  .dialog-copy h2 { font-size: 32px; }
+}
