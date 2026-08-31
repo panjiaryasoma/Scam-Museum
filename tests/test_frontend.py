@@ -30,9 +30,7 @@ class FakeScorer:
 
 @pytest.fixture()
 def client():
-    app = create_app(
-        ScamAnalysisService(scorer=FakeScorer())
-    )
+    app = create_app(ScamAnalysisService(scorer=FakeScorer()))
     return TestClient(app)
 
 
@@ -43,8 +41,21 @@ def test_home_renders_museum(client):
     assert "text/html" in response.headers["content-type"]
     assert "SCAM MUSEUM" in response.text
     assert "Every scam leaves artifacts." in response.text
+    assert "Gallery of Digital Deception" in response.text
+    assert 'id="collection"' in response.text
+    assert 'id="exhibit-grid"' in response.text
+    assert 'id="exhibit-dialog"' in response.text
     assert 'id="message-input"' in response.text
     assert 'id="result-section"' in response.text
+    assert 'id="view-similar-exhibits"' in response.text
+
+
+def test_home_keeps_visitor_analysis_private_by_default(client):
+    response = client.get("/")
+
+    assert response.status_code == 200
+    assert "Private visitor analyses are never automatically added to the collection." in response.text
+    assert "Visitor analyses are not automatically published to the museum collection." in response.text
 
 
 def test_css_is_served(client):
@@ -55,12 +66,33 @@ def test_css_is_served(client):
     assert ".artifact-frame" in response.text
 
 
+def test_museum_css_is_served(client):
+    response = client.get("/static/css/museum.css")
+
+    assert response.status_code == 200
+    assert "--gallery-brass" in response.text
+    assert ".museum-hero" in response.text
+    assert ".exhibit-grid" in response.text
+    assert ".exhibit-dialog" in response.text
+
+
 def test_javascript_is_served(client):
     response = client.get("/static/js/app.js")
 
     assert response.status_code == 200
     assert 'fetch("/api/analyze"' in response.text
     assert "renderHighlightedText" in response.text
+    assert "scam-museum:analysis-rendered" in response.text
+
+
+def test_gallery_javascript_is_served(client):
+    response = client.get("/static/js/gallery.js")
+
+    assert response.status_code == 200
+    assert "The Urgency Trap" in response.text
+    assert "Reconstructed demonstration" in response.text
+    assert "data-gallery-filter" not in response.text
+    assert "scam-museum:analysis-rendered" in response.text
 
 
 def test_frontend_has_no_duplicate_verdict_logic(client):

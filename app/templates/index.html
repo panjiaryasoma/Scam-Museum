@@ -4,59 +4,136 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Scam Museum screens suspicious messages for observable scam patterns, risk signals, and uncertainty.">
+  <meta name="description" content="Scam Museum is a digital gallery of deception where visitors can explore curated scam exhibits and examine suspicious messages.">
   <link rel="icon" type="image/png" href="/static/assets/icon.png">
-  <title>Scam Museum — Gallery of Digital Deception</title>
   <link rel="apple-touch-icon" href="/static/assets/icon.png">
+  <title>Scam Museum — Gallery of Digital Deception</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/css/museum.css">
   <link rel="stylesheet" href="/static/css/share-card.css">
 </head>
 <body>
-  <a class="skip-link" href="#analyzer">Skip to analyzer</a>
+  <a class="skip-link" href="#collection">Skip to collection</a>
 
-  <header class="site-header">
-    <div class="shell header-inner">
-      <div>
-        <img src="/static/assets/full-logo.png" alt="SCAM MUSEUM" height="44" decoding="async">
-        <p class="brand-title">Gallery of Digital Deception</p>
+  <header class="museum-header">
+    <nav class="shell museum-nav" aria-label="Museum navigation">
+      <a class="museum-brand" href="#top" aria-label="Scam Museum home">
+        <img src="/static/assets/icon.png" alt="" width="44" height="44" decoding="async">
+        <span>SCAM MUSEUM</span>
+      </a>
+
+      <div class="museum-links">
+        <a href="#collection">Collection</a>
+        <a href="#analyzer">Examine</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#about">About</a>
       </div>
-      <div class="accession">
-        <span class="overline">Accession</span>
-        <strong>SM.2026</strong>
-      </div>
-    </div>
+
+      <a class="museum-header-action" href="#about">About the museum</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div>
-          <p class="overline accent">Every scam leaves artifacts.</p>
-          <h1>Examine the message. Not the sender.</h1>
+  <main id="top">
+    <section class="museum-hero" aria-labelledby="hero-title">
+      <div class="shell museum-hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">Digital Archive · Est. 2026</p>
+          <h1 id="hero-title">Gallery of Digital Deception</h1>
+          <div class="hero-rule" aria-hidden="true"></div>
           <p class="lede">
-            Paste a suspicious message and Scam Museum will surface the observable
-            requests, pressure tactics, and manipulation patterns hidden inside the text.
+            Every scam leaves artifacts. Explore curated reconstructions of phishing,
+            impersonation, urgency, and digital fraud, or bring a suspicious message
+            into the examination room and inspect its observable evidence.
           </p>
+          <div class="hero-actions">
+            <a class="museum-cta primary" href="#collection"><span>Enter collection</span><span>→</span></a>
+            <a class="museum-cta" href="#analyzer"><span>Examine a message</span><span>→</span></a>
+          </div>
         </div>
 
-        <aside class="context-note">
-          <p class="overline">01 / About the exhibit</p>
-          <p>
-            This tool screens message text for risk signals. It does not verify
-            identity, reputation, or real-world intent.
-          </p>
-        </aside>
+        <div class="featured-wall" aria-label="Featured exhibit">
+          <div>
+            <div class="hero-frame" aria-hidden="true">
+              <div class="hero-frame-inner">
+                <div class="hero-message">
+                  <div class="hero-message-head"><span>⚠ Security Alert</span><span>9:41 AM</span></div>
+                  <p>Your account has been suspended due to suspicious activity.</p>
+                  <p>You must verify your identity within 24 hours or your account will be permanently locked.</p>
+                  <p>Verify now: <a>secure-login-id.example</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="hero-plaque">
+              <strong>The Urgency Trap</strong>
+              <span>Unknown sender · Reconstructed, 2026</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="analyzer" class="section">
+    <section id="collection" class="collection-section" aria-labelledby="collection-title">
       <div class="shell">
-        <div class="section-heading">
-          <span class="overline">Room I</span>
-          <span class="overline">Message Examination</span>
+        <div class="collection-head">
+          <div>
+            <p class="gallery-kicker">Now on view</p>
+            <h2 id="collection-title">The Collection</h2>
+          </div>
+          <p id="collection-count" class="collection-count">8 curated exhibits</p>
+        </div>
+
+        <div class="collection-toolbar">
+          <div class="collection-filters" role="group" aria-label="Filter museum collection">
+            <button class="collection-filter" type="button" data-gallery-filter="all" aria-pressed="true">All</button>
+            <button class="collection-filter" type="button" data-gallery-filter="banking" aria-pressed="false">Banking</button>
+            <button class="collection-filter" type="button" data-gallery-filter="impersonation" aria-pressed="false">Impersonation</button>
+            <button class="collection-filter" type="button" data-gallery-filter="job" aria-pressed="false">Job</button>
+            <button class="collection-filter" type="button" data-gallery-filter="delivery" aria-pressed="false">Delivery</button>
+            <button class="collection-filter" type="button" data-gallery-filter="family" aria-pressed="false">Family</button>
+            <button class="collection-filter" type="button" data-gallery-filter="wrong-number" aria-pressed="false">Wrong number</button>
+            <button class="collection-filter" type="button" data-gallery-filter="government" aria-pressed="false">Government</button>
+            <button class="collection-filter" type="button" data-gallery-filter="telecom" aria-pressed="false">Telecom</button>
+          </div>
+          <p class="collection-note">
+            Public exhibits are reconstructed demonstrations based on documented scam patterns.
+            Private visitor analyses are never automatically added to the collection.
+          </p>
+        </div>
+
+        <div id="exhibit-grid" class="exhibit-grid" aria-live="polite"></div>
+        <p id="collection-empty" class="collection-empty" hidden>No exhibits match this view.</p>
+
+        <div class="museum-stats" aria-label="Collection facts">
+          <div class="museum-stat statement">
+            <strong>Preserving digital tricks so future visitors recognize the pattern.</strong>
+            <span>Curatorial purpose</span>
+          </div>
+          <div class="museum-stat"><strong>8</strong><span>Curated reconstructions</span></div>
+          <div class="museum-stat"><strong>8</strong><span>Collection families</span></div>
+          <div class="museum-stat"><strong>0</strong><span>Visitor messages stored</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="analyzer" class="examination-room" aria-labelledby="examination-title">
+      <div class="shell examination-layout">
+        <div class="examination-copy">
+          <p class="room-kicker">Examination Room · Private analysis</p>
+          <h2 id="examination-title">Bring in an unknown artifact.</h2>
+          <p>
+            Paste text, upload a screenshot, or paste a screenshot directly with
+            <strong>Ctrl+V</strong>. OCR runs in the browser and extracted text stays editable
+            so you can correct it before analysis.
+          </p>
+          <ol class="room-list">
+            <li><b>01</b><span>Submit only the suspicious message or screenshot you want to inspect.</span></li>
+            <li><b>02</b><span>Review OCR text before analysis. OCR errors can change interpretation.</span></li>
+            <li><b>03</b><span>Read the evidence and uncertainty, not just the ML signal.</span></li>
+            <li><b>04</b><span>Visitor analyses are not automatically published to the museum collection.</span></li>
+          </ol>
         </div>
 
         <div class="analysis-grid">
@@ -80,11 +157,9 @@
             <footer class="panel-footer">
               <p class="helper">
                 Analysis runs on the text you submit. Do not paste passwords,
-                OTPs, or other secrets that are still valid.
+                OTPs, or secrets that are still valid.
               </p>
-              <button id="analyze-button" class="button-primary" type="button">
-                Analyze artifact
-              </button>
+              <button id="analyze-button" class="button-primary" type="button">Examine message</button>
             </footer>
 
             <div id="form-error" class="form-error" role="alert" hidden></div>
@@ -106,16 +181,16 @@
     <section id="result-section" class="section result-section" aria-live="polite" hidden>
       <div class="shell">
         <div class="section-heading">
-          <span class="overline">Room II</span>
-          <span class="overline">Curated Findings</span>
+          <span class="overline">Examination record</span>
+          <span class="overline">Private visitor artifact</span>
         </div>
 
         <article class="result-card">
           <header class="result-header">
             <div>
-              <p class="overline">Accession No. SM.2026.001</p>
+              <p class="overline">Accession No. VISITOR.EXAM.001</p>
               <h2 id="exhibit-title">Unclassified artifact</h2>
-              <p class="caption">Unknown sender, digital message</p>
+              <p class="caption">Unknown sender · Visitor-submitted digital message</p>
             </div>
 
             <div id="verdict-plaque" class="status-block" data-verdict="">
@@ -132,8 +207,8 @@
               </div>
               <blockquote id="highlighted-message" class="artifact-text"></blockquote>
               <p class="caption">
-                Highlighted passages are observable text patterns detected by the
-                evidence layer. They are not claims about sender identity.
+                Highlighted passages are observable text patterns detected by the evidence layer.
+                They are not claims about sender identity or intent.
               </p>
             </section>
 
@@ -158,51 +233,110 @@
         </article>
 
         <div class="result-actions">
-          <button id="share-exhibit" class="button-secondary share-button" type="button">
-            Share exhibit
-          </button>
-          <button id="analyze-another" class="button-secondary" type="button">
-            Examine another message
-          </button>
+          <button id="share-exhibit" class="button-secondary share-button" type="button">Share exhibit</button>
+          <button id="view-similar-exhibits" class="button-secondary" type="button" hidden>View related exhibits</button>
+          <button id="analyze-another" class="button-secondary" type="button">Examine another message</button>
           <span id="share-status" class="caption share-status" role="status" aria-live="polite"></span>
         </div>
       </div>
     </section>
 
-    <section class="section archive">
-      <div class="shell">
-        <div class="section-heading">
-          <span class="overline">Archive Note</span>
-          <span class="overline">How to Read the Result</span>
+    <section id="methodology" class="museum-method" aria-labelledby="methodology-title">
+      <div class="shell method-grid">
+        <div>
+          <p class="gallery-kicker">How to read an artifact</p>
+          <h2 id="methodology-title">The museum does not ask the model to be an oracle.</h2>
         </div>
 
-        <div class="principles">
+        <div class="method-principles">
           <article>
-            <span class="principle-index">01</span>
-            <h2>ML is a signal, not the verdict.</h2>
-            <p>The classifier contributes a text-risk signal. It does not decide whether a sender is fraudulent.</p>
+            <span>01 / ML SIGNAL</span>
+            <h3>Statistical risk is only one clue.</h3>
+            <p>The frozen v0.5 classifier contributes a WEAK, ELEVATED, or STRONG text-risk signal. The UI does not present it as a calibrated probability of malicious intent.</p>
           </article>
           <article>
-            <span class="principle-index">02</span>
-            <h2>Evidence stays observable.</h2>
-            <p>The museum highlights requests, threats, urgency, suspicious URLs, and other patterns found directly in the submitted text.</p>
+            <span>02 / EVIDENCE</span>
+            <h3>Artifacts stay observable.</h3>
+            <p>Requests, threats, urgency, suspicious URLs, impersonation cues, and other behaviors are cataloged separately from the ML score.</p>
           </article>
           <article>
-            <span class="principle-index">03</span>
-            <h2>Ambiguity is allowed.</h2>
-            <p>When a single message does not contain enough evidence, the system can return Insufficient Evidence instead of pretending certainty.</p>
+            <span>03 / CONTEXT</span>
+            <h3>Protective language matters.</h3>
+            <p>Warnings such as “never share your OTP” can counter superficial keyword matches when stronger malicious requests are absent.</p>
+          </article>
+          <article>
+            <span>04 / UNCERTAINTY</span>
+            <h3>Ambiguity is an allowed result.</h3>
+            <p>When a message does not contain enough evidence, Scam Museum can return Insufficient Evidence instead of forcing a binary accusation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="museum-method" aria-labelledby="about-title">
+      <div class="shell method-grid">
+        <div>
+          <p class="gallery-kicker">Curatorial statement</p>
+          <h2 id="about-title">A museum for recognizing patterns, not naming villains.</h2>
+        </div>
+        <div class="method-principles">
+          <article>
+            <span>ARCHIVE</span>
+            <h3>Curated public exhibits</h3>
+            <p>The collection uses reconstructed demonstrations inspired by documented scam patterns. It is intentionally separated from private visitor analysis.</p>
+          </article>
+          <article>
+            <span>PRIVACY</span>
+            <h3>No automatic public display</h3>
+            <p>A message examined in the private room is not automatically added to the gallery. That avoids exposing personal conversations or publishing a false-positive classification.</p>
+          </article>
+          <article>
+            <span>PURPOSE</span>
+            <h3>Recognition over certainty</h3>
+            <p>The museum teaches visitors to recognize observable manipulation techniques and verify suspicious interactions independently.</p>
+          </article>
+          <article>
+            <span>PROJECT</span>
+            <h3>Every scam leaves artifacts.</h3>
+            <p>Scam Museum turns the metaphor into the information architecture: collection, exhibits, accession records, an examination room, and curatorial notes.</p>
           </article>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-inner">
+  <footer class="museum-footer">
+    <div class="shell museum-footer-inner">
       <span>Scam Museum / Gallery of Digital Deception</span>
-      <span>Built for HackSocial 2026</span>
+      <span>HackSocial 2026 · AI/ML Track</span>
     </div>
   </footer>
+
+  <dialog id="exhibit-dialog" class="exhibit-dialog" aria-labelledby="dialog-title">
+    <button id="dialog-close" class="dialog-close" type="button" aria-label="Close exhibit">×</button>
+    <div class="dialog-layout">
+      <div class="dialog-artifact">
+        <div class="dialog-frame">
+          <div id="dialog-message" class="dialog-message"></div>
+        </div>
+      </div>
+      <div class="dialog-copy">
+        <p id="dialog-accession" class="exhibit-accession"></p>
+        <h2 id="dialog-title">Exhibit</h2>
+        <p id="dialog-meta" class="exhibit-meta"></p>
+        <dl>
+          <div><dt>Collection</dt><dd id="dialog-family"></dd></div>
+          <div><dt>Assessment</dt><dd id="dialog-risk"></dd></div>
+          <div><dt>Source type</dt><dd id="dialog-source"></dd></div>
+          <div><dt>Medium</dt><dd id="dialog-medium"></dd></div>
+        </dl>
+        <p class="plaque-label">Observed artifacts</p>
+        <div id="dialog-artifacts" class="dialog-artifacts"></div>
+        <p class="plaque-label">Curatorial note</p>
+        <p id="dialog-note" class="dialog-note"></p>
+      </div>
+    </div>
+  </dialog>
 
   <div id="loading-overlay" class="loading-overlay" hidden>
     <div class="loading-box" role="status" aria-live="polite">
@@ -212,6 +346,7 @@
   </div>
 
   <script src="/static/js/app.js" defer></script>
+  <script src="/static/js/gallery.js" defer></script>
   <script src="/static/js/share-card.js" defer></script>
 </body>
 </html>
