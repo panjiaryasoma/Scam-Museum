@@ -58,6 +58,15 @@ def test_home_keeps_visitor_analysis_private_by_default(client):
     assert "Visitor analyses are not automatically published to the museum collection." in response.text
 
 
+def test_home_exposes_gallery_filter_controls(client):
+    response = client.get("/")
+
+    assert response.status_code == 200
+    assert 'data-gallery-filter="all"' in response.text
+    assert 'data-gallery-filter="banking"' in response.text
+    assert 'data-gallery-filter="job"' in response.text
+
+
 def test_css_is_served(client):
     response = client.get("/static/css/app.css")
 
@@ -91,7 +100,7 @@ def test_gallery_javascript_is_served(client):
     assert response.status_code == 200
     assert "The Urgency Trap" in response.text
     assert "Reconstructed demonstration" in response.text
-    assert "data-gallery-filter" not in response.text
+    assert 'querySelectorAll("[data-gallery-filter]")' in response.text
     assert "scam-museum:analysis-rendered" in response.text
 
 
