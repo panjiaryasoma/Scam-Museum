@@ -35,6 +35,8 @@ const EVIDENCE_LABELS = {
   FAMILY_IMPERSONATION: "Family impersonation",
   NEW_NUMBER_CLAIM: "New number claim",
   UNEXPECTED_CONTACT: "Unexpected contact",
+  JOB_TASK_SOLICITATION: "Job or task solicitation",
+  PIECE_RATE_TASK_PAYMENT: "Piece-rate task payment",
   PROTECTIVE_DO_NOT_SHARE: "Do-not-share warning",
   ANTI_SCAM_ADVICE: "Anti-scam advice",
 };
@@ -120,9 +122,7 @@ function renderHighlightedText(text, evidence) {
 
   for (const range of ranges) {
     if (range.start > cursor) {
-      highlightedMessage.append(
-        document.createTextNode(text.slice(cursor, range.start))
-      );
+      highlightedMessage.append(document.createTextNode(text.slice(cursor, range.start)));
     }
 
     const mark = document.createElement("mark");
@@ -162,10 +162,7 @@ function uniqueFindingsById(items) {
   const seen = new Set();
 
   return items.filter((item) => {
-    if (!item?.id || seen.has(item.id)) {
-      return false;
-    }
-
+    if (!item?.id || seen.has(item.id)) return false;
     seen.add(item.id);
     return true;
   });
@@ -183,9 +180,7 @@ function renderEvidence(items) {
     return;
   }
 
-  uniqueItems.forEach((item, index) => {
-    evidenceList.append(makeFindingItem(item, index));
-  });
+  uniqueItems.forEach((item, index) => evidenceList.append(makeFindingItem(item, index)));
 }
 
 function renderProtective(items) {
@@ -198,16 +193,11 @@ function renderProtective(items) {
   }
 
   protectiveBlock.hidden = false;
-
-  uniqueItems.forEach((item, index) => {
-    protectiveList.append(makeFindingItem(item, index));
-  });
+  uniqueItems.forEach((item, index) => protectiveList.append(makeFindingItem(item, index)));
 }
 
 function renderVerdictNote(verdict) {
-  if (!warningNote) {
-    return;
-  }
+  if (!warningNote) return;
 
   const note = VERDICT_NOTES[verdict] || {
     text: "↳ Review the result before acting.",
@@ -231,20 +221,17 @@ function renderResult(data) {
   mlSignal.textContent = `ML risk signal: ${signalLabel}`;
 
   const artifactText = exhibit.artifact_text || input.value.trim();
-
   renderHighlightedText(artifactText, data.evidence || []);
   renderEvidence(data.evidence || []);
   renderProtective(data.protective_evidence || []);
 
-  curatorialNote.textContent =
-    exhibit.curatorial_note || "No curatorial note was returned.";
-
+  curatorialNote.textContent = exhibit.curatorial_note || "No curatorial note was returned.";
   resultSection.hidden = false;
 
+  window.dispatchEvent(new CustomEvent("scam-museum:analysis-rendered", { detail: data }));
+
   resultSection.scrollIntoView({
-    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      ? "auto"
-      : "smooth",
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
     block: "start",
   });
 }
@@ -271,29 +258,20 @@ async function analyzeMessage() {
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(
-        data?.error?.message || "The artifact could not be analyzed."
-      );
+      throw new Error(data?.error?.message || "The artifact could not be analyzed.");
     }
 
     renderResult(data);
   } catch (error) {
-    showError(
-      error instanceof Error
-        ? error.message
-        : "The artifact could not be analyzed."
-    );
+    showError(error instanceof Error ? error.message : "The artifact could not be analyzed.");
   } finally {
     setLoading(false);
   }
 }
 
 input.addEventListener("input", updateCharacterCount);
-
 input.addEventListener("keydown", (event) => {
-  if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
-    analyzeMessage();
-  }
+  if ((event.ctrlKey || event.metaKey) && event.key === "Enter") analyzeMessage();
 });
 
 analyzeButton.addEventListener("click", analyzeMessage);
@@ -301,11 +279,8 @@ analyzeButton.addEventListener("click", analyzeMessage);
 analyzeAnother.addEventListener("click", () => {
   resultSection.hidden = true;
   input.focus();
-
   document.getElementById("analyzer").scrollIntoView({
-    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      ? "auto"
-      : "smooth",
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
   });
 });
 
